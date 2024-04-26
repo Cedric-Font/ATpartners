@@ -10,10 +10,12 @@ function App() {
     <>
       <NavBarDesktop />
       <NavMobile />
-      <h2 className={styles.owerEnterprisesTitle}>Nos Entreprisess</h2>
+      <h2 className={styles.owerEnterprisesTitle}>Nos Entreprises</h2>
+      <div className={styles.enterpriseLinkContainer}>
       <EnterprisesLinkPictures pictures={"ATservices"} />
       <EnterprisesLinkPictures pictures={"ATimmobilier"} />
       <EnterprisesLinkPictures pictures={"ATpromotion"} />
+      </div>
       <h2 className={styles.owerEnterprisesTitle}>qui somme nous ?</h2>
     </>
   )

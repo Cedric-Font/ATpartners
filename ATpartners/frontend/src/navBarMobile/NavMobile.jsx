@@ -12,7 +12,7 @@ export default function NavMobile() {
         <h2 className={styles.ATtitle}>ATpartners</h2>
         <img src={burger} alt="" className={styles.burger} />
       </nav>
-      <section>
+      <section className={styles.picturePresentation}>
         <div className={styles.headerPhoto}>
           <img src={ATmain} alt="" className={styles.mainPicture} />
           <p className={styles.textIntro}>

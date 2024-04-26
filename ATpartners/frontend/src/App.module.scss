@@ -10,5 +10,23 @@ body{
     margin-right: auto;
     width: fit-content;
     font-family: "work sans";
+  
+  }
+  @media screen and (min-width: 1000px){
+    .enterpriseLinkContainer{
+      display: flex;
+      justify-content: center;
+      position: static;
+      width: 100%;
+      margin-top: 100px;
+      //padding-inline: 5%;
+      // padding-left: 3%;
+      // padding-right: 3%;
+      // border: solid 1px black;
+    }
+    .owerEnterprisesTitle{
+      margin-top: 430px;
+    }
+
   }
   
