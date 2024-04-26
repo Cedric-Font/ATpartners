@@ -10,7 +10,9 @@ function App() {
       <NavBarDesktop />
       <NavMobile />
       <h2 className={styles.owerEnterprisesTitle}>Nos Entreprisess</h2>
-      <EnterprisesLinkPictures />
+      <EnterprisesLinkPictures pictures={"ATservices"} />
+      <EnterprisesLinkPictures pictures={"ATimmobilier"} />
+      <EnterprisesLinkPictures pictures={"ATpromotion"} />
     </>
   )
 }
