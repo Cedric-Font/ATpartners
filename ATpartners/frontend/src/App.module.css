@@ -4,12 +4,12 @@ body {
 }
 
 .owerEnterprisesTitle {
-  font-family: inter;
   font-size: 32px;
-  font-weight: bold;
+  font-weight: bolder;
   color: #2C4295;
   margin-left: auto;
   margin-right: auto;
   width: -moz-fit-content;
   width: fit-content;
+  font-family: "work sans";
 }/*# sourceMappingURL=App.module.css.map */
