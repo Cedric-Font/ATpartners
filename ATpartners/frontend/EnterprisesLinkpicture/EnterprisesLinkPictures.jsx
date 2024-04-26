@@ -2,6 +2,7 @@ import styles from "./EnterprisesLinkPictures.module.css";
 import ATservices from "../src/assets/ATservices.jpg";
 import ATimmobilier from "../src/assets/ATimmobilier.jpg";
 import ATpromotion from "../src/assets/ATpromotion.jpg";
+import { Link } from "react-router-dom";
 
 export default function EnterprisesLinkPictures( {pictures} ) {
 
@@ -23,8 +24,12 @@ export default function EnterprisesLinkPictures( {pictures} ) {
     return (
         <>
         <div className={styles.linksPictures}>
+            <Link className={styles.link} to={{
+                pathname: "/test",
+            }}>
             <img src={linkPictures[pictures].src} alt="" className={styles.ATpicture} />
             <h2 className={styles.ATtitle}>{linkPictures[pictures].alt}</h2>
+            </Link>
         </div>
         </>
     )

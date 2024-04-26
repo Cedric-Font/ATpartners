@@ -1,4 +1,5 @@
 import styles from './App.module.css';
+import "./font.css"
 import NavBarDesktop from './navBarDesktop/NavBarDesktop'
 import NavMobile from './navBarMobile/NavMobile'
 import EnterprisesLinkPictures from '../EnterprisesLinkpicture/EnterprisesLinkPictures';
@@ -13,6 +14,7 @@ function App() {
       <EnterprisesLinkPictures pictures={"ATservices"} />
       <EnterprisesLinkPictures pictures={"ATimmobilier"} />
       <EnterprisesLinkPictures pictures={"ATpromotion"} />
+      <h2 className={styles.owerEnterprisesTitle}>qui somme nous ?</h2>
     </>
   )
 }

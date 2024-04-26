@@ -2,6 +2,7 @@ import styles from "./NavMobile.module.css";
 import burger from "../assets/burgerMenu.svg";
 import ATpartnersLogo from "../assets/ATpartnersLogo.png";
 import ATmain from "../assets/ATpartnersMain.jpg";
+import { Link } from "react-router-dom";
 
 export default function NavMobile() {
   return (
@@ -22,7 +23,12 @@ export default function NavMobile() {
             entreprise: ATservices, ATimmobilier ainsi que ATpromotion. Nous
             vous aidons a réaliser vos projets.
           </p>
+          <Link className={styles.discoverButtonLink}
+          to={{
+            pathname: "/test",
+          }}>
           <button className={styles.discoverButton}>Découvrir nos réalisations &nbsp; &nbsp; &gt;&gt;</button>
+          </Link>
         </div>
       </section>
     </>
