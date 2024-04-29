@@ -2,13 +2,27 @@ body{
     margin: 0;
     padding: 0;
   }
-  .owerEnterprisesTitle{
-    font-size: 32px;
-    font-weight: bolder;
-    color: #2C4295;
-    margin-left: auto;
-    margin-right: auto;
-    width: fit-content;
-    font-family: "work sans";
+  // .owerEnterprisesTitle{
+  //   font-size: 32px;
+  //   font-weight: bolder;
+  //   color: #2C4295;
+  //   margin-left: auto;
+  //   margin-right: auto;
+  //   width: fit-content;
+  //   font-family: "work sans";
+  
+  // }
+  @media screen and (min-width: 1000px){
+    .enterpriseLinkContainer{
+      display: flex;
+      justify-content: center;
+      position: static;
+      width: 100%;
+      margin-top: 100px;
+      //padding-inline: 5%;
+      // padding-left: 3%;
+      // padding-right: 3%;
+      // border: solid 1px black;
+    }
   }
   

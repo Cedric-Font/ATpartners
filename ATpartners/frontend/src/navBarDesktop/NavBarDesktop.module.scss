@@ -67,31 +67,160 @@ li:hover{
     scale: 1.05;
     transition: 250ms;
 }
+.mainPicture{
+    object-fit: cover;
+    width: 100%;   
+    height: 900px;
+    position: absolute;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    top: 128px;
+}
+.fullTextIntro{
+    margin-left: 1%;
+    margin-top: 150px;
+    height: 300px;
+}
+.textIntro{
+    font-family: "inter";
+    font-size: 40px;
+    color: black;
+    font-weight: bold;
+    position: relative;
+    top: 40px;
+    width: 40%;
+    left: 10px;
+}
+.introSecond{
+    color: black;
+    position: relative;
+    font-family: inter;
+    font-size: 20px;
+    width: 40%;
+    left: 10px;
+    margin-top: 2%;
+}
+.discoverButton{
+    position: absolute;
+    background-color: #0066FF;
+    color: white;
+    border: none;
+    font-family: inter;
+    font-size: 14px;
+    height: 40px;
+    font-weight: bold;
+    text-align: center;
+    left : 10px;
+    border-radius: 5px;
+    margin-left: 25px;
+    bottom: 200px;
+}
 
 @media screen and (max-width: 1000px){
     .navDesktop{
         display: none;
     }
-    /* ul{
+    .picturePresentation{
         display: none;
     }
-    .contactutton{
-        display: none;
-    }
-    .navDesktop{
-        border: solid 1px black;
-    }
-    .logoContainer{
-        width: 100%;
-        flex-direction: row-reverse;
-        border: solid 1px black;
-    }
-    /* .ATtitle{
-        margin-right: auto;
-    } */
     .ATpartnersLogo{
         margin-right: auto;
     } 
-
+    .burger{
+        width: 50px;
+        margin-right: 14%;
+    }
+    .ATtitle{
+        font-family: mitr;
+        color: rgba(44, 66, 149, 1);
+        font-weight: 400;
+    }
+    .logoContainer{
+        display: flex;
+        align-items: center;
+    
+        margin-left: 1%;
+        width: 30%;
+    
+    }
+    ul{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 34%;
+        font-size: 14px;
+    
+    }
+    li{
+        list-style-type: none;
+        font-weight: bold;
+        font-family: inter;
+    }
+    li:hover{
+        cursor: pointer;
+        text-decoration: underline;
+        text-underline-offset: 5px;
+        text-decoration-thickness: 3px;
+        text-decoration-color: #0066FF;
+        
+    
+    }
+    .contactutton{
+        width: 150px;
+        height: 30px;
+        border-radius: 10px;
+        background-color: #0066FF;
+        color: white;
+        border: none;
+        margin-left: auto;
+        margin-right: 3%;
+        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+        /* box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); */
+        font-family: inter;
+    }
+    .contactutton:hover{
+        cursor: pointer;
+        background-color: #0052CC;
+        scale: 1.05;
+        transition: 250ms;
+    }
+    .mainPicture{
+        object-fit: cover;
+        width: 100%;   
+        height: 530px;
+        position: absolute;
+        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+        top: 128px;
+    }
+    .textIntro{
+        font-family: "inter";
+        font-size: 40px;
+        color: black;
+        font-weight: bold;
+        position: relative;
+        top: 40px;
+        width: 80%;
+        left: 10px;
+    }
+    .introSecond{
+        color: black;
+        position: relative;
+        font-family: inter;
+        font-size: 20px;
+        width: 80%;
+        left: 10px;
+    }
+    .discoverButton{
+        position: relative;
+        background-color: #0066FF;
+        color: white;
+        border: none;
+        font-family: inter;
+        font-size: 14px;
+        height: 40px;
+        font-weight: bold;
+        text-align: center;
+        left : 10px;
+        border-radius: 5px;
+    }
     
 }
