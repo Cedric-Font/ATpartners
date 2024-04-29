@@ -3,17 +3,6 @@ body {
   padding: 0;
 }
 
-.owerEnterprisesTitle {
-  font-size: 32px;
-  font-weight: bolder;
-  color: #2C4295;
-  margin-left: auto;
-  margin-right: auto;
-  width: -moz-fit-content;
-  width: fit-content;
-  font-family: "work sans";
-}
-
 @media screen and (min-width: 1000px) {
   .enterpriseLinkContainer {
     display: flex;
@@ -21,8 +10,5 @@ body {
     position: static;
     width: 100%;
     margin-top: 100px;
-  }
-  .owerEnterprisesTitle {
-    margin-top: 430px;
   }
 }/*# sourceMappingURL=App.module.css.map */

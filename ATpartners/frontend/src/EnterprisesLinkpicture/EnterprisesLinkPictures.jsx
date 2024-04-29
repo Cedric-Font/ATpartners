@@ -1,7 +1,7 @@
 import styles from "./EnterprisesLinkPictures.module.css";
-import ATservices from "../src/assets/ATservices.jpg";
-import ATimmobilier from "../src/assets/ATimmobilier.jpg";
-import ATpromotion from "../src/assets/ATpromotion.jpg";
+import ATservices from "../assets/ATservices.jpg";
+import ATimmobilier from "../assets/ATimmobilier.jpg";
+import ATpromotion from "../assets/ATpromotion.jpg";
 import { Link } from "react-router-dom";
 
 export default function EnterprisesLinkPictures( {pictures} ) {

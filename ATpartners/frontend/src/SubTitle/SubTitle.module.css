@@ -1,0 +1,49 @@
+hr::after {
+  background: white;
+  content: attr(title);
+  padding: 0 50px;
+  position: relative;
+  font-weight: bold;
+  color: #2C4295;
+  font-size: 32px;
+  text-align: center;
+  width: 50px;
+  top: -22px;
+  font-family: work sans;
+  margin-bottom: 50px;
+}
+
+hr {
+  border: none;
+  color: #2C4295;
+  overflow: visible;
+  text-align: center;
+  height: 5px;
+  width: 100%;
+  margin-bottom: 50px;
+}
+
+@media screen and (min-width: 1000px) {
+  hr {
+    border: none;
+    border-top: solid 1px #2C4295;
+    color: #2C4295;
+    overflow: visible;
+    text-align: center;
+    height: 5px;
+    width: 80%;
+  }
+  hr::after {
+    background: white;
+    content: attr(title);
+    padding: 0 50px;
+    position: relative;
+    font-weight: bold;
+    color: #2C4295;
+    font-size: 32px;
+    text-align: center;
+    width: 50px;
+    top: -22px;
+    font-family: work sans;
+  }
+}/*# sourceMappingURL=SubTitle.module.css.map */
