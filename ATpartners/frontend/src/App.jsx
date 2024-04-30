@@ -25,7 +25,9 @@ function App() {
       <SubTitle title={"Qui sommes nous ?"} top={"50px"}/>
       <AboutUs />
       <SubTitle title={"Nos realisations"} top={"50px"}></SubTitle>
-      <Realisations title={"Salle blanche"} content={"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut urna eget arcu varius aliquam. Nulla facilisi. Nullam euismod, ligula nec porttitor."} picture={salleBlanche} />
+      <Realisations title={"Salle blanche"} content={"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut urna eget arcu varius aliquam. Nulla facilisi. Nullam euismod, ligula nec porttitor."} picture={salleBlanche}/>
+      <Realisations title={"Salle blanche"} direction={"row-reverse"} content={"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut urna eget arcu varius aliquam. Nulla facilisi. Nullam euismod, ligula nec porttitor."} picture={salleBlanche}/>
+      <Realisations title={"Salle blanche"} content={"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut urna eget arcu varius aliquam. Nulla facilisi. Nullam euismod, ligula nec porttitor."} picture={salleBlanche}/>
     </>
   )
 }
