@@ -1,5 +1,5 @@
 hr::after {
-    background: white;
+    background: rgba(246, 246, 246, 1);
      content: attr(title);
     padding: 0 50px;
     position: relative;
@@ -35,7 +35,7 @@ hr::after {
         width: 80%;
       }
       hr::after {
-        background: white;
+        background: rgba(246, 246, 246, 1);
          content: attr(title);
         padding: 0 50px;
         position: relative;

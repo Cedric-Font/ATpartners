@@ -1,6 +1,7 @@
 body {
   margin: 0;
   padding: 0;
+  background-color: rgb(246, 246, 246);
 }
 
 @media screen and (min-width: 1000px) {
