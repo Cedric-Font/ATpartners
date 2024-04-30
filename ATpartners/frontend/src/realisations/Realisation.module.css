@@ -45,8 +45,12 @@
     display: flex;
     border-radius: 10px;
     width: 77%;
+    position: static;
+    flex-direction: row;
+    align-items: normal;
   }
   .RealisationsText {
+    position: static;
     background-color: white;
     padding-left: 100px;
     display: flex;
@@ -55,6 +59,7 @@
     padding-right: 100px;
     border-radius: 10px 0px 0px 10px;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    transform: translate(0%, 0%);
   }
   .RealisationsTitle {
     margin-bottom: 30%;
@@ -62,12 +67,14 @@
     font-size: 32px;
     font-family: inter;
     font-weight: bold;
+    text-align: start;
   }
   .RealisationsContent {
     color: #2C4295;
     font-family: inter;
     font-size: 20px;
     margin: 0;
+    display: block;
   }
   .RealisationsPicture {
     width: 50%;
