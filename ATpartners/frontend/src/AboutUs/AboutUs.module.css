@@ -1,0 +1,235 @@
+.aboutSection {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.aboutContainer {
+  width: 80%;
+  background: rgb(12, 109, 255);
+  background: linear-gradient(90deg, rgb(12, 109, 255) 0%, rgb(6, 59, 175) 100%);
+  border-radius: 0px 64px 0px 64px;
+  padding: 50px;
+  margin-inline: 30px;
+  box-sizing: border-box;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+.aboutContainer2 {
+  width: 80%;
+  background: rgb(12, 109, 255);
+  background: linear-gradient(90deg, rgb(12, 109, 255) 0%, rgb(6, 59, 175) 100%);
+  margin-top: 50px;
+  border-radius: 64px 0px 64px 0px;
+  padding: 50px;
+  box-sizing: border-box;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+.titleABout {
+  font-family: work sans;
+  font-size: 40px;
+  font-weight: bold;
+  color: white;
+  text-align: center;
+  margin: 0;
+}
+
+.aboutText {
+  font-family: work sans;
+  font-size: 20px;
+  color: white;
+  font-weight: 200;
+  text-align: center;
+}
+
+.pictureOver {
+  display: flex;
+  width: 100%;
+  margin-top: 40px;
+  padding-left: 100px;
+}
+
+.backPicture {
+  width: 52%;
+  min-width: 240px;
+  max-width: 500px;
+  min-height: 360px;
+  max-height: 600px;
+  height: 54vw;
+  -o-object-fit: cover;
+     object-fit: cover;
+  position: relative;
+  border-radius: 10px;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+.textContainer {
+  display: flex;
+  position: absolute;
+  flex-direction: column;
+  left: 50%;
+  margin-top: 60px;
+}
+
+.overText {
+  font-family: work sans;
+  font-size: 36px;
+  color: #0556CE;
+  font-weight: bold;
+  margin: 0px;
+  text-shadow: 1px 1px 2px rgba(5, 5, 5, 0.49);
+}
+
+.overSubText {
+  font-family: work sans;
+  font-size: 14px;
+  color: #0556CE;
+  margin: 0px;
+  text-shadow: 1px 1px 2px rgba(5, 5, 5, 0.49);
+}
+
+.pictureOver2 {
+  display: flex;
+  flex-direction: row-reverse;
+  width: 100%;
+  margin-top: 30px;
+  padding-right: 100px;
+}
+
+.textContainer2 {
+  display: flex;
+  position: absolute;
+  flex-direction: column;
+  left: 23%;
+  margin-top: 60px;
+}
+
+.aboutPart1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.aboutPart2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+@media screen and (min-width: 1921px) {
+  .aboutSection {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+  .aboutContainer {
+    width: 50%;
+    border-radius: 0px 64px 0px 64px;
+  }
+  .aboutPart1 {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: start;
+    padding-left: 250px;
+    padding-right: 250px;
+    box-sizing: border-box;
+  }
+  .pictureOver {
+    padding-left: 50px;
+  }
+  .textContainer {
+    left: 35%;
+  }
+  .backPicture {
+    width: 63%;
+    min-width: 377px;
+    max-width: 700px;
+    min-height: 500px;
+    max-height: 800px;
+  }
+  .overText {
+    font-size: 48px;
+  }
+  .aboutContainer {
+    width: 75%;
+    border-radius: 0px 0px 0px 64px;
+  }
+  .aboutPart2 {
+    flex-direction: row-reverse;
+  }
+  .pictureOver2 {
+    width: 45%;
+    padding-right: 250px;
+  }
+  .aboutContainer2 {
+    width: 40%;
+    margin-left: 250px;
+  }
+  .textContainer2 {
+    right: 27%;
+    left: auto;
+  }
+}
+@media only screen and (min-width: 1000px) and (max-width: 1920px) {
+  .aboutSection {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+  .aboutContainer {
+    width: 50%;
+    border-radius: 0px 64px 0px 64px;
+  }
+  .aboutPart1 {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: start;
+    padding-left: 100px;
+    padding-right: 100px;
+    box-sizing: border-box;
+  }
+  .pictureOver {
+    padding-left: 50px;
+  }
+  .textContainer {
+    left: 35%;
+  }
+  .backPicture {
+    width: 63%;
+    min-width: 377px;
+    max-width: 700px;
+    min-height: 500px;
+    max-height: 800px;
+  }
+  .overText {
+    font-size: 48px;
+  }
+  .aboutContainer {
+    width: 75%;
+    border-radius: 0px 0px 0px 64px;
+  }
+  .aboutPart2 {
+    flex-direction: row-reverse;
+  }
+  .pictureOver2 {
+    width: 45%;
+    padding-right: 100px;
+  }
+  .aboutContainer2 {
+    width: 40%;
+    margin-left: 150px;
+  }
+  .textContainer2 {
+    right: 27%;
+    left: auto;
+  }
+}/*# sourceMappingURL=AboutUs.module.css.map */

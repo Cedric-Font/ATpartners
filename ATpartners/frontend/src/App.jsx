@@ -4,6 +4,7 @@ import NavBarDesktop from './navBarDesktop/NavBarDesktop'
 import NavMobile from './navBarMobile/NavMobile'
 import EnterprisesLinkPictures from './EnterprisesLinkpicture/EnterprisesLinkPictures';
 import SubTitle from './SubTitle/SubTitle';
+import AboutUs from './AboutUs/AboutUs';
 
 function App() {
 
@@ -20,6 +21,7 @@ function App() {
       </div>
       {/* <h2 className={styles.owerEnterprisesTitleAbout}>qui somme nous ?</h2> */}
       <SubTitle title={"Qui sommes nous ?"} top={"50px"}/>
+      <AboutUs />
     </>
   )
 }
