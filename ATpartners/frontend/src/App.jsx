@@ -7,6 +7,7 @@ import SubTitle from './SubTitle/SubTitle';
 import AboutUs from './AboutUs/AboutUs';
 import Realisations from './realisations/Realisations';
 import salleBlanche from './assets/salleBlanche2.jpg'
+import Footer from './footer/Footer';
 
 function App() {
 
@@ -28,6 +29,7 @@ function App() {
       <Realisations title={"Salle blanche"} content={"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut urna eget arcu varius aliquam. Nulla facilisi. Nullam euismod, ligula nec porttitor."} picture={salleBlanche}/>
       <Realisations title={"Salle blanche"} direction={"row-reverse"} content={"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut urna eget arcu varius aliquam. Nulla facilisi. Nullam euismod, ligula nec porttitor."} picture={salleBlanche}/>
       <Realisations title={"Salle blanche"} content={"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut urna eget arcu varius aliquam. Nulla facilisi. Nullam euismod, ligula nec porttitor."} picture={salleBlanche}/>
+      <Footer title={"ATservices"}></Footer>
     </>
   )
 }
