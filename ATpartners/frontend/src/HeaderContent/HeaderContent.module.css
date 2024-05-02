@@ -1,0 +1,105 @@
+.mainPicture {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: 900px;
+  position: absolute;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  top: 128px;
+}
+
+.fullTextIntro {
+  margin-left: 1%;
+  margin-top: 150px;
+  height: 300px;
+}
+
+.textIntro {
+  font-family: "inter";
+  font-size: 40px;
+  color: black;
+  font-weight: bold;
+  position: relative;
+  top: 40px;
+  width: 40%;
+  left: 10px;
+}
+
+.introSecond {
+  color: black;
+  position: relative;
+  font-family: inter;
+  font-size: 20px;
+  width: 40%;
+  left: 10px;
+  margin-top: 2%;
+}
+
+.discoverButton {
+  position: absolute;
+  background-color: #0066FF;
+  color: white;
+  border: none;
+  font-family: inter;
+  font-size: 14px;
+  height: 40px;
+  font-weight: bold;
+  text-align: center;
+  left: 10px;
+  border-radius: 5px;
+  margin-left: 25px;
+  bottom: 200px;
+  transition: 250ms;
+}
+
+.discoverButton:hover {
+  cursor: pointer;
+  background-color: #0052CC;
+  scale: 1.05;
+}
+
+@media screen and (max-width: 1000px) {
+  .picturePresentation {
+    display: none;
+  }
+  .mainPicture {
+    -o-object-fit: cover;
+       object-fit: cover;
+    width: 100%;
+    height: 530px;
+    position: absolute;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    top: 128px;
+  }
+  .textIntro {
+    font-family: "inter";
+    font-size: 40px;
+    color: black;
+    font-weight: bold;
+    position: relative;
+    top: 40px;
+    width: 80%;
+    left: 10px;
+  }
+  .introSecond {
+    color: black;
+    position: relative;
+    font-family: inter;
+    font-size: 20px;
+    width: 80%;
+    left: 10px;
+  }
+  .discoverButton {
+    position: relative;
+    background-color: #0066FF;
+    color: white;
+    border: none;
+    font-family: inter;
+    font-size: 14px;
+    height: 40px;
+    font-weight: bold;
+    text-align: center;
+    left: 10px;
+    border-radius: 5px;
+  }
+}/*# sourceMappingURL=HeaderContent.module.css.map */

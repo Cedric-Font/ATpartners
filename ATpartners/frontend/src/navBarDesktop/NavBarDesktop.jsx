@@ -4,8 +4,6 @@ import { useEffect } from "react";
 import burger from "../assets/burgerMenu.svg"
 import BurgerMenu from "../burgerMenu/BurgerMenu";
 import ATpartnersLogo from "../assets/ATpartnersLogo.png"
-import ATmain from "../assets/ATpartnersMain.jpg";
-import { Link } from "react-router-dom";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
@@ -13,6 +11,16 @@ export default function NavBarDesktop() {
   useEffect(() => {
     AOS.init();
   }, []);
+  window.onscroll = function() {scrollFunction()};
+  function scrollFunction() {
+    if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
+      document.getElementById("navbar").style.padding = "30px 10px";
+      document.getElementById("logo").style.fontSize = "25px";
+    } else {
+      document.getElementById("navbar").style.padding = "80px 10px";
+      document.getElementById("logo").style.fontSize = "35px";
+    }
+  }
     return (
         <div className={styles.stickyNav}>
         <nav className={styles.navDesktop}>
@@ -29,27 +37,6 @@ export default function NavBarDesktop() {
             </ul>
             <button className={styles.contactutton}>Contact</button>
         </nav>
-        <section className={styles.picturePresentation}>
-        <div className={styles.headerPhoto}>
-          <img src={ATmain} alt="" className={styles.mainPicture} />
-          <div className={styles.fullTextIntro}>
-          <p className={styles.textIntro}>
-            Nous bâtissons. <br /> Nous nous engageons sur la qualité.
-          </p>
-          <p className={styles.introSecond}>
-            ATcompany est une entreprise professionnelle qui regroupe trois
-            entreprise: <br /> ATservices, ATimmobilier ainsi que ATpromotion. <br /> Nous
-            vous aidons a réaliser vos projets.
-          </p>
-          </div>
-          <Link className={styles.discoverButtonLink}
-          to={{
-            pathname: "/test",
-          }}>
-          <button className={styles.discoverButton}>Découvrir nos réalisations &nbsp; &nbsp; &gt;&gt;</button>
-          </Link>
-        </div>
-      </section>
       {/* <div data-aos="zoom-in"
              data-aos-easing="ease-in-out"
              data-aos-duration="1500"

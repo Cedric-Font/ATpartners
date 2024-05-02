@@ -8,6 +8,7 @@ import AboutUs from './AboutUs/AboutUs';
 import Realisations from './realisations/Realisations';
 import salleBlanche from './assets/salleBlanche2.jpg'
 import Footer from './footer/Footer';
+import HeaderContent from './HeaderContent/HeaderContent';
 
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
     <div id='Home'>
       <NavBarDesktop />
       <NavMobile />
+      <HeaderContent />
       <SubTitle title={"Nos entreprises"}  top={"600px"}/>
       {/* <h2 className={styles.owerEnterprisesTitle}>Nos Entreprises</h2> */}
       <div className={styles.enterpriseLinkContainer}>
