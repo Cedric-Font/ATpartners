@@ -9,9 +9,10 @@
 }
 
 .fullTextIntro {
-  margin-left: 1%;
-  margin-top: 150px;
+  margin-left: 3%;
+  margin-top: 220px;
   height: 300px;
+  border: solid red;
 }
 
 .textIntro {
@@ -33,6 +34,7 @@
   width: 40%;
   left: 10px;
   margin-top: 2%;
+  line-height: 30px;
 }
 
 .discoverButton {
@@ -45,7 +47,7 @@
   height: 40px;
   font-weight: bold;
   text-align: center;
-  left: 10px;
+  left: 3%;
   border-radius: 5px;
   margin-left: 25px;
   bottom: 200px;

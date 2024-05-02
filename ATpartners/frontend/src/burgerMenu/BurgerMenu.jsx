@@ -13,8 +13,9 @@ import ListItemText from '@mui/material/ListItemText';
 import InboxIcon from '@mui/icons-material/MoveToInbox';
 import MailIcon from '@mui/icons-material/Mail';
 import Burger from "../assets/burgerMenu.svg";
+import WhiteBurgerMenu from "../assets/WhiteBurgerMenu.svg";
 
-export default function TemporaryDrawer() {
+export default function TemporaryDrawer( {isScrolled}) {
   const [open, setOpen] = React.useState(false);
   const navigate = useNavigate();
 
@@ -32,6 +33,7 @@ export default function TemporaryDrawer() {
   const DrawerList = (
     <Box sx={{ width: 400 }} role="presentation" onClick={toggleDrawer(false)}>
       <List sx={{ flexDirection: "column" }}>
+      <img src={Burger} alt=""  className={styles.burgerMenu}/>
         <h2>ATpartners</h2>
         {['Home','Nos entreprises', 'Nos realisations', 'Qui sommes nous ?', 'contact'].map((text, index) => (
           <ListItem key={text} disablePadding>
@@ -60,7 +62,7 @@ export default function TemporaryDrawer() {
   return (
     <div>
       <Button onClick={toggleDrawer(true)}>
-        <img src={Burger} alt=""  className={styles.burgerMenu}/>
+        <img src={isScrolled ? WhiteBurgerMenu : Burger} alt=""  className={styles.burgerMenu}/>
       </Button>
       <Drawer open={open} onClose={toggleDrawer(false)}>
         {DrawerList}

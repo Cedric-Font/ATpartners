@@ -26,9 +26,9 @@ function App() {
       <EnterprisesLinkPictures pictures={"ATpromotion"} />
       </div>
       {/* <h2 className={styles.owerEnterprisesTitleAbout}>qui somme nous ?</h2> */}
-      <SubTitle title={"Qui sommes nous ?"} top={"50px"}/>
+      <SubTitle title={"Qui sommes nous ?"} top={"100px"}/>
       <AboutUs />
-      <SubTitle title={"Nos realisations"} top={"50px"}></SubTitle>
+      <SubTitle title={"Nos realisations"} top={"100px"}></SubTitle>
       <Realisations title={"Salle blanche"} content={"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut urna eget arcu varius aliquam. Nulla facilisi. Nullam euismod, ligula nec porttitor."} picture={salleBlanche}/>
       <Realisations title={"Salle blanche"} direction={"row-reverse"} content={"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut urna eget arcu varius aliquam. Nulla facilisi. Nullam euismod, ligula nec porttitor."} picture={salleBlanche}/>
       <Realisations title={"Salle blanche"} content={"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut urna eget arcu varius aliquam. Nulla facilisi. Nullam euismod, ligula nec porttitor."} picture={salleBlanche}/>

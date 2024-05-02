@@ -1,6 +1,9 @@
 .stickyNav {
-  position: sticky;
+  position: fixed;
+  width: 100%;
+  z-index: 100;
   top: 0;
+  height: 120px;
 }
 
 .burger {
@@ -52,6 +55,7 @@ li {
   text-decoration-thickness: 3px;
   text-decoration-color: transparent;
   border-radius: 5px;
+  color: black;
 }
 
 li:hover {
@@ -84,7 +88,33 @@ li:hover {
   transition: 250ms;
 }
 
+.stickyNav.scrolled {
+  height: 65px;
+  background-color: rgba(44, 67, 149, 0.6745098039);
+  transition: 400ms;
+  -webkit-backdrop-filter: blur(4px);
+          backdrop-filter: blur(4px);
+}
+
+.navDesktop.scrolled {
+  transition: 400ms;
+  height: 65px;
+}
+
+.liNav.scrolled {
+  transition: 400ms;
+  color: white;
+}
+
+.ATtitle.scrolled {
+  transition: 400ms;
+  color: white;
+}
+
 @media screen and (max-width: 1000px) {
+  .stickyNav {
+    display: none;
+  }
   .navDesktop {
     display: none;
   }
