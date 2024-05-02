@@ -1,0 +1,111 @@
+.hr {
+  border: none;
+  border-top: solid 1px #2C4295;
+  color: #2C4295;
+  overflow: visible;
+  text-align: center;
+  height: 5px;
+  width: 80%;
+  margin-top: 50px;
+  margin-bottom: 30px;
+}
+
+.hr::after {
+  background: transparent;
+  position: relative;
+  font-weight: bold;
+  color: #2C4295;
+  width: 50px;
+  top: -22px;
+}
+
+.footer {
+  padding-inline: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footerMainContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footerTitle {
+  font-size: 36px;
+  font-family: mitr;
+  font-weight: 400;
+  color: rgb(44, 66, 149);
+  margin: 0;
+}
+
+.footerDescription {
+  color: black;
+  font-family: mitr;
+  font-size: 20px;
+  text-align: center;
+  font-weight: 300;
+}
+
+.generaleInformation {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.logoTitle {
+  display: flex;
+  align-items: center;
+  width: 300px;
+  margin-right: auto;
+}
+
+.adressImg {
+  width: 25px;
+  height: 25px;
+  margin-right: 15%;
+}
+
+.evry {
+  color: #2C4295;
+  margin-bottom: 5px;
+}
+
+.adress {
+  color: black;
+  text-align: start;
+  width: 200px;
+  margin-left: 45px;
+  font-family: mitr;
+  font-size: 15px;
+  margin-top: 0;
+}
+
+.phoneNumber {
+  font-family: mitr;
+  font-size: 15px;
+  margin-top: 0;
+}
+
+.footerTitle {
+  margin-bottom: 20px;
+}
+
+.footerLinks {
+  display: flex;
+  flex-direction: column;
+}
+
+.aLinks {
+  text-decoration: none;
+  color: black;
+  font-family: mitr;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.coloredWords {
+  color: #2C4295;
+  text-decoration: none;
+}/*# sourceMappingURL=Footer.module.css.map */

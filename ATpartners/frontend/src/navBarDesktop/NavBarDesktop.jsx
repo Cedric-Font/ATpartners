@@ -1,12 +1,17 @@
 import styles from "./NavBarDesktop.module.css";
 import "../../src/font.css"
+import { useEffect } from "react";
 import burger from "../assets/burgerMenu.svg"
 import ATpartnersLogo from "../assets/ATpartnersLogo.png"
 import ATmain from "../assets/ATpartnersMain.jpg";
 import { Link } from "react-router-dom";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 export default function NavBarDesktop() {
-
+  useEffect(() => {
+    AOS.init();
+  }, []);
     return (
         <>
         <nav className={styles.navDesktop}>
@@ -44,6 +49,12 @@ export default function NavBarDesktop() {
           </Link>
         </div>
       </section>
+      {/* <div data-aos="zoom-in"
+             data-aos-easing="ease-in-out"
+             data-aos-duration="1500"
+             data-aos-delay="1000">
+      <img src={ATmain} alt="" />
+      </div> */}
         </>
     )
 }
