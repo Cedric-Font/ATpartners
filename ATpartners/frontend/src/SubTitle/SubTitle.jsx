@@ -28,6 +28,6 @@ export default function SubTitle({ title, top }) {
     const hrStyle = { marginTop: margin };
 
     return (
-        <hr className={styles.hr} title={title} style={hrStyle} />
+        <hr id={title} className={styles.hr} title={title} style={hrStyle} />
     );
 }

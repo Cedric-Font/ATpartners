@@ -2,6 +2,7 @@ import styles from "./NavBarDesktop.module.css";
 import "../../src/font.css"
 import { useEffect } from "react";
 import burger from "../assets/burgerMenu.svg"
+import BurgerMenu from "../burgerMenu/BurgerMenu";
 import ATpartnersLogo from "../assets/ATpartnersLogo.png"
 import ATmain from "../assets/ATpartnersMain.jpg";
 import { Link } from "react-router-dom";
@@ -13,10 +14,10 @@ export default function NavBarDesktop() {
     AOS.init();
   }, []);
     return (
-        <>
+        <div className={styles.stickyNav}>
         <nav className={styles.navDesktop}>
             <div className={styles.logoContainer}>
-            <img src={burger} alt="" className={styles.burger} />
+            <BurgerMenu />
             <img src={ATpartnersLogo} alt="" className={styles.ATpartnersLogo} />
             <h2 className={styles.ATtitle}>ATpartners</h2>
             </div>
@@ -55,6 +56,6 @@ export default function NavBarDesktop() {
              data-aos-delay="1000">
       <img src={ATmain} alt="" />
       </div> */}
-        </>
+        </div>
     )
 }
