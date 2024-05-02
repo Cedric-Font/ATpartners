@@ -38,6 +38,12 @@ li{
     list-style-type: none;
     font-weight: bold;
     font-family: inter;
+    transition: 150ms ease-in-out;
+    text-decoration: underline;
+    text-underline-offset: 5px;
+    text-decoration-thickness: 3px;
+    text-decoration-color: transparent;
+    border-radius: 5px;
 }
 li:hover{
     cursor: pointer;
@@ -45,8 +51,7 @@ li:hover{
     text-underline-offset: 5px;
     text-decoration-thickness: 3px;
     text-decoration-color: #0066FF;
-    
-
+    filter: drop-shadow(0px 10px 9px #0066FF);
 }
 .contactutton{
     width: 150px;
@@ -113,6 +118,12 @@ li:hover{
     border-radius: 5px;
     margin-left: 25px;
     bottom: 200px;
+    transition: 250ms;
+}
+.discoverButton:hover{
+    cursor: pointer;
+    background-color: #0052CC;
+    scale: 1.05;
 }
 
 @media screen and (max-width: 1000px){

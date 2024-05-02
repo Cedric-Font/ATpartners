@@ -41,10 +41,17 @@
         margin-right: 2%;
         margin-left: 2%;
         position: relative;
+        overflow: hidden;
     }
     .ATpicture{
         width: 100%;
         height: 894px;
+        background-position: center;
+        transition: 250ms;
+        border-radius: 5px;
+    }
+    .ATpicture:hover{
+        transform: scale(1.2);
     }
     .ATtitle{
         // display: none;

@@ -49,12 +49,12 @@ export default function NavBarDesktop() {
           </Link>
         </div>
       </section>
-      <div data-aos="zoom-in"
+      {/* <div data-aos="zoom-in"
              data-aos-easing="ease-in-out"
              data-aos-duration="1500"
              data-aos-delay="1000">
       <img src={ATmain} alt="" />
-      </div>
+      </div> */}
         </>
     )
 }

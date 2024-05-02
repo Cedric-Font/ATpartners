@@ -85,6 +85,10 @@
     position: static;
     flex-direction: row;
     align-items: normal;
+    transition: 250ms;
+  }
+  .RealisationsGlobal:hover {
+    transform: scale(1.05);
   }
   .RealisationsText {
     position: static;
@@ -130,6 +134,10 @@
     flex-direction: row-reverse;
     align-items: normal;
     margin-bottom: 50px;
+    transition: 250ms;
+  }
+  .reverseRealisationsGlobal:hover {
+    transform: scale(1.05);
   }
   .reverseRealisationsText {
     position: static;
