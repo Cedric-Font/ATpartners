@@ -4,6 +4,12 @@ body {
   background-color: rgb(246, 246, 246);
 }
 
+.enterpriseLinkContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
 @media screen and (min-width: 1000px) {
   .enterpriseLinkContainer {
     display: flex;

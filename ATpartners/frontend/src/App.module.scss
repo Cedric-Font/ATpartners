@@ -3,6 +3,12 @@ body{
     padding: 0;
     background-color: rgba(246, 246, 246, 1);
   }
+  .enterpriseLinkContainer{
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
   // .owerEnterprisesTitle{
   //   font-size: 32px;
   //   font-weight: bolder;
@@ -11,7 +17,6 @@ body{
   //   margin-right: auto;
   //   width: fit-content;
   //   font-family: "work sans";
-  
   // }
   @media screen and (min-width: 1000px){
     .enterpriseLinkContainer{

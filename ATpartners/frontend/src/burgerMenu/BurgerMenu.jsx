@@ -14,6 +14,7 @@ import InboxIcon from '@mui/icons-material/MoveToInbox';
 import MailIcon from '@mui/icons-material/Mail';
 import Burger from "../assets/burgerMenu.svg";
 import WhiteBurgerMenu from "../assets/WhiteBurgerMenu.svg";
+import ATpartnersLogo from "../assets/ATpartnersLogo.png";
 
 export default function TemporaryDrawer( {isScrolled}) {
   const [open, setOpen] = React.useState(false);
@@ -30,28 +31,35 @@ export default function TemporaryDrawer( {isScrolled}) {
     }
   }
 
+  const Burgertab = [
+    ['Home','Nos entreprises', 'Nos realisations', 'Qui sommes nous ?', 'contact'],
+    ["home", "Qui sommes nous ?", "Reference", "Nos objectifs", "Nos valeurs", "Nos moyens humains"],
+  ]
+
   const DrawerList = (
     <Box sx={{ width: 400 }} role="presentation" onClick={toggleDrawer(false)}>
       <List sx={{ flexDirection: "column" }}>
-      <img src={Burger} alt=""  className={styles.burgerMenu}/>
-        <h2>ATpartners</h2>
+        <div className={styles.burgerAndTitle}>
+      <img src={Burger} alt=""  className={styles.insideBurgerMenu}/>
+      <img src={ATpartnersLogo} alt="" className={styles.ATpartnersLogo}/>
+        <h2 className={styles.burgerTitle}>ATPartners</h2>
+        </div>
+        <h2 className={styles.BurgerSubTitle}>ATPartners</h2>
         {['Home','Nos entreprises', 'Nos realisations', 'Qui sommes nous ?', 'contact'].map((text, index) => (
-          <ListItem key={text} disablePadding>
+          <ListItem key={text} disablePadding sx={{ marginLeft: "80px" }}>
             <ListItemButton sx={{ "span":{width: "15rem"} }} onClick={() => scrollToElement(text)} >
-              <ListItemText primary={text} />
+              <ListItemText primary={text}sx={{ "span": {fontWeight: "bold"} }} />
             </ListItemButton>
           </ListItem>
         ))}
       </List>
       <Divider sx={{ background: "transparent", "&:after" :{background: "transparent" }}}/>
       <List sx={{ flexDirection: "column" }}>
-        {['All mail', 'Trash', 'Spam'].map((text, index) => (
-          <ListItem key={text} disablePadding>
-            <ListItemButton>
-              <ListItemIcon>
-                {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-              </ListItemIcon>
-              <ListItemText primary={text} />
+        <h2 className={styles.BurgerSubTitle}>ATServices</h2>
+        {["home", "Qui sommes nous ?", "Reference", "Nos objectifs", "Nos valeurs", "Nos moyens humains"].map((text, index) => (
+          <ListItem key={text} disablePadding sx={{ marginLeft: "80px" }}>
+            <ListItemButton sx={{ "span":{width: "15rem"} }} onClick={() => scrollToElement(text)} >
+              <ListItemText primary={text} sx={{ "span": {fontWeight: "bold"} }}/>
             </ListItemButton>
           </ListItem>
         ))}

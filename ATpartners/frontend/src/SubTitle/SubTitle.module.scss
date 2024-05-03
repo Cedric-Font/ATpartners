@@ -1,7 +1,7 @@
 hr::after {
     background: rgba(246, 246, 246, 1);
      content: attr(title);
-    padding: 0 50px;
+    // padding: 0 50px;
     position: relative;
     font-weight: bold;
     color: #2C4295;
@@ -11,6 +11,10 @@ hr::after {
     top: -22px;
     font-family: work sans;
     margin-bottom: 50px;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+  
   }
   hr {
     border: none;
@@ -20,6 +24,7 @@ hr::after {
     text-align: center;
     height: 5px;
     width: 100%;
+
     margin-bottom: 50px;
   }
   

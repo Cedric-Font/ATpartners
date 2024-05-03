@@ -3,14 +3,19 @@ import burger from "../assets/burgerMenu.svg";
 import ATpartnersLogo from "../assets/ATpartnersLogo.png";
 import ATmain from "../assets/ATpartnersMain.jpg";
 import { Link } from "react-router-dom";
+import BurgerMenu from "../burgerMenu/BurgerMenu";
 
 export default function NavMobile() {
   return (
     <>
       <nav className={styles.navMobile}>
+        <div className={styles.logoTitle}>
         <img src={ATpartnersLogo} alt="" className={styles.ATpartnersLogo} />
         <h2 className={styles.ATtitle}>ATpartners</h2>
-        <img src={burger} alt="" className={styles.burger} />
+        </div>
+        <div className={styles.burgerFixed}>
+        <BurgerMenu />
+        </div>
       </nav>
       <section className={styles.picturePresentation}>
         <div className={styles.headerPhoto}>

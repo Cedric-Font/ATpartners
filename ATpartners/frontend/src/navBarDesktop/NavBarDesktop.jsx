@@ -61,7 +61,7 @@ export default function NavBarDesktop() {
             <h2 className={`${styles.ATtitle} ${isScrolled ? styles.scrolled : ""}`}>ATpartners</h2>
             </div>
             <ul>
-                <li className={`${styles.liNav} ${isScrolled ? styles.scrolled : ""}`}>home</li>
+                <li className={`${styles.liNav} ${isScrolled ? styles.scrolled : ""}`}>Accueil</li>
                 <li className={`${styles.liNav} ${isScrolled ? styles.scrolled : ""}`}>ATservices</li>
                 <li className={`${styles.liNav} ${isScrolled ? styles.scrolled : ""}`}>ATimmobilier</li>
                 <li className={`${styles.liNav} ${isScrolled ? styles.scrolled : ""}`}>ATpromotion</li>

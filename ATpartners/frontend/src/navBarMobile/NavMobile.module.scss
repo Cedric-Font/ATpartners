@@ -1,6 +1,9 @@
 .navMobile{
     display: flex;
     align-items: center;
+    justify-content: space-between;
+    padding-left: 20px;
+    padding-right: 30px;
     height: 100px;
 }
 .ATpartnersLogo{
@@ -69,6 +72,15 @@
 .ATLinkPictures{
     width: 375px;
     border: solid red;
+}
+.logoTitle{
+    display: flex;
+    align-items: center;
+}
+.burgerFixed{
+    position: fixed;
+    right: 30px;
+    z-index: 100;
 }
 @media screen and (min-width: 1000px) {
     .navMobile {

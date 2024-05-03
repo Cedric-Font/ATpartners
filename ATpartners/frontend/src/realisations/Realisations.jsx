@@ -8,7 +8,6 @@ export default function Realisations({title, content, picture, direction}) {
         const image = `${reverse}RealisationsPicture`
         const Title = `${reverse}RealisationsTitle`
         const Content = `${reverse}RealisationsContent`
-        console.log(direction)
     return(
         <>
         <div className={styles.mainRealisationContainer}>

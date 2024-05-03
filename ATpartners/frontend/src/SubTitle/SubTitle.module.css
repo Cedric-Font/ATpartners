@@ -1,7 +1,6 @@
 hr::after {
   background: rgb(246, 246, 246);
   content: attr(title);
-  padding: 0 50px;
   position: relative;
   font-weight: bold;
   color: #2C4295;
@@ -11,6 +10,9 @@ hr::after {
   top: -22px;
   font-family: work sans;
   margin-bottom: 50px;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
 }
 
 hr {
