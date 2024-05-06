@@ -1,10 +1,10 @@
-import styles from "./EnterprisesLinkPictures.module.css";
+import styles from "./EnterprisesLinkpictureIphone.module.css";
 import ATservices from "../assets/ATservices.jpg";
 import ATimmobilier from "../assets/ATimmobilier.jpg";
 import ATpromotion from "../assets/ATpromotion.jpg";
 import { Link } from "react-router-dom";
 
-export default function EnterprisesLinkPictures( {pictures} ) {
+export default function EnterprisesLinkPictureIphone( {pictures} ) {
 
     const linkPictures = {
         ATservices:{
@@ -20,7 +20,7 @@ export default function EnterprisesLinkPictures( {pictures} ) {
             alt: "AT promotion"
         }
     }
-    console.log("classique component")
+    console.log("iphoneComponent")
 
     return (
         <>

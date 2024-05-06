@@ -1,7 +1,7 @@
 hr::after {
     background: rgba(246, 246, 246, 1);
      content: attr(title);
-    padding: 0 50px;
+   // padding: 0 50px;
     position: relative;
     font-weight: bold;
     color: #2C4295;
@@ -11,6 +11,10 @@ hr::after {
     top: -22px;
     font-family: work sans;
     margin-bottom: 50px;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    // border: solid;
   }
   hr {
     border: none;
@@ -33,18 +37,19 @@ hr::after {
         text-align: center;
         height: 5px;
         width: 80%;
+        margin-bottom: 100px;
       }
       hr::after {
         background: rgba(246, 246, 246, 1);
          content: attr(title);
         padding: 0 50px;
-        position: relative;
         font-weight: bold;
         color: #2C4295;
-        font-size: 32px;
+        font-size: 45px;
         text-align: center;
         width: 50px;
-        top: -22px;
+        top: -30px;
         font-family: work sans;
+        display: inline;
       }
 }

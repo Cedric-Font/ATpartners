@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import styles from "./SubTitle.module.css";
 
-export default function SubTitle({ title, top }) {
+export default function SubTitle({ title, top, userAgent }) {
     const [largeur, setLargeur] = useState(window.innerWidth);
     const [margin, setMargin] = useState(top);
 
@@ -28,6 +28,6 @@ export default function SubTitle({ title, top }) {
     const hrStyle = { marginTop: margin };
 
     return (
-        <hr className={styles.hr} title={title} style={hrStyle} />
+        <hr id={title} className={styles.hr} title={title} style={hrStyle} />
     );
 }

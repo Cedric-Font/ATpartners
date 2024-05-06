@@ -1,0 +1,51 @@
+.burgerAndTitle{
+    display: flex;
+    width: fit-content;
+    align-items: center;
+    margin-left: 190px;
+    width: 300px;
+}
+.burgerMenu{
+    width: 50px;
+    margin-left: 90%;
+}
+.insideBurgerMenu{
+    width: 60px;
+    margin-right: 40px;
+}
+.insideBurgerMenu:hover{
+    cursor: pointer;
+
+}
+.ATpartnersLogo{
+    width: 60px;
+    height: 60px;
+    margin-right: 15px;
+}
+.burgerTitle{
+    font-size: 36px;
+    font-family: mitr;
+    font-weight: 400;
+    color: rgba(44, 66, 149, 1);
+}
+.BurgerSubTitle{
+    color: rgba(44, 66, 149, 1);
+    font-family: mitr;
+    font-weight: 400;
+    font-size: 20px;
+}
+@media screen and (max-width: 1000px) {
+    .burgerAndTitle{
+        display: flex;
+        flex-direction: row-reverse;
+        width: fit-content;
+        align-items: center;
+        margin-left: 240px;
+        width: 300px;
+    }
+    .insideBurgerMenu{
+        width: 60px;
+        margin-right: 0px;
+    }
+}
+

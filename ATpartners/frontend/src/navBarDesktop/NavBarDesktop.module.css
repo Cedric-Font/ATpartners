@@ -1,3 +1,11 @@
+.stickyNav {
+  position: fixed;
+  width: 100%;
+  z-index: 100;
+  top: 0;
+  height: 120px;
+}
+
 .burger {
   width: 50px;
   margin-right: 14%;
@@ -6,7 +14,7 @@
 .ATpartnersLogo {
   width: 60px;
   height: 60px;
-  /* margin-left: 5%; */
+  margin-left: 10%;
   margin-right: 2%;
 }
 
@@ -47,6 +55,7 @@ li {
   text-decoration-thickness: 3px;
   text-decoration-color: transparent;
   border-radius: 5px;
+  color: black;
 }
 
 li:hover {
@@ -79,71 +88,34 @@ li:hover {
   transition: 250ms;
 }
 
-.mainPicture {
-  -o-object-fit: cover;
-     object-fit: cover;
-  width: 100%;
-  height: 900px;
-  position: absolute;
-  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-  top: 128px;
+.stickyNav.scrolled {
+  height: 65px;
+  background-color: rgba(44, 67, 149, 0.6745098039);
+  transition: 400ms;
+  -webkit-backdrop-filter: blur(4px);
+          backdrop-filter: blur(4px);
 }
 
-.fullTextIntro {
-  margin-left: 1%;
-  margin-top: 150px;
-  height: 300px;
+.navDesktop.scrolled {
+  transition: 400ms;
+  height: 65px;
 }
 
-.textIntro {
-  font-family: "inter";
-  font-size: 40px;
-  color: black;
-  font-weight: bold;
-  position: relative;
-  top: 40px;
-  width: 40%;
-  left: 10px;
-}
-
-.introSecond {
-  color: black;
-  position: relative;
-  font-family: inter;
-  font-size: 20px;
-  width: 40%;
-  left: 10px;
-  margin-top: 2%;
-}
-
-.discoverButton {
-  position: absolute;
-  background-color: #0066FF;
+.liNav.scrolled {
+  transition: 400ms;
   color: white;
-  border: none;
-  font-family: inter;
-  font-size: 14px;
-  height: 40px;
-  font-weight: bold;
-  text-align: center;
-  left: 10px;
-  border-radius: 5px;
-  margin-left: 25px;
-  bottom: 200px;
-  transition: 250ms;
 }
 
-.discoverButton:hover {
-  cursor: pointer;
-  background-color: #0052CC;
-  scale: 1.05;
+.ATtitle.scrolled {
+  transition: 400ms;
+  color: white;
 }
 
 @media screen and (max-width: 1000px) {
-  .navDesktop {
+  .stickyNav {
     display: none;
   }
-  .picturePresentation {
+  .navDesktop {
     display: none;
   }
   .ATpartnersLogo {
@@ -201,45 +173,5 @@ li:hover {
     background-color: #0052CC;
     scale: 1.05;
     transition: 250ms;
-  }
-  .mainPicture {
-    -o-object-fit: cover;
-       object-fit: cover;
-    width: 100%;
-    height: 530px;
-    position: absolute;
-    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-    top: 128px;
-  }
-  .textIntro {
-    font-family: "inter";
-    font-size: 40px;
-    color: black;
-    font-weight: bold;
-    position: relative;
-    top: 40px;
-    width: 80%;
-    left: 10px;
-  }
-  .introSecond {
-    color: black;
-    position: relative;
-    font-family: inter;
-    font-size: 20px;
-    width: 80%;
-    left: 10px;
-  }
-  .discoverButton {
-    position: relative;
-    background-color: #0066FF;
-    color: white;
-    border: none;
-    font-family: inter;
-    font-size: 14px;
-    height: 40px;
-    font-weight: bold;
-    text-align: center;
-    left: 10px;
-    border-radius: 5px;
   }
 }/*# sourceMappingURL=NavBarDesktop.module.css.map */
