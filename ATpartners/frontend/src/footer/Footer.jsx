@@ -8,6 +8,8 @@ export default function Footer() {
       <section className={styles.footer}>
         <div className={styles.footerMainContainer}>
           <hr className={styles.hr} />
+          <div className={styles.allFooterContent}>
+            <div className={styles.allfooterDescriptionContent}>
           <h2 className={styles.footerTitle}>ATPartners</h2>
           <p className={styles.footerDescription}>
             ATpartners is a company specialised in the design, the manufacture
@@ -16,6 +18,8 @@ export default function Footer() {
             constraints of your work environment, we adapt our solutions to
             propose you reliable and customised creations.
           </p>
+          </div>
+          <div className={styles.allIInformationsFooterContent}>
           <h2 className={styles.footerTitle}>INFORMATION</h2>
         
         <div className={styles.generaleInformation}>
@@ -32,6 +36,8 @@ export default function Footer() {
           </div>
           <p className={styles.phoneNumber}>+33 (0)7 89 01 01 94</p>
         </div>
+        </div>
+        <div className={styles.allSiteMapContent}>
         <h2 className={styles.footerTitle}>SITEMAP</h2>
         <div className={styles.footerLinks}>
           <a className={styles.aLinks} href="">
@@ -49,6 +55,8 @@ export default function Footer() {
           <a className={styles.aLinks} href="">
             Politique de cookies (UE)
           </a>
+        </div>
+        </div>
         </div>
         <hr className={styles.hr} />
         <p className={styles.footerEnding}>

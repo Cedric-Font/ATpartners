@@ -46,6 +46,7 @@
   font-size: 20px;
   text-align: center;
   font-weight: 300;
+  width: 260px;
 }
 
 .generaleInformation {
@@ -108,4 +109,57 @@
 .coloredWords {
   color: #2C4295;
   text-decoration: none;
+}
+
+.allfooterDescriptionContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.allIInformationsFooterContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.allSiteMapContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@media screen and (min-width: 1000px) {
+  .footerMainContainer {
+    width: 80%;
+  }
+  .allFooterContent {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+    max-width: 1100px;
+  }
+  .allfooterDescriptionContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .allIInformationsFooterContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .allSiteMapContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .footerDescription {
+    text-align: start;
+    width: 300px;
+  }
+  .aLinks {
+    text-align: start;
+  }
 }/*# sourceMappingURL=Footer.module.css.map */
