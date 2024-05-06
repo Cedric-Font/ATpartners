@@ -41,6 +41,7 @@
     font-size: 20px;
     text-align: center;
     font-weight: 300;
+    width: 260px;
   }
   .generaleInformation{
     display: flex;
@@ -94,6 +95,21 @@
     color: #2C4295;
     text-decoration: none;
   }
+  .allfooterDescriptionContent{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .allIInformationsFooterContent{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .allSiteMapContent{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 
   @media screen and (min-width: 1000px) {
     .footerMainContainer{
@@ -101,6 +117,7 @@
     }
     .allFooterContent{
       display: flex;
+      flex-direction: row;
       justify-content: space-around;
       width: 100%;
       max-width: 1100px;
