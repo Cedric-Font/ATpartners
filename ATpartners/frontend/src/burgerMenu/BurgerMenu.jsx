@@ -8,10 +8,7 @@ import List from '@mui/material/List';
 import Divider from '@mui/material/Divider';
 import ListItem from '@mui/material/ListItem';
 import ListItemButton from '@mui/material/ListItemButton';
-import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
-import InboxIcon from '@mui/icons-material/MoveToInbox';
-import MailIcon from '@mui/icons-material/Mail';
 import Burger from "../assets/burgerMenu.svg";
 import WhiteBurgerMenu from "../assets/WhiteBurgerMenu.svg";
 import ATpartnersLogo from "../assets/ATpartnersLogo.png";
@@ -24,10 +21,15 @@ export default function TemporaryDrawer( {isScrolled}) {
     setOpen(newOpen);
   };
 
-  function scrollToElement(id) {
-    const element = document.getElementById(id);
+  function scrollToElement(elementId, offset = -100) {
+    const element = document.getElementById(elementId);
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+      const { top } = element.getBoundingClientRect();
+      console.log(top)
+      window.scrollTo({
+        top: top + window.scrollY + offset,
+        behavior: 'smooth'
+      });
     }
   }
 
