@@ -40,13 +40,13 @@ hr {
     background: rgb(246, 246, 246);
     content: attr(title);
     padding: 0 50px;
-    position: relative;
     font-weight: bold;
     color: #2C4295;
-    font-size: 32px;
+    font-size: 45px;
     text-align: center;
     width: 50px;
-    top: -22px;
+    top: -30px;
     font-family: work sans;
+    display: inline;
   }
 }/*# sourceMappingURL=SubTitle.module.css.map */
