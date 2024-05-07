@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import styles from "./Form.module.css";
 
 export default function FormVerification() {
   const [email, setEmail] = useState("");
@@ -34,11 +35,11 @@ export default function FormVerification() {
     const containsLetters = regex(inputPhoneNumber);
     if (containsLetters) {
       setPhoneNumberError(
-        <small>Le numéro de téléphone ne doit pas contenir de lettres.</small>
+        <small className={styles.test}>Le numéro de téléphone ne doit pas contenir de lettres.</small>
       );
     } else if(inputPhoneNumber.length != 10) {
         setPhoneNumberError(
-            <small>Le numéro de téléphone doit contenir 10 chiffres.</small>
+            <small className={styles.test}>Le numéro de téléphone doit contenir 10 chiffres.</small>
         );
     }
     else if(!containsLetters && inputPhoneNumber.length === 10) {

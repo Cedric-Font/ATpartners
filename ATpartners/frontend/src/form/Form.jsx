@@ -97,7 +97,7 @@ export default function Form() {
                 <div className={`${styles.correctContainer} ${e.checked ? "" : styles.hidden}`} >
                   <img src={correct} alt="" className={styles.correct} />
                 </div>
-                <p>{e.small}</p>
+                <div className={styles.small}>{e.small}</div>
                 </div>
             ))}
             {/* <input type="text" className={styles.input} placeholder="Nom" />

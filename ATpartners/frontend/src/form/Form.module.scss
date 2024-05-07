@@ -178,6 +178,14 @@
   #company{
    width: 100%;
   }
+
+  .small{
+    color: red;
+    display: flex;
+    width: fit-content;
+    position : absolute;
+    bottom: 15px;
+  }
  
  
 //   .input::placeholder{
