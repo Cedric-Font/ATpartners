@@ -175,13 +175,11 @@
   background-color: #0066FF;
   border: none;
   color: white;
-  width: 100px;
+  width: 80%;
+  height: 50px;
   border-radius: 5px;
   font-size: 20px;
   font-weight: bold;
-  margin-right: 20px;
-  margin-left: auto;
-  text-align: center;
   transition: ease-in-out 0.3s;
 }
 
@@ -189,13 +187,13 @@
   background-color: #666666;
   border: none;
   color: white;
-  width: 100px;
+  width: 80%;
+  height: 50px;
   border-radius: 5px;
   font-size: 20px;
   font-weight: bold;
-  margin-right: 20px;
-  margin-left: auto;
   text-align: center;
+  opacity: 0.5;
 }
 
 #company {

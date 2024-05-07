@@ -1,10 +1,10 @@
 import styles from "./Form.module.css";
-import { useState } from "react";
 import NavMobile from "../navBarMobile/NavMobile";
 import formBackground from "../assets/formBackground.jpg";
 import Footer from "../footer/Footer";
 import FormVerification2 from "./FormVerification";
 import correct from "../assets/correct.png";
+import redCross from "../assets/redCross.png";
 
 export default function Form() {
   const formVerification = FormVerification2();
@@ -94,24 +94,12 @@ export default function Form() {
                   onChange={e.function}
                   required
                 />
-                <div className={`${styles.correctContainer} ${e.checked ? "" : styles.hidden}`} >
-                  <img src={correct} alt="" className={styles.correct} />
+                <div className={`${styles.correctContainer} ${e.checked || e.small ? "" : styles.hidden}`} >
+                  <img src={e.small ? redCross : correct} alt="" className={styles.correct} />
                 </div>
                 <div className={styles.small}>{e.small}</div>
                 </div>
             ))}
-            {/* <input type="text" className={styles.input} placeholder="Nom" />
-            <input type="text" className={styles.input} placeholder="Prénon" />
-            <input
-              type="text"
-              className={styles.input}
-              placeholder="Numero de téléphone"
-            />
-            <input
-              type="email"
-              className={styles.input}
-              placeholder="Adress Email"
-            /> */}
             <div className={styles.selectContainer}>
               <select name="country" id="" className={styles.select}>
                 <option
@@ -133,12 +121,6 @@ export default function Form() {
                 <i className={styles.selectIcon}>&#x2304;</i>
               </div>
             </div>
-            {/* <input
-              type="text"
-              id="company"
-              className={styles.input}
-              placeholder="Nom de l'entreprise"
-            /> */}
             <textarea
               type="text"
               className={styles.input}

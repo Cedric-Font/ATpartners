@@ -61,14 +61,15 @@ const handleChangePseudo = (event) => {
     }
   };
 
-  const handleChangeFirstname = (f) => {
-    if (f.target.length <= 0) {
+  const handleChangeFirstname = (event) => {
+    const value = event.target.value;
+    if (value.length <= 0) {
         setFalseFirstname(<small>Ce champ ne peut pas etre vide</small>);
         setFirstname("");
     }
-    if (f.target.value.length <= MAX_LENGTH_NAME) {
+    if (value.length <= MAX_LENGTH_NAME) {
       setFalseFirstname("");
-      setFirstname(f.target.value);
+      setFirstname(value);
     } else {
       setFalseFirstname(<small>Le prénom est trop long</small>);
     }
