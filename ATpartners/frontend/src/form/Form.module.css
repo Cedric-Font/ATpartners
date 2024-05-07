@@ -1,1 +1,165 @@
-/*# sourceMappingURL=Form.module.css.map */
+.fullFormContent {
+  background-color: white;
+}
+
+.mainPicture {
+  position: relative;
+  justify-content: center;
+  display: flex;
+}
+
+.formBackground {
+  min-width: 430px;
+  width: 100%;
+  height: 540px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.gradient {
+  background: linear-gradient(90deg, rgb(44, 66, 149) 0%, rgba(37, 129, 196, 0.43) 100%);
+  width: 100%;
+  height: 540px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.textContainer {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  z-index: 5;
+  width: 80%;
+  top: 50px;
+  margin-right: auto;
+  margin-left: auto;
+  right: 20px;
+}
+
+.textIntro {
+  font-family: work sans;
+  font-size: 40px;
+  font-weight: bold;
+  color: white;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  margin: 0;
+}
+
+.textIntroSecond {
+  font-family: work sans;
+  font-size: 20px;
+  font-weight: 300;
+  color: white;
+  z-index: 2;
+  margin: 0;
+  top: 0;
+  left: 0;
+  width: 80%;
+}
+
+.formSection {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 880px;
+  background-image: url("../assets/backgroundForm.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-top: 80px;
+}
+
+.formBlur {
+  width: 90%;
+  height: 100%;
+  border-radius: 20px;
+  background: rgba(233, 233, 233, 0.5);
+  -webkit-backdrop-filter: blur(4px);
+          backdrop-filter: blur(4px);
+  display: flex;
+  flex-direction: column;
+  box-shadow: 7px 7px 13px rgb(116, 116, 116);
+}
+
+.contactUs {
+  text-align: center;
+  color: rgb(44, 66, 149);
+  font-family: work sans;
+  font-size: 36px;
+  text-align: center;
+}
+
+.formInput {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.input {
+  border: none;
+  border-bottom: solid 1px #979797;
+  background-color: transparent;
+  width: 90%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-family: work sans;
+  font-size: 24px;
+  font-weight: 400;
+  margin-bottom: 30px;
+}
+
+.input:focus {
+  outline: none;
+}
+
+.selectContainer {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  min-width: 250px;
+  height: 50px;
+  width: 90%;
+  margin-bottom: 30px;
+}
+
+.select {
+  width: 100%;
+  border: none;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  border-bottom: solid 1px #979797;
+  background-color: transparent;
+}
+
+.iconContainer {
+  width: 50px;
+  height: 100%;
+  position: absolute;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  font-size: 30px;
+  color: #979797;
+}
+
+.submitButton {
+  background-color: #0066FF;
+  border: none;
+  color: white;
+  width: 100px;
+  border-radius: 5px;
+  font-size: 20px;
+  font-weight: bold;
+  margin-right: 20px;
+  margin-left: auto;
+}
+
+#company {
+  width: 100%;
+}/*# sourceMappingURL=Form.module.css.map */
