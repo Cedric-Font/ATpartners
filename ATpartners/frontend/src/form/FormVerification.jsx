@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 export default function FormVerification() {
   const [email, setEmail] = useState("");
@@ -18,44 +18,67 @@ export default function FormVerification() {
   const MAX_LENGTH_ENTERPRISE = 100;
   const [phoneNumberError, setPhoneNumberError] = useState("");
 
+  const [isFormValid, setIsFormValid] = useState(false);
+
   const regexEmail =
     /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
   const handlePhoneNumberChange = (event) => {
     const inputPhoneNumber = event.target.value;
     setPhoneNumber(inputPhoneNumber);
-    console.log(phoneNumber);
     const containsLetters = /[a-zA-Z]/.test(phoneNumber);
     if (containsLetters) {
       setPhoneNumberError(
         <small>Le numéro de téléphone ne doit pas contenir de lettres.</small>
       );
-      console.log(phoneNumberError);
-    } else {
+    } else if(inputPhoneNumber.length != 10) {
+        setPhoneNumberError(
+            <small>Le numéro de téléphone doit contenir 10 chiffres.</small>
+        );
+    }
+    else if(!containsLetters && inputPhoneNumber.length === 10) {
       setPhoneNumberError("");
-      console.log("ok");
+      setPhoneNumber(inputPhoneNumber);
     }
   };
 
-  const handleChangePseudo = (p) => {
-    if (p.target.value.length <= MAX_LENGTH_NAME) {
+//   const handleChangePseudo = (p) => {
+//     if(p.target.value.length <= 0) {
+//         setFalsePseudo(<small>ce champ ne peut pas etre vide</small>);
+//         setPseudo("")
+//     }
+//     else if (p.target.value.length <= MAX_LENGTH_NAME) {
+//       setFalsePseudo("");
+//       setPseudo(p.target.value);
+//     } else {
+//       setFalsePseudo(<small>Le pseudo est trop long</small>);
+//     }
+//     validateForm();
+//     console.log(pseudo)
+//   };
+const handleChangePseudo = (event) => {
+    const value = event.target.value;
+    if (value.length <= 0) {
+      setFalsePseudo(<small>Ce champ ne peut pas être vide</small>);
+      setPseudo(""); // Mettre à jour directement avec la nouvelle valeur
+    } else if (value.length <= 45) {
       setFalsePseudo("");
-      setPseudo(p.target.value);
-      console.log(pseudo, falsePseudo);
+      setPseudo(value); // Mettre à jour directement avec la nouvelle valeur
     } else {
       setFalsePseudo(<small>Le pseudo est trop long</small>);
-      console.log("coucou");
     }
   };
 
   const handleChangeFirstname = (f) => {
+    if (f.target.length <= 0) {
+        setFalseFirstname(<small>Ce champ ne peut pas etre vide</small>);
+        setFirstname("");
+    }
     if (f.target.value.length <= MAX_LENGTH_NAME) {
       setFalseFirstname("");
       setFirstname(f.target.value);
-      console.log(firstname, falseFirstname);
     } else {
       setFalseFirstname(<small>Le prénom est trop long</small>);
-      console.log("coucou");
     }
   }
 
@@ -88,6 +111,31 @@ export default function FormVerification() {
         }
       }
 
+      const validateForm = () => {
+        // Condition pour valider le formulaire globalement
+        if (
+          pseudo &&
+          phoneNumber &&
+          firstname &&
+          enterpriseName &&
+          email &&
+          !falsePhoneNumber &&
+          !falsePseudo &&
+          !falseFirstname &&
+          !falseEnterpriseName &&
+          !falseMessage &&
+          !falseEmail
+        ) {
+          setIsFormValid(true); // Mettre à jour l'état de validation globale
+        } else {
+          setIsFormValid(false);
+        }
+      };
+      useEffect(() => {
+        // Valider le formulaire chaque fois que pseudo est mis à jour
+        validateForm();
+      }, [pseudo, phoneNumber, firstname, enterpriseName, email, falsePhoneNumber, falsePseudo, falseFirstname, falseEnterpriseName, falseMessage, falseEmail]);
+    //   console.log(isFormValid)
   return {
     email,
     handleChangePseudo,
@@ -119,5 +167,7 @@ export default function FormVerification() {
     setMessage,
     falseMessage,
     setFalseMessage,
+    isFormValid,
+    setIsFormValid,
   };
 }

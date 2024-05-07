@@ -1,10 +1,13 @@
 import styles from "./Form.module.css";
+import { useState } from "react";
 import NavMobile from "../navBarMobile/NavMobile";
 import formBackground from "../assets/formBackground.jpg";
 import Footer from "../footer/Footer";
 import FormVerification2 from "./FormVerification";
+import correct from "../assets/correct.png";
 
 export default function Form() {
+  const [unlock, setUnlock] = useState(false);
   const formVerification = FormVerification2();
     const ranges = [
         {
@@ -14,6 +17,7 @@ export default function Form() {
           function: formVerification.handleChangePseudo,
           small: formVerification.falsePseudo,
           class: "input",
+          checked: formVerification.pseudo && !formVerification.falsePseudo ? true : false,
         },
         {
           value: "Prénom",
@@ -22,6 +26,7 @@ export default function Form() {
           function: formVerification.handleChangeFirstname,
           small: formVerification.falseFirstname,
           class: "input",
+          checked: formVerification.firstname && !formVerification.falseFirstname ? true : false,
         },
         {
             value: "Numero de téléphone",
@@ -30,6 +35,7 @@ export default function Form() {
             function: formVerification.handlePhoneNumberChange,
             small: formVerification.phoneNumberError,
             class: "input",
+            checked: formVerification.phoneNumber && !formVerification.phoneNumberError ? true : false,
           },
         {
           value: "email",
@@ -38,6 +44,7 @@ export default function Form() {
           function: formVerification.handleChangeEmail,
           small: formVerification.falseEmail,
           class: "input",
+          checked: formVerification.email && !formVerification.falseEmail ? true : false,
         },
         {
           value: "Nom de l'entreprise",
@@ -46,16 +53,11 @@ export default function Form() {
           function: formVerification.handleEnterpriseName,
           small: formVerification.falseEnterpriseName,
           class: "input",
+          checked: formVerification.enterpriseName ? true : false,
         }
-        // {
-        //   value: "Message",
-        //   state: formVerification.message,
-        //   text: "Message",
-        //   function: formVerification.handleMessage,
-        //   small: formVerification.falseMessage,
-        //   class: "input",
-        // },
       ];
+      console.log(ranges[0].checked)
+
   return (
     <div className={styles.fullFormContent}>
       <NavMobile />
@@ -81,7 +83,25 @@ export default function Form() {
             Contactez <br /> nous
           </h2>
           <form action="" className={styles.formInput}>
-            <input type="text" className={styles.input} placeholder="Nom" />
+          {ranges.map((e) => (
+            <div  className={styles.inputContainer} key={e.text}>
+                <input
+                  type="text"
+                  name={e.value}
+                  id={e.value}
+                  className={styles[e.class]}
+                  placeholder={e.text}
+                  value={e.state}
+                  onChange={e.function}
+                  required
+                />
+                <div className={`${styles.correctContainer} ${e.checked ? "" : styles.hidden}`} >
+                  <img src={correct} alt="" className={styles.correct} />
+                </div>
+                <p>{e.small}</p>
+                </div>
+            ))}
+            {/* <input type="text" className={styles.input} placeholder="Nom" />
             <input type="text" className={styles.input} placeholder="Prénon" />
             <input
               type="text"
@@ -92,9 +112,9 @@ export default function Form() {
               type="email"
               className={styles.input}
               placeholder="Adress Email"
-            />
+            /> */}
             <div className={styles.selectContainer}>
-              {/* <select name="country" id="" className={styles.select}>
+              <select name="country" id="" className={styles.select}>
                 <option
                   value=""
                   className={styles.selectedDefaultValue}
@@ -109,53 +129,28 @@ export default function Form() {
                 <option value="Angleter">Angleter</option>
                 <option value="Alemagne">Alemagne</option>
                 <option value="Italie">Italie</option>
-              </select> */}
+              </select>
               <div className={styles.iconContainer}>
                 <i className={styles.selectIcon}>&#x2304;</i>
               </div>
             </div>
-            <input
+            {/* <input
               type="text"
               id="company"
               className={styles.input}
               placeholder="Nom de l'entreprise"
-            />
+            /> */}
             <textarea
               type="text"
               className={styles.input}
               placeholder="Message"
             />
-            <button type="submit" className={styles.submitButton}>
+            <button type="submit" disabled={!formVerification.isFormValid} className={`${styles.submitButton} ${!formVerification.isFormValid ? styles.disabled : styles.unlockSubmitButton}`}>
               Envoyer
             </button>
           </form>
         </div>
       </section>
-      <form action="">
-      {ranges.map((e) => (
-              <div
-                className={
-                  styles.inscription__mainElement__formConteneur__formulaire__range
-                }
-                key={e.text}
-              >
-                <input
-                  type="text"
-                  name={e.value}
-                  id={e.value}
-                  className={styles[e.class]}
-                  placeholder={e.text}
-                  value={e.state}
-                  onChange={e.function}
-                  required
-                />
-                {e.small}
-              </div>
-            ))}
-             <button type="submit" className={styles.submitButton}>
-              Envoyer
-            </button>
-      </form>
       <Footer />
     </div>
   );
