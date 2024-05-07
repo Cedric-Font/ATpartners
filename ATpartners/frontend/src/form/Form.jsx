@@ -7,7 +7,6 @@ import FormVerification2 from "./FormVerification";
 import correct from "../assets/correct.png";
 
 export default function Form() {
-  const [unlock, setUnlock] = useState(false);
   const formVerification = FormVerification2();
     const ranges = [
         {

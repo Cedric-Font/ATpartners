@@ -23,10 +23,15 @@ export default function FormVerification() {
   const regexEmail =
     /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
+    function regex(string){
+        return /[a-zA-Z]/.test(string)
+    }
+    
   const handlePhoneNumberChange = (event) => {
     const inputPhoneNumber = event.target.value;
     setPhoneNumber(inputPhoneNumber);
-    const containsLetters = /[a-zA-Z]/.test(phoneNumber);
+    // const containsLetters = /[a-zA-Z]/.test(phoneNumber);
+    const containsLetters = regex(inputPhoneNumber);
     if (containsLetters) {
       setPhoneNumberError(
         <small>Le numéro de téléphone ne doit pas contenir de lettres.</small>
@@ -41,21 +46,7 @@ export default function FormVerification() {
       setPhoneNumber(inputPhoneNumber);
     }
   };
-
-//   const handleChangePseudo = (p) => {
-//     if(p.target.value.length <= 0) {
-//         setFalsePseudo(<small>ce champ ne peut pas etre vide</small>);
-//         setPseudo("")
-//     }
-//     else if (p.target.value.length <= MAX_LENGTH_NAME) {
-//       setFalsePseudo("");
-//       setPseudo(p.target.value);
-//     } else {
-//       setFalsePseudo(<small>Le pseudo est trop long</small>);
-//     }
-//     validateForm();
-//     console.log(pseudo)
-//   };
+ 
 const handleChangePseudo = (event) => {
     const value = event.target.value;
     if (value.length <= 0) {
@@ -111,30 +102,30 @@ const handleChangePseudo = (event) => {
         }
       }
 
-      const validateForm = () => {
-        // Condition pour valider le formulaire globalement
-        if (
-          pseudo &&
-          phoneNumber &&
-          firstname &&
-          enterpriseName &&
-          email &&
-          !falsePhoneNumber &&
-          !falsePseudo &&
-          !falseFirstname &&
-          !falseEnterpriseName &&
-          !falseMessage &&
-          !falseEmail
-        ) {
-          setIsFormValid(true); // Mettre à jour l'état de validation globale
-        } else {
-          setIsFormValid(false);
-        }
-      };
+     
       useEffect(() => {
-        // Valider le formulaire chaque fois que pseudo est mis à jour
+        const validateForm = () => {
+            if (
+              pseudo &&
+              phoneNumber &&
+              firstname &&
+              enterpriseName &&
+              email &&
+              !falsePhoneNumber &&
+              !falsePseudo &&
+              !falseFirstname &&
+              !falseEnterpriseName &&
+              !falseMessage &&
+              !falseEmail &&
+              !phoneNumberError
+            ) {
+              setIsFormValid(true);
+            } else {
+              setIsFormValid(false);
+            }
+          };
         validateForm();
-      }, [pseudo, phoneNumber, firstname, enterpriseName, email, falsePhoneNumber, falsePseudo, falseFirstname, falseEnterpriseName, falseMessage, falseEmail]);
+      }, [pseudo, phoneNumber, firstname, enterpriseName, email, falsePhoneNumber, falsePseudo, falseFirstname, falseEnterpriseName, falseMessage, falseEmail, phoneNumberError]);
     //   console.log(isFormValid)
   return {
     email,
