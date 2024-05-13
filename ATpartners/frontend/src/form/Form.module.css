@@ -277,4 +277,22 @@
     margin-bottom: 3rem;
     position: relative;
   }
+  .textContainer {
+    width: -moz-fit-content;
+    width: fit-content;
+    right: auto;
+    top: auto;
+  }
+  .mainPicture {
+    align-items: center;
+  }
+  .formSection {
+    flex-direction: column;
+    align-items: center;
+    background-size: auto;
+  }
+  .iframeContainer {
+    margin-top: 10rem;
+    margin-bottom: 14rem;
+  }
 }/*# sourceMappingURL=Form.module.css.map */
