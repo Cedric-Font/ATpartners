@@ -3,10 +3,11 @@ import ReactDOM from 'react-dom/client'
 import App from './App.jsx'
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { StyledEngineProvider } from '@mui/material/styles';
-import NavBarDesktop from './navBarDesktop/NavBarDesktop.jsx';
 import Footer from './footer/Footer.jsx';
 import './index.css'
 import Form from './form/Form.jsx'
+import Atservices from './ATservices/Atservices.jsx'
+
 const router = createBrowserRouter([
   {
     path: "/",
@@ -19,6 +20,10 @@ const router = createBrowserRouter([
   {
     path: "/contact",
     element: <Form />,
+  },
+  {
+    path: "/ATservices",
+    element: <Atservices />,
   },
 ]);
 ReactDOM.createRoot(document.getElementById('root')).render(

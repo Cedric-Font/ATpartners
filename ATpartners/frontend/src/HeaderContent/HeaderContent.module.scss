@@ -49,11 +49,13 @@
     transition: 250ms;
     top: 52rem;
 }
+
 .discoverButton:hover{
     cursor: pointer;
     background-color: #0052CC;
     scale: 1.05;
 }
+
 
 @media screen and (max-width: 1000px){
     // .picturePresentation{

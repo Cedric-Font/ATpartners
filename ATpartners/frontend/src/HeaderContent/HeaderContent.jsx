@@ -2,12 +2,12 @@ import styles from "./HeaderContent.module.css";
 import ATmain from "../assets/ATpartnersMain.jpg";
 import { Link } from "react-router-dom";
 
-export default function HeaderContent() {
+export default function HeaderContent( {mainPicture} ) {
 
     return(
 <section className={styles.picturePresentation}>
         <div className={styles.headerPhoto}>
-          <img src={ATmain} alt="" className={styles.mainPicture} />
+          <img src={mainPicture} alt="" className={styles.mainPicture} />
           <div className={styles.fullTextIntro}>
           <p className={styles.textIntro}>
             Nous bâtissons. <br /> Nous nous engageons sur la qualité.
