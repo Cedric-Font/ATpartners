@@ -93,7 +93,9 @@
     position: relative;
     width: 90%;
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    height: 120px;
   }
   .input{
     border: none;
@@ -151,6 +153,7 @@
     justify-content: center;
     font-size: 30px;
     color: #979797;
+    bottom: 20px;
   }
   .submitButton{
     background-color: #0066FF;
@@ -194,14 +197,36 @@
   .mapContainer{
     display: flex;
     flex-direction: column;
+    align-items: center;
     width: 100%;
   }
   .messageContainer{
     width: 90%;
     display: flex;
     flex-direction: column;
+    margin-top: 30px;
 
   }
+  .iframeContainer{
+    display: none;
+  }
+  .inputTitle{
+    opacity: 0;
+    width: fit-content;
+    transform: translate(0%,200%);
+   }
+   .inputTitleDisplayed{
+    transition: 400ms;
+    opacity: 1;
+    transform: translate(0%,80%);
+    font-family: work sans;
+    color: rgb(44, 66, 149);
+    font-weight: 500;
+   }
+   .smallMessage{
+    margin-bottom: 3rem;
+    position: relative;
+   }
  
 //   .input::placeholder{
 //     margin-bottom: 20px;
@@ -272,6 +297,7 @@
   background-size: auto;
  }
  .iframeContainer{
+  display: block;
   margin-top: 10rem;
   margin-bottom: 14rem;
  }

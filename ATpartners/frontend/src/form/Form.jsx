@@ -191,7 +191,11 @@ export default function Form() {
           </form>
         </div>
         <div  className={styles.iframeContainer}>
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d21095.643491868017!2d2.4211902775070406!3d48.629834813317494!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e5de1eaa00cd73%3A0x2fc69a12a2793c39!2s%C3%89vry%2C%2091000%20%C3%89vry-Courcouronnes!5e0!3m2!1sfr!2sfr!4v1715616530450!5m2!1sfr!2sfr" width="1133" height="450" style={{border:0}} allowfullscreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d21095.643491868017!2d2.4211902775070406!3d48.629834813317494!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e5de1eaa00cd73%3A0x2fc69a12a2793c39!2s%C3%89vry%2C%2091000%20%C3%89vry-Courcouronnes!5e0!3m2!1sfr!2sfr!4v1715616530450!5m2!1sfr!2sfr" width="1133" height="450" style={{
+    border: "0",
+    WebkitFilter: "grayscale(100%)", // Utilisation de WebkitFilter pour le préfixe -webkit-
+    filter: "grayscale(100%)", // Utilisation de filter pour les autres navigateurs
+  }} allowfullscreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade">
         </iframe>
         </div>
       </section>
