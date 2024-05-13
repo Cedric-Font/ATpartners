@@ -111,6 +111,11 @@ li:hover {
   color: white;
 }
 
+.contactButtonContainer {
+  margin-left: auto;
+  margin-right: 3%;
+}
+
 @media screen and (max-width: 1000px) {
   .stickyNav {
     display: none;

@@ -19,4 +19,7 @@ body {
     width: 100%;
     margin-top: 100px;
   }
+  a {
+    text-decoration: none;
+  }
 }/*# sourceMappingURL=App.module.css.map */

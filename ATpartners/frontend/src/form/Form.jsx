@@ -1,11 +1,12 @@
 import styles from "./Form.module.css";
 import NavMobile from "../navBarMobile/NavMobile";
+import NavBarDesktop from "../navBarDesktop/NavBarDesktop";
 import formBackground from "../assets/formBackground.jpg";
 import Footer from "../footer/Footer";
 import FormVerification2 from "./FormVerification";
 import correct from "../assets/correct.png";
 import redCross from "../assets/redCross.png";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 export default function Form() {
   const formVerification = FormVerification2();
@@ -18,21 +19,9 @@ export default function Form() {
     enterpriseName: false,
     country: false,
   });
-
-  // const handleFocusChange = (fieldName, isFocused, e) => {
-  //   setFocusStates((prevFocusStates) => ({
-  //     ...prevFocusStates,
-  //     [fieldName]: isFocused,
-  //   }));
-  // if(e.target.value <= 0){
-  //   setFocusStates((prevFocusStates) => ({
-  //     ...prevFocusStates,
-  //     [fieldName]: true,
-  //   }));
-  //   console.log("coucou")
-  // }
-  //   console.log(focusStates)
-  // };
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, []);
   const handleFocusChange = (fieldName, isFocused, value, e) => {
     if (!isFocused && !value.trim()) {
       setFocusStates((prevFocusStates) => ({
@@ -104,11 +93,11 @@ export default function Form() {
           checked: formVerification.selectedCountry ? true : false,
         }
       ];
-      // console.log(ranges[0].checked)
 
   return (
     <div className={styles.fullFormContent}>
       <NavMobile />
+      <NavBarDesktop />
       <section className={styles.formHeader}>
         <div className={styles.mainPicture}>
           <img src={formBackground} alt="" className={styles.formBackground} />
@@ -195,7 +184,7 @@ export default function Form() {
     border: "0",
     WebkitFilter: "grayscale(100%)", // Utilisation de WebkitFilter pour le préfixe -webkit-
     filter: "grayscale(100%)", // Utilisation de filter pour les autres navigateurs
-  }} allowfullscreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade">
+  }} allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade">
         </iframe>
         </div>
       </section>

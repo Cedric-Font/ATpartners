@@ -6,6 +6,7 @@ import BurgerMenu from "../burgerMenu/BurgerMenu";
 import ATpartnersLogo from "../assets/ATpartnersLogo.png"
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { Link } from "react-router-dom";
 
 export default function NavBarDesktop() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -16,8 +17,6 @@ export default function NavBarDesktop() {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
-  // const liItems = document.querySelectorAll(".liNav")
-  // console.log(liItems)
 
   const handleScroll = () => {
     const scrollThreshold = 80;
@@ -26,26 +25,6 @@ export default function NavBarDesktop() {
       document.documentElement.scrollTop > scrollThreshold
     );
   };
-  // window.onscroll = function() {scrollFunction()};
-  // function scrollFunction() {
-  //   if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
-  //     document.getElementById("stickyNav").style.heigth = "65px";
-  //     document.getElementById("navDesktop").style.height = "65px";
-  //     document.getElementById("navDesktop").style.backgroundColor = "#2c4295";
-  //     if(liItems.length > 0) {
-  //       liItems.forEach((li) => {
-  //         li.style.color = "white";
-  //       })
-  //     } else {
-  //       console.log("no li items")
-  //     }
-
-  //   } else {
-  //     document.getElementById("stickyNav").style.heigth = "120px";
-  //     document.getElementById("navDesktop").style.height = "120px";
-  //     document.getElementById("navDesktop").style.backgroundColor = "transparent";
-  //   }
-  // }
     return (
       <div
       className={`${styles.stickyNav} ${isScrolled ? styles.scrolled : ""}`}
@@ -61,12 +40,24 @@ export default function NavBarDesktop() {
             <h2 className={`${styles.ATtitle} ${isScrolled ? styles.scrolled : ""}`}>ATpartners</h2>
             </div>
             <ul>
+              <Link to={{
+                pathname: "/",
+              }}>
                 <li className={`${styles.liNav} ${isScrolled ? styles.scrolled : ""}`}>Accueil</li>
+                </Link>
                 <li className={`${styles.liNav} ${isScrolled ? styles.scrolled : ""}`}>ATservices</li>
                 <li className={`${styles.liNav} ${isScrolled ? styles.scrolled : ""}`}>ATimmobilier</li>
                 <li className={`${styles.liNav} ${isScrolled ? styles.scrolled : ""}`}>ATpromotion</li>
             </ul>
-            <button className={styles.contactutton}>Contact</button>
+            <div className={styles.contactButtonContainer}>
+            <Link to={{
+                pathname: "/form",
+              }}>
+            <button className={styles.contactutton}>
+              Contact
+             </button>
+             </Link>
+             </div>
         </nav>
       {/* <div data-aos="zoom-in"
              data-aos-easing="ease-in-out"
