@@ -12,26 +12,75 @@ import ListItemText from '@mui/material/ListItemText';
 import Burger from "../assets/burgerMenu.svg";
 import WhiteBurgerMenu from "../assets/WhiteBurgerMenu.svg";
 import ATpartnersLogo from "../assets/ATpartnersLogo.png";
+import { Link } from "react-router-dom";
+import { useEffect, useRef } from "react";
 
 export default function TemporaryDrawer( {isScrolled}) {
   const [open, setOpen] = React.useState(false);
   const navigate = useNavigate();
+  const listRef = useRef(null);
+  const scrollRef = useRef(null);
+
 
   const toggleDrawer = (newOpen) => () => {
     setOpen(newOpen);
   };
+  useEffect(() => {
+    const anchor = window.location.hash.substring(1);
 
-  function scrollToElement(elementId, offset = -100) {
-    const element = document.getElementById(elementId);
-    if (element) {
-      const { top } = element.getBoundingClientRect();
-      console.log(top)
-      window.scrollTo({
-        top: top + window.scrollY + offset,
-        behavior: 'smooth'
-      });
+    if (anchor && listRef.current) {
+      const element = document.getElementById(anchor);
+
+      if (element) {
+        setTimeout(() => {
+          element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }, 100);
+      }
     }
-  }
+  }, []);
+
+  const scrollToElement = (text) => {
+    const anchor = text.toLowerCase().replace(/\s+/g, '');
+    if(text === "contact"){
+      navigate("/contact");
+      setOpen(false);
+      return;
+    }
+    navigate(`/#${anchor}`); // Redirige vers la racine avec l'ancre spécifiée
+    setOpen(false); // Ferme le menu déroulant après la navigation
+    console.log(text);
+  };
+
+  useEffect(() => {
+    const anchor = window.location.hash.substring(1);
+
+    if (anchor && scrollRef.current) {
+      const element = document.getElementById(anchor);
+
+      if (element) {
+        setTimeout(() => {
+          element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }, 100);
+      }
+    }
+  }, []);
+
+  const handleScrollTo = (text) => {
+    const anchor = text.toLowerCase().replace(/\s+/g, '');
+    scrollToElement(text); // Rediriger vers la page racine avec l'ancre spécifiée
+  
+    // Attendre un court délai avant de faire défiler pour garantir le rendu correct de l'élément
+    setTimeout(() => {
+      const element = document.getElementById(anchor);
+      if (element) {
+        // Calculer la position de défilement ajustée pour faire défiler 100 pixels au-dessus de l'élément ciblé
+        const { top } = element.getBoundingClientRect();
+        const offset = top + window.scrollY - 100; // Décalage de 100 pixels au-dessus de l'élément
+        window.scrollTo({ top: offset, behavior: 'smooth' });
+      }
+    }, 100);
+  };
+
 
   const Burgertab = [
     ['Home','Nos entreprises', 'Nos realisations', 'Qui sommes nous ?', 'contact'],
@@ -46,10 +95,13 @@ export default function TemporaryDrawer( {isScrolled}) {
       <img src={ATpartnersLogo} alt="" className={styles.ATpartnersLogo}/>
         <h2 className={styles.burgerTitle}>ATPartners</h2>
         </div>
-        <h2 className={styles.BurgerSubTitle}>ATPartners</h2>
+        <h2 className={styles.BurgerSubTitle}>
+          <Link to={{pathname: "/"}}>
+          ATPartners
+          </Link></h2>
         {['Home','Nos entreprises', 'Nos realisations', 'Qui sommes nous ?', 'contact'].map((text, index) => (
           <ListItem key={text} disablePadding sx={{ marginLeft: "80px" }}>
-            <ListItemButton sx={{ "span":{width: "15rem"} }} onClick={() => scrollToElement(text)} >
+            <ListItemButton sx={{ "span":{width: "15rem"} }} onClick={() => handleScrollTo(text)} >
               <ListItemText primary={text}sx={{ "span": {fontWeight: "bold"} }} />
             </ListItemButton>
           </ListItem>
@@ -60,7 +112,7 @@ export default function TemporaryDrawer( {isScrolled}) {
         <h2 className={styles.BurgerSubTitle}>ATServices</h2>
         {["home", "Qui sommes nous ?", "Reference", "Nos objectifs", "Nos valeurs", "Nos moyens humains"].map((text, index) => (
           <ListItem key={text} disablePadding sx={{ marginLeft: "80px" }}>
-            <ListItemButton sx={{ "span":{width: "15rem"} }} onClick={() => scrollToElement(text)} >
+            <ListItemButton sx={{ "span":{width: "15rem"} }} onClick={() => handleScrollTo(text)} >
               <ListItemText primary={text} sx={{ "span": {fontWeight: "bold"} }}/>
             </ListItemButton>
           </ListItem>

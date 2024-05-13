@@ -6,6 +6,7 @@ import { StyledEngineProvider } from '@mui/material/styles';
 import NavBarDesktop from './navBarDesktop/NavBarDesktop.jsx';
 import Footer from './footer/Footer.jsx';
 import './index.css'
+import Form from './form/Form.jsx'
 const router = createBrowserRouter([
   {
     path: "/",
@@ -14,6 +15,10 @@ const router = createBrowserRouter([
   {
     path: "/test",
     element: <Footer />,
+  },
+  {
+    path: "/contact",
+    element: <Form />,
   },
 ]);
 ReactDOM.createRoot(document.getElementById('root')).render(

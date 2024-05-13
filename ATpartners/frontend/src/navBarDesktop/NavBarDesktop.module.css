@@ -16,12 +16,14 @@
   height: 60px;
   margin-left: 10%;
   margin-right: 2%;
+  cursor: pointer;
 }
 
 .ATtitle {
   font-family: mitr;
   color: rgb(44, 66, 149);
   font-weight: 400;
+  cursor: pointer;
 }
 
 .navDesktop {
@@ -109,6 +111,12 @@ li:hover {
 .ATtitle.scrolled {
   transition: 400ms;
   color: white;
+  cursor: pointer;
+}
+
+.contactButtonContainer {
+  margin-left: auto;
+  margin-right: 3%;
 }
 
 @media screen and (max-width: 1000px) {

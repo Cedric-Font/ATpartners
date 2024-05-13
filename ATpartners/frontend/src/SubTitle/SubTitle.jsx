@@ -4,6 +4,7 @@ import styles from "./SubTitle.module.css";
 export default function SubTitle({ title, top, userAgent }) {
     const [largeur, setLargeur] = useState(window.innerWidth);
     const [margin, setMargin] = useState(top);
+    const titleId = title.toLowerCase().replace(/\s+/g, '')
 
     useEffect(() => {
         const handleResize = () => {
@@ -28,6 +29,6 @@ export default function SubTitle({ title, top, userAgent }) {
     const hrStyle = { marginTop: margin };
 
     return (
-        <hr id={title} className={styles.hr} title={title} style={hrStyle} />
+        <hr id={titleId} className={styles.hr} title={title} style={hrStyle} />
     );
 }

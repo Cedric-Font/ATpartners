@@ -17,6 +17,7 @@ function App() {
   const [userAgent, setUserAgent] = useState("")
 
   useEffect(() => {
+    window.scrollTo(0, 0)
     function getUserAgent() {
      const NowUserAgent = navigator.userAgent.toLowerCase()
      if(NowUserAgent.includes("iphone")) {

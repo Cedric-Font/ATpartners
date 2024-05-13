@@ -27,18 +27,20 @@
   margin-right: 15px;
 }
 
-.burgerTitle {
-  font-size: 36px;
-  font-family: mitr;
-  font-weight: 400;
-  color: rgb(44, 66, 149);
-}
-
 .BurgerSubTitle {
   color: rgb(44, 66, 149);
   font-family: mitr;
   font-weight: 400;
   font-size: 20px;
+  text-decoration: none;
+}
+
+.BurgerSubTitle a {
+  color: rgb(44, 66, 149);
+  font-family: mitr;
+  font-weight: 400;
+  font-size: 20px;
+  text-decoration: none;
 }
 
 @media screen and (max-width: 1000px) {
