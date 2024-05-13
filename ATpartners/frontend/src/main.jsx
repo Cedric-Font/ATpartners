@@ -17,7 +17,7 @@ const router = createBrowserRouter([
     element: <Footer />,
   },
   {
-    path: "/form",
+    path: "/contact",
     element: <Form />,
   },
 ]);

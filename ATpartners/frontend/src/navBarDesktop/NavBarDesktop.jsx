@@ -6,9 +6,11 @@ import BurgerMenu from "../burgerMenu/BurgerMenu";
 import ATpartnersLogo from "../assets/ATpartnersLogo.png"
 import AOS from "aos";
 import "aos/dist/aos.css";
-import { Link } from "react-router-dom";
+import { Link, Navigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 export default function NavBarDesktop() {
+  const navigate = useNavigate();
   const [isScrolled, setIsScrolled] = useState(false);
   useEffect(() => {
     AOS.init();
@@ -36,8 +38,8 @@ export default function NavBarDesktop() {
       >
             <div className={styles.logoContainer}>
             <BurgerMenu isScrolled={isScrolled} />
-            <img src={ATpartnersLogo} alt="" className={styles.ATpartnersLogo} />
-            <h2 className={`${styles.ATtitle} ${isScrolled ? styles.scrolled : ""}`}>ATpartners</h2>
+            <img src={ATpartnersLogo} alt="" className={styles.ATpartnersLogo} onClick={()=>navigate("/")} />
+            <h2 className={`${styles.ATtitle} ${isScrolled ? styles.scrolled : ""}`} onClick={()=>navigate("/")}>ATpartners</h2>
             </div>
             <ul>
               <Link to={{
@@ -51,7 +53,7 @@ export default function NavBarDesktop() {
             </ul>
             <div className={styles.contactButtonContainer}>
             <Link to={{
-                pathname: "/form",
+                pathname: "/contact",
               }}>
             <button className={styles.contactutton}>
               Contact

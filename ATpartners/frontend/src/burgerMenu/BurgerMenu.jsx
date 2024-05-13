@@ -41,8 +41,14 @@ export default function TemporaryDrawer( {isScrolled}) {
 
   const scrollToElement = (text) => {
     const anchor = text.toLowerCase().replace(/\s+/g, '');
+    if(text === "contact"){
+      navigate("/contact");
+      setOpen(false);
+      return;
+    }
     navigate(`/#${anchor}`); // Redirige vers la racine avec l'ancre spécifiée
     setOpen(false); // Ferme le menu déroulant après la navigation
+    console.log(text);
   };
 
   useEffect(() => {
