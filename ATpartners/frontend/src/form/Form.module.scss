@@ -189,10 +189,66 @@
     position : absolute;
     bottom: 15px;
   }
- 
+  .mapContainer{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  .messageContainer{
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+
+  }
  
 //   .input::placeholder{
 //     margin-bottom: 20px;
 //   }
+@media screen and (min-width: 1000px) {
+  .formBlur{
+    width: 50%;
+    height: auto;
+  }
+  .formInput{
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  .inputContainer{
+    width: 34%;
+    display: flex;
+    flex-direction: column;
+    // margin-left: 8rem;
+  }
+  .selectContainer{
+    width: 94%;
+  }
+  .mapContainer{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    height: 400px;
+  }
+  .input.textArea{
+    margin-top: 5rem;
+  }
+  .input{
+    height: fit-content;
+  }
+ .iconContainer{
+  right: 20px;
+ }
+ .coucou{
+  opacity: 0;
+  width: fit-content;
+  transform: translate(0%,200%);
+ }
+ .coucou2{
+  transition: 400ms;
+  opacity: 1;
+  transform: translate(0%,-11%);
+ }
 
+}
  

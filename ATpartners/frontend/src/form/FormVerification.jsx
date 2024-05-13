@@ -8,6 +8,7 @@ export default function FormVerification() {
   const [firstname, setFirstname] = useState("");
   const [enterpriseName, setEnterpriseName] = useState("");
   const [message, setMessage] = useState("");
+  const [selectedCountry, setSelectedCountry] = useState("");
 
   const [falsePhoneNumber, setFalsePhoneNumber] = useState("");
   const [falsePseudo, setFalsePseudo] = useState("");
@@ -96,13 +97,25 @@ const handleChangePseudo = (event) => {
     }
 
     const handleMessage = (m) => {
-        if (m.target.value.length <= 500) {
+        if (m.target.value.length <= 500 && m.target.value.length >= 30) {
           setFalseMessage("");
-          setMessage(m.target.value);
-        } else {
-          setFalseMessage(<small>Le message est trop long</small>);
+          setMessage("true");
+        } else if (m.target.value.length < 30) {
+          setFalseMessage(<small>Le message doit contenri au moin 30 caracteres</small>);
+        } else if(m.target.value.length > 500) {
+          setFalseMessage(<small>Le message ne doit pas depasser 500 caracteres</small>);
         }
       }
+
+      const handleCountry = (e) => {
+        if(e.target.value !== "Pays") {
+          setSelectedCountry("true");
+          console.log(e.target.value)
+          console.log(selectedCountry)
+        } else {
+          setSelectedCountry("false");
+        }
+      };
 
      
       useEffect(() => {
@@ -113,6 +126,8 @@ const handleChangePseudo = (event) => {
               firstname &&
               enterpriseName &&
               email &&
+              message &&
+              selectedCountry &&
               !falsePhoneNumber &&
               !falsePseudo &&
               !falseFirstname &&
@@ -127,7 +142,7 @@ const handleChangePseudo = (event) => {
             }
           };
         validateForm();
-      }, [pseudo, phoneNumber, firstname, enterpriseName, email, falsePhoneNumber, falsePseudo, falseFirstname, falseEnterpriseName, falseMessage, falseEmail, phoneNumberError]);
+      }, [pseudo, phoneNumber, firstname, enterpriseName, email, falsePhoneNumber, falsePseudo, falseFirstname, falseEnterpriseName, falseMessage, falseEmail, phoneNumberError, selectedCountry], message);
     //   console.log(isFormValid)
   return {
     email,
@@ -162,5 +177,7 @@ const handleChangePseudo = (event) => {
     setFalseMessage,
     isFormValid,
     setIsFormValid,
+    selectedCountry,
+    handleCountry,
   };
 }
