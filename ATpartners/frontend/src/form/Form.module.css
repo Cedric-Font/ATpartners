@@ -119,6 +119,7 @@
   font-size: 24px;
   font-weight: 400;
   margin-bottom: 30px;
+  z-index: 10;
 }
 
 .input:focus {
@@ -159,6 +160,7 @@
           appearance: none;
   border-bottom: solid 1px #979797;
   background-color: transparent;
+  font-size: 24px;
 }
 
 .iconContainer {
@@ -257,15 +259,22 @@
   .iconContainer {
     right: 20px;
   }
-  .coucou {
+  .inputTitle {
     opacity: 0;
     width: -moz-fit-content;
     width: fit-content;
     transform: translate(0%, 200%);
   }
-  .coucou2 {
+  .inputTitleDisplayed {
     transition: 400ms;
     opacity: 1;
     transform: translate(0%, -11%);
+    font-family: work sans;
+    color: rgb(44, 66, 149);
+    font-weight: 500;
+  }
+  .smallMessage {
+    margin-bottom: 3rem;
+    position: relative;
   }
 }/*# sourceMappingURL=Form.module.css.map */

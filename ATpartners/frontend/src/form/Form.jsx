@@ -70,7 +70,7 @@ export default function Form() {
         {
             value: "phoneNumber",
             state: formVerification.phoneNumber,
-            text: "Numéron de téléphone",
+            text: "Numéro de téléphone",
             function: formVerification.handlePhoneNumberChange,
             small: formVerification.phoneNumberError,
             class: "input",
@@ -88,7 +88,7 @@ export default function Form() {
         {
           value: "enterpriseName",
           state: formVerification.enterpriseName,
-          text: "Nom de l'entreprise",
+          text: "Société",
           function: formVerification.handleEnterpriseName,
           small: formVerification.falseEnterpriseName,
           class: "input",
@@ -134,7 +134,7 @@ export default function Form() {
             <div className={styles.mapContainer}>
           {ranges.map((e) => (
             <div  className={styles.inputContainer} key={e.text}>
-              <h2 className={`${styles.coucou} ${focusStates[e.value] ? styles.coucou2 : ""}`}>{e.text}</h2>
+              <h2 className={`${styles.inputTitle} ${focusStates[e.value] ? styles.inputTitleDisplayed : ""}`}>{e.text}</h2>
               {e.class === "input" ?
                 <input
                   type="text"
@@ -148,7 +148,7 @@ export default function Form() {
                   onBlur={() => handleFocusChange(e.value, false, e.state)}
                   required
                 /> : <div className={styles.selectContainer}>
-                <select name="country" id="" className={styles.select} required onChange={e.function}>
+                <select name="country" id="countrySelect" className={styles.select} required onChange={e.function}>
                   <option
                     value=""
                     className={styles.selectedDefaultValue}
@@ -158,9 +158,9 @@ export default function Form() {
                   >
                     Pays
                   </option>
-                  <option value="France">france</option>
+                  <option value="France">France</option>
                   <option value="Belgique">Belgique</option>
-                  <option value="Angleter">Angleter</option>
+                  <option value="Angleterre">Angleterre</option>
                   <option value="Alemagne">Alemagne</option>
                   <option value="Italie">Italie</option>
                 </select>
@@ -183,7 +183,7 @@ export default function Form() {
               placeholder="Message"
               onChange={formVerification.handleMessage}
             />
-            <small>{formVerification.falseMessage}</small>
+             <div className={`${styles.small} ${styles.smallMessage}`}>{formVerification.falseMessage}</div>
             </div>
             <button type="submit" disabled={!formVerification.isFormValid} className={`${styles.submitButton} ${!formVerification.isFormValid ? styles.disabled : styles.unlockSubmitButton}`}>
               Envoyer

@@ -89,6 +89,7 @@ const handleChangePseudo = (event) => {
     setEnterpriseName(e.target.value);
     if (e.target.value.length <= MAX_LENGTH_ENTERPRISE) {
       setFalseEnterpriseName("");
+      enterpriseName("true")
     } else if(e.target.value.length === 0) {
         setFalseEnterpriseName(<small>Ce champ ne peut pas etre vide</small>);
     } else {
