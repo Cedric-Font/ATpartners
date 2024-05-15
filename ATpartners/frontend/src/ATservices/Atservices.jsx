@@ -1,16 +1,14 @@
 import styles from "./Atservices.module.css";
 import NavMobile from "../navBarMobile/NavMobile";
 import NavBarDesktop from "../navBarDesktop/NavBarDesktop";
-import HeaderContent from "../HeaderContent/HeaderContent";
 import ATservicesMain from "../assets/AtservicesHeader.jpg";
 import { Link } from "react-router-dom";
-import wave from "../assets/wave.svg";
 import imageWave from "../assets/imageWave.svg";
-import waveClaire from "../assets/waveClaire.svg";
 import sale from "../assets/sale.svg";
 import grue from "../assets/grue.svg";
 import flask from "../assets/flask.svg";
 import ble from "../assets/ble.svg";
+import reference from "../assets/reference.jpg";
 
 export default function Atservices() {
   const iconTab = [
@@ -34,6 +32,21 @@ export default function Atservices() {
       number: "35 000 m2",
       text: "panneaux agro",
     },
+  ];
+
+  const referencesTab = [
+    {
+        image: reference,
+        text: "CATALENT4031, GOSSELIES (Belgique) DATE : JANVIER-MAI 2022 CHIFFRE D’AFFAIRES : 462 937,50 €",
+    },
+    {
+        image: reference,
+        text: "YPOSKESI 91100, CORBEIL-ESSONES DATE : MAI-DECEMBRE 2022 CHIFFRE D’AFFAIRES : 324 877,50 €",
+    },
+    {
+        image: reference,
+        text: "ATELIER INOVE 45500, SAINT DENIS DE L’HOTEL DATE : MARS-MAI 2022 CHIFFRE D’AFFAIRES : 83 000,00 €",
+    }
   ];
   return (
     <>
@@ -85,29 +98,60 @@ export default function Atservices() {
         </div>
         <div className={styles.waveMainBackground}>
           <div className={styles.waveContainer}>
+            <div className={styles.pohotContainer}>
             <img src={imageWave} alt="" className={styles.imageWave} />
-            {/* <img src={waveClaire} alt="" className={styles.waveClaire}/>
-           <img src={wave} alt="" className={styles.wave} /> */}
             <div className={styles.customshapedividertop}>
-            <svg width="100%" height="100%" id="svg" viewBox="0 0 1440 690" xmlns="http://www.w3.org/2000/svg" class="transition duration-300 ease-in-out delay-150"><path d="M 0,700 L 0,262 C 150.66666666666663,314.4 301.33333333333326,366.8 478,351 C 654.6666666666667,335.2 857.3333333333335,251.20000000000002 1022,225 C 1186.6666666666665,198.79999999999998 1313.3333333333333,230.39999999999998 1440,262 L 1440,700 L 0,700 Z" stroke="none" stroke-width="0" fill="#3696f7" fill-opacity="1" class="transition-all duration-300 ease-in-out delay-150 path-0"></path></svg>
+            <svg width="100%" height="100%" id="svg" viewBox="0 0 1440 690" xmlns="http://www.w3.org/2000/svg"><path d="M 0,700 L 0,262 C 150.66666666666663,314.4 301.33333333333326,366.8 478,351 C 654.6666666666667,335.2 857.3333333333335,251.20000000000002 1022,225 C 1186.6666666666665,198.79999999999998 1313.3333333333333,230.39999999999998 1440,262 L 1440,700 L 0,700 Z" stroke="none" stroke-width="0" fill="#3696f7" fill-opacity="1" class="transition-all duration-300 ease-in-out delay-150 path-0">
+                </path>
+                </svg>
             </div>
             <div className={styles.customshapedividertop2}>
-            <svg width="100%" height="100%" id="svg" viewBox="0 0 1440 690" xmlns="http://www.w3.org/2000/svg" class="transition duration-300 ease-in-out delay-150"><path d="M 0,700 L 0,262 C 188,308.1333333333333 376,354.2666666666667 519,343 C 662,331.7333333333333 760,263.06666666666666 906,240 C 1052,216.93333333333334 1246,239.46666666666667 1440,262 L 1440,700 L 0,700 Z" stroke="none" stroke-width="0" fill="#00bad3" fill-opacity="1" class="transition-all duration-300 ease-in-out delay-150 path-0"></path></svg>
+            <svg width="100%" height="100%" id="svg" viewBox="0 0 1440 690" xmlns="http://www.w3.org/2000/svg"><path d="M 0,700 L 0,262 C 188,308.1333333333333 376,354.2666666666667 519,343 C 662,331.7333333333333 760,263.06666666666666 906,240 C 1052,216.93333333333334 1246,239.46666666666667 1440,262 L 1440,700 L 0,700 Z" stroke="none" stroke-width="0" fill="#00bad3" fill-opacity="1" className={styles.fillShape2}>
+                </path>
+                </svg>
             </div>
+            </div>
+            {/* <img src={waveClaire} alt="" className={styles.waveClaire}/>
+           <img src={wave} alt="" className={styles.wave} /> */}
+           
           </div>
           <div className={styles.logoContainer}>
             {iconTab.map((icon, index) => (
               <div key={index} className={styles.fullIcon}>
                 <img src={icon.icon} alt="" className={styles.iconImg} />
-                {/* <p className={styles.iconNumber}>{icon.number}</p>
-                    <p className={styles.iconText}>{icon.text}</p> */}
+                <p className={styles.iconNumber}>{icon.number}</p>
+                    <p className={styles.iconText}>{icon.text}</p>
               </div>
             ))}
           </div>
+          <div className={styles.downWave}>
+             <div className={styles.waveContainer}>
+            <div className={styles.pohotContainer}>
+            <div className={styles.customshapedividertop}>
+            <svg width="100%" height="100%" id="svg" viewBox="0 0 1440 690" xmlns="http://www.w3.org/2000/svg" class="transition duration-300 ease-in-out delay-150"><path d="M 0,700 L 0,262 C 150.66666666666663,314.4 301.33333333333326,366.8 478,351 C 654.6666666666667,335.2 857.3333333333335,251.20000000000002 1022,225 C 1186.6666666666665,198.79999999999998 1313.3333333333333,230.39999999999998 1440,262 L 1440,700 L 0,700 Z" stroke="none" stroke-width="0" fill="#3696f7" fill-opacity="1" class="transition-all duration-300 ease-in-out delay-150 path-0">
+                </path>
+                </svg>
+            </div>
+            <div className={styles.customshapedividertop3}>
+            <svg width="100%" height="100%" id="svg" viewBox="0 0 1440 690" xmlns="http://www.w3.org/2000/svg" class="transition duration-300 ease-in-out delay-150"><path d="M 0,700 L 0,262 C 188,308.1333333333333 376,354.2666666666667 519,343 C 662,331.7333333333333 760,263.06666666666666 906,240 C 1052,216.93333333333334 1246,239.46666666666667 1440,262 L 1440,700 L 0,700 Z" stroke="none" stroke-width="0" fill="#00bad3" fill-opacity="1" class="transition-all duration-300 ease-in-out delay-150 path-0">
+                </path>
+                </svg>
+            </div>
+            </div>
+          </div>
+          </div>
+          <p className={styles.references}>réferences</p>
         </div>
-        {/* <div className={styles.test}>
-
-        </div> */}
+      </section>
+      <section className={styles.referenceContainer}>
+        <div className={styles.referenceMap}>
+            {referencesTab.map((reference, index) => (
+                <div key={index} className={styles.reference}>
+                    <img src={reference.image} alt="" className={styles.referenceImage} />
+                    <p className={styles.referenceText}>{reference.text}</p>
+                </div>
+            ))}
+        </div>
       </section>
     </>
   );

@@ -123,22 +123,18 @@
   position: relative;
   width: 100%;
   height: 1800px;
+  margin-top: 50px;
 }
 
 .waveContainer {
   width: 100%;
   position: relative;
-  border: solid;
-  height: 2000px;
 }
 
 .imageWave {
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-  height: -moz-fit-content;
-  height: fit-content;
-  position: absolute;
 }
 
 .waveClaire {
@@ -159,7 +155,6 @@
 }
 
 .logoContainer {
-  position: absolute;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -170,6 +165,7 @@
   font-weight: bold;
   text-align: center;
   top: 350px;
+  background-color: #3696F7;
 }
 
 .fullIcon {
@@ -188,12 +184,11 @@
 .test {
   background-image: url("../assets/wave.svg");
   background-size: cover;
-  border: solid;
 }
 
 .customshapedividertop {
   position: absolute;
-  top: 9rem;
+  bottom: 0;
   left: 0;
   width: 100%;
   overflow: hidden;
@@ -208,12 +203,83 @@
 
 .customshapedividertop2 {
   position: absolute;
-  top: 9rem;
+  bottom: 2rem;
   left: 0;
   width: 100%;
   overflow: hidden;
-  rotate: -5deg;
+  rotate: 0deg;
   transform: scaleX(-1);
   line-height: 0;
   z-index: 1;
+}
+
+.waveBackground {
+  position: absolute;
+  height: 400px;
+  z-index: 3;
+  top: 10rem;
+  width: 100%;
+}
+
+.pohotContainer {
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: auto;
+}
+
+.downWave {
+  rotate: 180deg;
+}
+
+.customshapedividertop3 {
+  position: absolute;
+  bottom: 2rem;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  rotate: 0deg;
+  transform: scaleX(-1);
+  line-height: 0;
+  z-index: 1;
+}
+
+.references {
+  color: white;
+  position: absolute;
+  z-index: 200;
+  width: 100%;
+  text-align: center;
+  font-family: work sans;
+  font-weight: bold;
+  font-size: 40px;
+}
+
+.referenceContainer {
+  background: linear-gradient(180deg, rgb(44, 66, 149) 75%, rgb(246, 246, 246) 100%);
+  height: 1000px;
+  width: 100%;
+}
+
+.referenceMap {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.reference {
+  width: 80%;
+  margin-top: 80px;
+}
+
+.referenceImage {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.referenceText {
+  color: white;
+  font-family: inter;
 }/*# sourceMappingURL=Atservices.module.css.map */
