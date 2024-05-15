@@ -152,6 +152,10 @@ export default function Atservices() {
                 </div>
             ))}
         </div>
+        <div className={styles.moreInformation}>
+            <h2 className={styles.moreTitle}>Vous souaithez en savoir plus sur ATservices ?</h2>
+            <p className={styles.moreText}>Venez découvrir comment fonctionne ATservices ainsi que ses objectifs et ses engagements</p>
+        </div>
       </section>
     </>
   );
