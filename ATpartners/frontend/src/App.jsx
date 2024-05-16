@@ -11,6 +11,7 @@ import salleBlanche from './assets/salleBlanche2.jpg'
 import Footer from './footer/Footer';
 import HeaderContent from './HeaderContent/HeaderContent';
 import EnterprisesLinkPicturesIphone from './EnterprisesLinkpictureIphone/EnterprisesLinkpictureIphone';
+import ATmain from './assets/ATpartnersMain.jpg'
 
 
 function App() {
@@ -35,9 +36,10 @@ function App() {
 
   return (
     <div id='Home'>
+      
       <NavBarDesktop />
       <NavMobile />
-      <HeaderContent />
+      <HeaderContent mainPicture={ATmain}/>
       <SubTitle title={"Nos entreprises"}  top={"600px"}/>
       {/* <h2 className={styles.owerEnterprisesTitle}>Nos Entreprises</h2> */}
       <div className={styles.enterpriseLinkContainer}>
