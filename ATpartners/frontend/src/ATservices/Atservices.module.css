@@ -259,6 +259,7 @@
 .referenceContainer {
   background: linear-gradient(180deg, rgb(44, 66, 149) 60%, rgb(246, 246, 246) 100%);
   width: 100%;
+  padding-top: 45%;
 }
 
 .referenceMap {
