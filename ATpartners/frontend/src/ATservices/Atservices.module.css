@@ -106,7 +106,7 @@
 }
 
 .aboutTitle {
-  font-size: 35px;
+  font-size: 28px;
   font-family: work sans;
   text-align: center;
   margin: 0;
@@ -114,16 +114,17 @@
 
 .aboutText {
   font-family: work sans;
-  font-size: 20px;
-  font-weight: 200;
-  text-align: center;
+  font-size: 14px;
+  font-weight: 400;
+  margin-top: 40px;
 }
 
 .waveMainBackground {
   position: relative;
   width: 100%;
-  height: 1800px;
+  height: 100%;
   margin-top: 50px;
+  background: linear-gradient(180deg, rgb(246, 246, 246) 0%, rgb(44, 66, 149) 50%);
 }
 
 .waveContainer {
@@ -256,8 +257,7 @@
 }
 
 .referenceContainer {
-  background: linear-gradient(180deg, rgb(44, 66, 149) 75%, rgb(246, 246, 246) 100%);
-  height: 1000px;
+  background: linear-gradient(180deg, rgb(44, 66, 149) 60%, rgb(246, 246, 246) 100%);
   width: 100%;
 }
 
@@ -271,23 +271,31 @@
 .reference {
   width: 80%;
   margin-top: 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .referenceImage {
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  border-radius: 15px;
 }
 
 .referenceText {
   color: white;
   font-family: inter;
+  font-weight: 400;
+  font-size: 24px;
+  width: 80%;
 }
 
 .moreInformation {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-top: 100px;
 }
 
 .moreTitle {
@@ -295,7 +303,7 @@
   font-size: 24px;
   font-weight: bold;
   color: #2C4295;
-  width: 37%;
+  width: 50%;
   margin: 0;
 }
 
@@ -304,7 +312,18 @@
   font-size: 16px;
   font-weight: 400;
   font-family: work sans;
-  width: 37%;
+  width: 50%;
   margin: 0;
   margin-top: 10px;
+}
+
+.moreInformationBtn {
+  border: none;
+  color: white;
+  background-color: #0066FF;
+  font-family: work sans;
+  font-size: 16px;
+  border-radius: 5px;
+  margin-top: 60px;
+  padding: 10px;
 }/*# sourceMappingURL=Atservices.module.css.map */

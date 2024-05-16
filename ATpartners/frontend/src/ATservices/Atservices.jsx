@@ -9,6 +9,7 @@ import grue from "../assets/grue.svg";
 import flask from "../assets/flask.svg";
 import ble from "../assets/ble.svg";
 import reference from "../assets/reference.jpg";
+import Footer from "../footer/Footer";
 
 export default function Atservices() {
   const iconTab = [
@@ -101,12 +102,12 @@ export default function Atservices() {
             <div className={styles.pohotContainer}>
             <img src={imageWave} alt="" className={styles.imageWave} />
             <div className={styles.customshapedividertop}>
-            <svg width="100%" height="100%" id="svg" viewBox="0 0 1440 690" xmlns="http://www.w3.org/2000/svg"><path d="M 0,700 L 0,262 C 150.66666666666663,314.4 301.33333333333326,366.8 478,351 C 654.6666666666667,335.2 857.3333333333335,251.20000000000002 1022,225 C 1186.6666666666665,198.79999999999998 1313.3333333333333,230.39999999999998 1440,262 L 1440,700 L 0,700 Z" stroke="none" stroke-width="0" fill="#3696f7" fill-opacity="1" class="transition-all duration-300 ease-in-out delay-150 path-0">
+            <svg width="100%" height="100%" id="svg" viewBox="0 0 1440 690" xmlns="http://www.w3.org/2000/svg"><path d="M 0,700 L 0,262 C 150.66666666666663,314.4 301.33333333333326,366.8 478,351 C 654.6666666666667,335.2 857.3333333333335,251.20000000000002 1022,225 C 1186.6666666666665,198.79999999999998 1313.3333333333333,230.39999999999998 1440,262 L 1440,700 L 0,700 Z" stroke="none" fill="#3696f7">
                 </path>
                 </svg>
             </div>
             <div className={styles.customshapedividertop2}>
-            <svg width="100%" height="100%" id="svg" viewBox="0 0 1440 690" xmlns="http://www.w3.org/2000/svg"><path d="M 0,700 L 0,262 C 188,308.1333333333333 376,354.2666666666667 519,343 C 662,331.7333333333333 760,263.06666666666666 906,240 C 1052,216.93333333333334 1246,239.46666666666667 1440,262 L 1440,700 L 0,700 Z" stroke="none" stroke-width="0" fill="#00bad3" fill-opacity="1" className={styles.fillShape2}>
+            <svg width="100%" height="100%" id="svg" viewBox="0 0 1440 690" xmlns="http://www.w3.org/2000/svg"><path d="M 0,700 L 0,262 C 188,308.1333333333333 376,354.2666666666667 519,343 C 662,331.7333333333333 760,263.06666666666666 906,240 C 1052,216.93333333333334 1246,239.46666666666667 1440,262 L 1440,700 L 0,700 Z" stroke="none" fill="#00bad3" className={styles.fillShape2}>
                 </path>
                 </svg>
             </div>
@@ -128,12 +129,12 @@ export default function Atservices() {
              <div className={styles.waveContainer}>
             <div className={styles.pohotContainer}>
             <div className={styles.customshapedividertop}>
-            <svg width="100%" height="100%" id="svg" viewBox="0 0 1440 690" xmlns="http://www.w3.org/2000/svg" class="transition duration-300 ease-in-out delay-150"><path d="M 0,700 L 0,262 C 150.66666666666663,314.4 301.33333333333326,366.8 478,351 C 654.6666666666667,335.2 857.3333333333335,251.20000000000002 1022,225 C 1186.6666666666665,198.79999999999998 1313.3333333333333,230.39999999999998 1440,262 L 1440,700 L 0,700 Z" stroke="none" stroke-width="0" fill="#3696f7" fill-opacity="1" class="transition-all duration-300 ease-in-out delay-150 path-0">
+            <svg width="100%" height="100%" id="svg" viewBox="0 0 1440 690" xmlns="http://www.w3.org/2000/svg" ><path d="M 0,700 L 0,262 C 150.66666666666663,314.4 301.33333333333326,366.8 478,351 C 654.6666666666667,335.2 857.3333333333335,251.20000000000002 1022,225 C 1186.6666666666665,198.79999999999998 1313.3333333333333,230.39999999999998 1440,262 L 1440,700 L 0,700 Z" stroke="none" fill="#3696f7">
                 </path>
                 </svg>
             </div>
             <div className={styles.customshapedividertop3}>
-            <svg width="100%" height="100%" id="svg" viewBox="0 0 1440 690" xmlns="http://www.w3.org/2000/svg" class="transition duration-300 ease-in-out delay-150"><path d="M 0,700 L 0,262 C 188,308.1333333333333 376,354.2666666666667 519,343 C 662,331.7333333333333 760,263.06666666666666 906,240 C 1052,216.93333333333334 1246,239.46666666666667 1440,262 L 1440,700 L 0,700 Z" stroke="none" stroke-width="0" fill="#00bad3" fill-opacity="1" class="transition-all duration-300 ease-in-out delay-150 path-0">
+            <svg width="100%" height="100%" id="svg" viewBox="0 0 1440 690" xmlns="http://www.w3.org/2000/svg" ><path d="M 0,700 L 0,262 C 188,308.1333333333333 376,354.2666666666667 519,343 C 662,331.7333333333333 760,263.06666666666666 906,240 C 1052,216.93333333333334 1246,239.46666666666667 1440,262 L 1440,700 L 0,700 Z" stroke="none" fill="#00bad3">
                 </path>
                 </svg>
             </div>
@@ -155,8 +156,10 @@ export default function Atservices() {
         <div className={styles.moreInformation}>
             <h2 className={styles.moreTitle}>Vous souaithez en savoir plus sur ATservices ?</h2>
             <p className={styles.moreText}>Venez découvrir comment fonctionne ATservices ainsi que ses objectifs et ses engagements</p>
+            <button className={styles.moreInformationBtn}>En savoir plus &nbsp; &gt;&gt;</button>
         </div>
       </section>
+            <Footer />
     </>
   );
 }
