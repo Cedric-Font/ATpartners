@@ -40,6 +40,7 @@ function App() {
       <NavBarDesktop />
       <NavMobile />
       <HeaderContent mainPicture={ATmain}/>
+      <section className={styles.padding}>
       <SubTitle title={"Nos entreprises"}  top={"600px"}/>
       {/* <h2 className={styles.owerEnterprisesTitle}>Nos Entreprises</h2> */}
       <div className={styles.enterpriseLinkContainer}>
@@ -55,6 +56,7 @@ function App() {
       <Realisations title={"Salle blanche"} direction={"row-reverse"} content={"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut urna eget arcu varius aliquam. Nulla facilisi. Nullam euismod, ligula nec porttitor."} picture={salleBlanche}/>
       <Realisations title={"Salle blanche"} content={"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut urna eget arcu varius aliquam. Nulla facilisi. Nullam euismod, ligula nec porttitor."} picture={salleBlanche}/>
       <Footer title={"ATservices"}></Footer>
+      </section>
     </div>
   )
 }

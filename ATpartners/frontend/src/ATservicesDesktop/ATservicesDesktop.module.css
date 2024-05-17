@@ -1,3 +1,7 @@
+.ATservicesMainContainer {
+  display: none;
+}
+
 .ATservicesheader {
   margin-top: 15px;
 }
@@ -339,7 +343,7 @@
 
 @media only screen and (min-width: 1000px) {
   .ATservicesMainContainer {
-    display: none;
+    display: block;
   }
   .gradient2 {
     display: block;
@@ -359,8 +363,75 @@
   }
   .logoContainer {
     flex-direction: row;
+    position: absolute;
+    z-index: 100;
+    top: 70%;
   }
   .fullIcon {
-    margin-right: 100px;
+    margin-bottom: 0px;
   }
-}/*# sourceMappingURL=Atservices.module.css.map */
+  .logoWidth {
+    width: 52%;
+    justify-content: space-between;
+    display: flex;
+    flex-direction: row;
+  }
+  .referenceMap {
+    position: relative;
+  }
+  .reference.index0 {
+    bottom: 0;
+    display: flex;
+    flex-direction: row;
+    top: -60%;
+    width: 100%;
+    padding-left: 35%;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+  .reference.index0 .referenceImage {
+    width: 24%;
+  }
+  .reference.index0 .referenceText {
+    width: 424px;
+    margin-left: 50px;
+  }
+  .reference.index1 {
+    position: static;
+    display: flex;
+    flex-direction: row-reverse;
+    padding-right: 35%;
+  }
+  .reference.index1 .referenceText {
+    margin-right: 50px;
+    text-align: right;
+  }
+  .reference.index2 {
+    position: static;
+    display: flex;
+    flex-direction: row;
+    padding-left: 35%;
+    margin-top: 8%;
+  }
+  .reference.index2 .referenceText {
+    margin-left: 50px;
+  }
+  .referenceImage {
+    width: 24%;
+    min-width: 500px;
+  }
+  .reference {
+    position: absolute;
+    margin-top: 0px;
+    width: 100%;
+  }
+  .referenceText {
+    width: 424px;
+  }
+  .moreInformation {
+    text-align: center;
+  }
+  .moreText {
+    text-align: center;
+  }
+}/*# sourceMappingURL=ATservicesDesktop.module.css.map */
