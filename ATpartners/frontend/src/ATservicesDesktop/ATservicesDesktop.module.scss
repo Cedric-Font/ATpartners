@@ -371,7 +371,28 @@
     display: flex;
     flex-direction: row;
     width: 490px;
+    position: relative;
    }
+   .hr {
+    border: none;
+    border-top: solid 3px #2C4295;
+    color: #2C4295;
+    overflow: visible;
+    left: -58%;
+    top: 19rem;
+    width: 500px;
+    position: absolute;
+    transform: rotate(90deg);
+  }
+  // .hr::after {
+  //   background: transparent;
+  //   position: relative;
+  //   font-weight: bold;
+  //   color: #2C4295;
+  //   width: 50px;
+  //   top: -22px;
+  //   transform: rotate(90deg);
+  // }
   .aboutPicture{
     width: 100%;
     height: 40rem;
@@ -382,11 +403,12 @@
     background-color: #eeeeeeac;
     padding: 30px;
     width: 390px;
-    bottom: 0rem;
-    left: 55%;
+    bottom: -3rem;
+    left: 57%;
     color: #2C4295;
     border-radius: 10px;
     position: absolute;
+    backdrop-filter: blur(4px);
   }
   .logoContainer{
     flex-direction: row;

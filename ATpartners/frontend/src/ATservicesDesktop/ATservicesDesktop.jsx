@@ -92,6 +92,7 @@ export default function ATservicesDesktop() {
             </button>
             </div>
             <div className={styles.aboutPictureMain}>
+                <hr className={styles.hr}/>
             <img src={aboutPicture} alt="" className={styles.aboutPicture} />
             <p className={styles.aboutText}>
               ATServices est une entreprise de BTP qui intervient dans le domaine
