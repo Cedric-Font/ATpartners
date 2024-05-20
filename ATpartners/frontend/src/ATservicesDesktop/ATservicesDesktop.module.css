@@ -14,7 +14,7 @@
 .formBackground {
   min-width: 430px;
   width: 100%;
-  height: 530px;
+  height: 900px;
   -o-object-fit: cover;
      object-fit: cover;
 }
@@ -22,9 +22,9 @@
 .gradient {
   background: linear-gradient(90deg, rgb(44, 66, 149) 0%, rgba(37, 129, 196, 0.43) 100%);
   width: 100%;
-  height: 530px;
+  height: 900px;
   position: absolute;
-  top: 0;
+  top: 0px;
   left: 0;
   z-index: 1;
 }
@@ -35,7 +35,7 @@
   position: absolute;
   z-index: 5;
   width: 90%;
-  top: 70px;
+  top: 30%;
   margin-right: auto;
   margin-left: auto;
   left: 5%;
@@ -61,7 +61,7 @@
   margin: 0;
   top: 0;
   left: 0;
-  width: 80%;
+  width: 35%;
 }
 
 .discoverButton {
@@ -78,7 +78,7 @@
   border-radius: 5px;
   bottom: 200px;
   transition: 250ms;
-  top: 28rem;
+  top: 70%;
   z-index: 100;
 }
 
@@ -99,12 +99,11 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 80%;
-  border-radius: 0px 64px 0px 64px;
-  background-color: #00ace3;
+  width: 100%;
   color: white;
   padding: 50px;
   box-sizing: border-box;
+  background-color: #00ACE3;
   margin-top: 30px;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
@@ -118,9 +117,10 @@
 
 .aboutText {
   font-family: work sans;
-  font-size: 14px;
-  font-weight: 400;
+  font-size: 18px;
+  font-weight: bold;
   margin-top: 40px;
+  width: 60%;
 }
 
 .waveMainBackground {
@@ -166,7 +166,7 @@
   align-items: center;
   flex-direction: column;
   color: white;
-  font-size: 32px;
+  font-size: 20px;
   font-weight: bold;
   text-align: center;
   top: 350px;
@@ -342,6 +342,13 @@
 }
 
 @media only screen and (min-width: 1000px) {
+  .aboutTitle {
+    font-size: 35px;
+    text-align: start;
+  }
+  .mainPicture {
+    margin-top: 128px;
+  }
   .ATservicesMainContainer {
     display: block;
   }
@@ -361,6 +368,66 @@
     -o-object-fit: cover;
        object-fit: cover;
   }
+  .aboutContainer {
+    background-color: transparent;
+    flex-direction: row;
+    justify-content: center;
+    align-items: start;
+  }
+  .aboutTextMain {
+    display: flex;
+    flex-direction: column;
+    font-size: 30px;
+    font-weight: medium bold;
+    color: #2C4295;
+    width: 450px;
+    padding: 50px;
+    padding-top: 0px;
+  }
+  .discoverButton2 {
+    background-color: #0066ff;
+    color: white;
+    border: none;
+    font-family: inter;
+    font-size: 14px;
+    height: 40px;
+    font-weight: bold;
+    text-align: center;
+    left: 5%;
+    border-radius: 5px;
+    bottom: 200px;
+    transition: 250ms;
+    top: 70%;
+    z-index: 100;
+    width: 200px;
+  }
+  .discoverButton2:hover {
+    cursor: pointer;
+    background-color: #0052cc;
+    scale: 1.05;
+  }
+  .aboutPictureMain {
+    display: flex;
+    flex-direction: row;
+    width: 490px;
+  }
+  .aboutPicture {
+    width: 100%;
+    height: 40rem;
+    -o-object-fit: cover;
+       object-fit: cover;
+    border-radius: 10px;
+  }
+  .aboutText {
+    background-color: rgba(238, 238, 238, 0.6745098039);
+    padding: 30px;
+    width: 390px;
+    bottom: 0rem;
+    left: 55%;
+    color: #2C4295;
+    border-radius: 10px;
+    position: absolute;
+  }
   .logoContainer {
     flex-direction: row;
     position: absolute;
@@ -368,13 +435,22 @@
     top: 70%;
   }
   .fullIcon {
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.297);
+    padding: 10px;
     margin-bottom: 0px;
+    box-shadow: 2px 2px 7px white;
+    transition: 250ms;
+  }
+  .fullIcon:hover {
+    scale: 1.02;
   }
   .logoWidth {
     width: 52%;
-    justify-content: space-between;
+    justify-content: center;
     display: flex;
     flex-direction: row;
+    gap: 50px;
   }
   .referenceMap {
     position: relative;

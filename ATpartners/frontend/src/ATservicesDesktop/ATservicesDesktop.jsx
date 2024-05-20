@@ -11,6 +11,7 @@ import flask from "../assets/flask.svg";
 import ble from "../assets/ble.svg";
 import reference from "../assets/reference.jpg";
 import Footer from "../footer/Footer";
+import aboutPicture from "../assets/aboutPicture.jpeg";
 
 export default function ATservicesDesktop() {
 
@@ -83,7 +84,15 @@ export default function ATservicesDesktop() {
         </section>
         <section className={styles.bodyContainer}>
           <div className={styles.aboutContainer}>
+            <div className={styles.aboutTextMain}>
             <h2 className={styles.aboutTitle}>Qui sommes-nous ?</h2>
+            <p>Nous nous adaptons aux mieux à vos besoins et mettons nos compétences à votre service.</p>
+            <p>Découvrez notre équipe et nos valeurs et nos réalisations.</p>
+            <button className={styles.discoverButton2}>Découvir nos équipes &nbsp; &nbsp; &gt;&gt;
+            </button>
+            </div>
+            <div className={styles.aboutPictureMain}>
+            <img src={aboutPicture} alt="" className={styles.aboutPicture} />
             <p className={styles.aboutText}>
               ATServices est une entreprise de BTP qui intervient dans le domaine
               d’installation de panneaux sandwich et menuiseries isothermes. Avec
@@ -98,6 +107,7 @@ export default function ATservicesDesktop() {
               réseau en plaçant la satisfaction du client au centre de nos
               priorités.
             </p>
+            </div>
           </div>
           <div className={styles.waveMainBackground}>
             <div className={styles.waveContainer}>
