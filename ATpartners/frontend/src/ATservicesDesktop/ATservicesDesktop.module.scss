@@ -384,15 +384,15 @@
     position: absolute;
     transform: rotate(90deg);
   }
-  // .hr::after {
-  //   background: transparent;
-  //   position: relative;
-  //   font-weight: bold;
-  //   color: #2C4295;
-  //   width: 50px;
-  //   top: -22px;
-  //   transform: rotate(90deg);
-  // }
+  .hr::after {
+    background: transparent;
+    position: relative;
+    font-weight: bold;
+    color: #2C4295;
+    width: 50px;
+    top: -22px;
+    transform: rotate(90deg);
+  }
   .aboutPicture{
     width: 100%;
     height: 40rem;
@@ -433,6 +433,34 @@
     display: flex;
     flex-direction: row;
     gap: 50px;
+  }
+  .referenceHr{
+        border: none;
+        position: relative;
+        border-top: solid 2px #ffffff;
+        color: #ffffff;
+        overflow: visible;
+        text-align: center;
+        height: 5px;
+        width: 50%;
+        margin-top: 50px;
+  }
+  .referenceHr::after {
+    background: rgba(246, 246, 246, 1);
+         content: "Réferences";
+        padding: 0 50px;
+        font-weight: bold;
+        color: #ffffff;
+        font-size: 45px;
+        text-align: center;
+        width: 50px;
+        top: -30px;
+        font-family: work sans;
+        display: inline;
+        background-color: #3696F7;
+  }
+  .references{
+    display: none;
   }
   .referenceMap{
     position: relative;
@@ -487,8 +515,67 @@
    }
    .moreInformation{
     text-align: center;
+    display: none;
    }
    .moreText{
     text-align: center;
+   }
+   .ourObjectifs{
+    margin-top: 100px;
+    text-align: center;
+    color: #2C4295;
+    font-weight: 600;
+    font-size: 36px;
+    font-family: work sans;
+   }
+   .aveirContainer{
+    display: flex;
+    position: relative;
+;
+   }
+   .avenirImg{
+    min-width: 500px;
+    width: 20%;
+    margin-left: 25%;
+   }
+   .avenirText{
+    min-width: 490px;
+    width: 20%;
+    background-color: #dfdfdfa4;
+    height: fit-content;
+    border-radius: 10px;
+    backdrop-filter: blur(4px);
+    color: #2C4295;
+    font-weight: 500;
+    font-family: work sans;
+    padding: 20px;
+    position: absolute;
+    left: 35%;
+    bottom: 20px;
+   }
+   .objectifsContainer{
+    display: flex;
+    flex-direction: row-reverse;
+    position: relative;
+   }
+   .objectifsImg{
+    min-width: 500px;
+    width: 20%;
+    margin-right: 25%;
+   }
+   .objectifsText{
+    min-width: 490px;
+    width: 20%;
+    background-color: #dfdfdfa4;
+    height: fit-content;
+    border-radius: 10px;
+    backdrop-filter: blur(4px);
+    color: #2C4295;
+    font-weight: 500;
+    font-family: work sans;
+    padding: 20px;
+    position: absolute;
+    right: 35%;
+    bottom: 20px;
    }
   }
