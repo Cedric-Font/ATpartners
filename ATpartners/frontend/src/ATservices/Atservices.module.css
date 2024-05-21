@@ -327,4 +327,40 @@
   border-radius: 5px;
   margin-top: 60px;
   padding: 10px;
+}
+
+.gradient2 {
+  display: none;
+}
+
+.formBackgroundDesktop {
+  display: none;
+}
+
+@media only screen and (min-width: 1000px) {
+  .ATservicesMainContainer {
+    display: none;
+  }
+  .gradient2 {
+    display: block;
+    width: 100%;
+    position: absolute;
+    height: 400px;
+    background: linear-gradient(180deg, rgb(246, 246, 246) 20%, rgba(255, 255, 255, 0) 100%);
+  }
+  .imageWave {
+    display: none;
+  }
+  .formBackgroundDesktop {
+    display: block;
+    width: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .logoContainer {
+    flex-direction: row;
+  }
+  .fullIcon {
+    margin-right: 100px;
+  }
 }/*# sourceMappingURL=Atservices.module.css.map */

@@ -1,0 +1,581 @@
+
+.ATservicesMainContainer{
+  display: none;
+}
+.ATservicesheader {
+    margin-top: 15px;
+  }
+  .mainPicture {
+    position: relative;
+    display: flex;
+  }
+  .formBackground {
+    min-width: 430px;
+    width: 100%;
+    height: 900px;
+    object-fit: cover;
+  }
+  .gradient {
+    background: linear-gradient(
+      90deg,
+      rgba(44, 66, 149, 1) 0%,
+      rgba(37, 129, 196, 0.43) 100%
+    );
+    width: 100%;
+    height: 900px;
+    position: absolute;
+    top: 0px;
+    left: 0;
+    z-index: 1;
+  }
+  .textContainer {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    z-index: 5;
+    width: 90%;
+    top: 30%;
+    margin-right: auto;
+    margin-left: auto;
+    left: 5%;
+  }
+  .textIntro {
+    font-family: work sans;
+    font-size: 40px;
+    font-weight: bold;
+    color: white;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    margin: 0;
+  }
+  .textIntroSecond {
+    font-family: work sans;
+    font-size: 20px;
+    font-weight: 300;
+    color: white;
+    z-index: 2;
+    margin: 0;
+    top: 0;
+    left: 0;
+    width: 35%;
+  }
+  .discoverButton {
+    position: absolute;
+    background-color: #0066ff;
+    color: white;
+    border: none;
+    font-family: inter;
+    font-size: 14px;
+    height: 40px;
+    font-weight: bold;
+    text-align: center;
+    left: 5%;
+    border-radius: 5px;
+    bottom: 200px;
+    transition: 250ms;
+    top: 70%;
+    z-index: 100;
+  }
+  
+  .discoverButton:hover {
+    cursor: pointer;
+    background-color: #0052cc;
+    scale: 1.05;
+  }
+  .bodyContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+  .aboutContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    color: white;
+    padding: 50px;
+    box-sizing: border-box;
+    background-color: #00ACE3;
+    margin-top: 30px;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  }
+  .aboutTitle {
+    font-size: 28px;
+    font-family: work sans;
+    text-align: center;
+    margin: 0;
+  }
+  .aboutText {
+    font-family: work sans;
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 40px;
+    width: 60%;
+  }
+  .waveMainBackground {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    margin-top: 50px;
+    background: linear-gradient(180deg, rgba(246, 246, 246, 1) 0%, rgb(44, 66, 149) 50%);
+  
+  }
+  .waveContainer{
+      width: 100%;
+      position: relative;
+  }
+  .imageWave {
+      width: 100%;
+      object-fit: cover;
+  }
+  .waveClaire {
+      width: 100%;
+      top: 33vw;
+      object-fit: cover;
+      position: absolute;
+  }
+  .wave {
+      width: 100%;
+      top: 38vw;
+      object-fit: cover;
+      z-index: 2;
+      position: absolute;
+  }
+  .logoContainer{
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      color: white;
+      font-size: 20px;
+      font-weight: bold;
+      text-align: center;
+      top: 350px;
+      background-color: #3696F7;
+  }
+  .fullIcon{
+      margin-bottom: 80px;
+  }
+  .iconImg{
+  }
+  .iconNumber{
+      margin: 0;
+      margin-top: 20px;
+  }
+  .iconText{
+      margin: 0;
+  }
+  .test{
+      background-image: url("../assets/wave.svg");
+      background-size: cover;
+  }
+  .customshapedividertop {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      overflow: hidden;
+      line-height: 0;
+      transform: scaleX(-1);
+      z-index: 2;
+  }
+  .shapeFill{
+      fill:#3696F7;
+  }
+  .customshapedividertop2 {
+      position: absolute;
+      bottom: 2rem;
+      left: 0;
+      width: 100%;
+      overflow: hidden;
+      rotate: 0deg;
+      transform: scaleX(-1);
+      line-height: 0;
+      z-index: 1;
+  }
+  .waveBackground{
+      position: absolute;
+      height: 400px;
+      z-index: 3;
+      top: 10rem;
+      width: 100%;
+  }
+  .pohotContainer{
+      position: relative;
+      display: flex;
+      width: 100%;
+      height: auto;
+  }
+  .downWave{
+      rotate: 180deg;
+  }
+  .customshapedividertop3 {
+      position: absolute;
+      bottom: 2rem;
+      left: 0;
+      width: 100%;
+      overflow: hidden;
+      rotate: 0deg;
+      transform: scaleX(-1);
+      line-height: 0;
+      z-index: 1;
+  }
+  .references{
+      color: white;
+      position: absolute;
+      z-index: 200;
+      width: 100%;
+      text-align: center;
+      font-family: work sans;
+      font-weight: bold;
+      font-size: 40px;
+  }
+  .referenceContainer{
+      background: linear-gradient(180deg, rgba(44,66,149,1) 60%, rgba(246,246,246,1) 100%);    
+      width: 100%;
+      padding-top: 45%;
+  }
+  .referenceMap{
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+  }
+  .reference{
+      width: 80%;
+      margin-top: 80px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+  }
+  .referenceImage{
+      width: 100%;
+      object-fit: cover;
+      border-radius: 15px;
+  }
+  .referenceText{
+      color: white;
+      font-family: inter;
+      font-weight: 400;
+      font-size: 24px;
+      width: 80%;
+  }
+  .moreInformation{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 100px;
+  }
+  .moreTitle{
+      font-family: work sans;
+      font-size: 24px;
+      font-weight: bold;
+      color: #2C4295;
+      width: 50%;
+      margin: 0;
+  }
+  .moreText{
+      color: #2C4295;
+      font-size: 16px;
+      font-weight: 400;
+      font-family: work sans;
+      width: 50%;
+      margin: 0;
+      margin-top: 10px;
+  }
+  .moreInformationBtn{
+    border: none;
+    color: white;
+    background-color: #0066FF;
+    font-family: work sans;
+    font-size: 16px;
+    border-radius: 5px;
+    margin-top: 60px;
+    padding: 10px;
+  }
+  .gradient2{
+    display: none;
+  }
+  .formBackgroundDesktop{
+    display: none;
+  }
+  
+  @media only screen and (min-width: 1000px){
+    .aboutTitle {
+      font-size: 35px;
+      text-align: start;
+    }
+    .mainPicture{
+      margin-top: 128px;
+    }
+.ATservicesMainContainer{
+  display: block;
+}
+  .gradient2{
+    display: block;
+    width: 100%;
+    position: absolute;
+    height: 400px;
+    background: linear-gradient(180deg, rgba(246, 246, 246,1) 20%, rgba(255,255,255,0) 100%);
+  }
+  .imageWave{
+    display: none;
+  }
+  .formBackgroundDesktop{
+    display: block;
+    width: 100%;
+    object-fit: cover;
+  }
+  .aboutContainer{
+    background-color: transparent;
+    flex-direction: row;
+    justify-content: center;
+    align-items: start;
+  }
+  .aboutTextMain{
+    display: flex;
+    flex-direction: column;
+    font-size: 30px;
+    font-weight: medium bold;
+    color: #2C4295;
+    width: 450px;
+    padding: 50px;
+    padding-top: 0px;
+   }
+   .discoverButton2{
+    background-color: #0066ff;
+    color: white;
+    border: none;
+    font-family: inter;
+    font-size: 14px;
+    height: 40px;
+    font-weight: bold;
+    text-align: center;
+    left: 5%;
+    border-radius: 5px;
+    bottom: 200px;
+    transition: 250ms;
+    top: 70%;
+    z-index: 100;
+    width: 200px;
+  }
+  .discoverButton2:hover {
+    cursor: pointer;
+    background-color: #0052cc;
+    scale: 1.05;
+  }
+   .aboutPictureMain{
+    display: flex;
+    flex-direction: row;
+    width: 490px;
+    position: relative;
+   }
+   .hr {
+    border: none;
+    border-top: solid 3px #2C4295;
+    color: #2C4295;
+    overflow: visible;
+    left: -58%;
+    top: 19rem;
+    width: 500px;
+    position: absolute;
+    transform: rotate(90deg);
+  }
+  .hr::after {
+    background: transparent;
+    position: relative;
+    font-weight: bold;
+    color: #2C4295;
+    width: 50px;
+    top: -22px;
+    transform: rotate(90deg);
+  }
+  .aboutPicture{
+    width: 100%;
+    height: 40rem;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+  .aboutText{
+    background-color: #eeeeeeac;
+    padding: 30px;
+    width: 390px;
+    bottom: -3rem;
+    left: 57%;
+    color: #2C4295;
+    border-radius: 10px;
+    position: absolute;
+    backdrop-filter: blur(4px);
+  }
+  .logoContainer{
+    flex-direction: row;
+    position: absolute;
+    z-index: 100;
+    top: 70%;
+  }
+  .fullIcon{
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.297);
+    padding: 10px;
+    margin-bottom: 0px;
+    box-shadow: 2px 2px 7px white;
+    transition: 250ms;
+  }
+  .fullIcon:hover{
+    scale: 1.02;
+  }
+  .logoWidth{
+    width: 52%;
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+  }
+  .referenceHr{
+        border: none;
+        position: relative;
+        border-top: solid 2px #ffffff;
+        color: #ffffff;
+        overflow: visible;
+        text-align: center;
+        height: 5px;
+        width: 50%;
+        margin-top: 50px;
+  }
+  .referenceHr::after {
+    background: rgba(246, 246, 246, 1);
+         content: "Réferences";
+        padding: 0 50px;
+        font-weight: bold;
+        color: #ffffff;
+        font-size: 45px;
+        text-align: center;
+        width: 50px;
+        top: -30px;
+        font-family: work sans;
+        display: inline;
+        background-color: #3696F7;
+  }
+  .references{
+    display: none;
+  }
+  .referenceMap{
+    position: relative;
+  }
+  .reference.index0{
+    bottom: 0;
+    display: flex;
+    flex-direction: row;
+    top: -60%;
+    width: 100%;
+    padding-left: 35%;
+    height: fit-content;
+  }
+  .reference.index0 .referenceImage{
+    width: 24%;
+  }
+  .reference.index0 .referenceText{
+    width: 424px;
+    margin-left: 50px;
+  }
+  .reference.index1{
+    position: static;
+    display: flex;
+    flex-direction: row-reverse;
+    padding-right: 35%;
+  }
+  .reference.index1 .referenceText{
+    margin-right: 50px;
+    text-align: right;
+  }
+  .reference.index2{
+    position: static;
+    display: flex;
+    flex-direction: row;
+    padding-left: 35%;
+    margin-top: 8%;
+  }
+  .reference.index2 .referenceText{
+    margin-left: 50px;
+  }
+   .referenceImage{
+    width: 24%;
+    min-width: 500px;
+   }
+   .reference{
+    position: absolute;
+    margin-top: 0px;
+    width: 100%;
+   }
+   .referenceText{
+    width: 424px;
+   }
+   .moreInformation{
+    text-align: center;
+    display: none;
+   }
+   .moreText{
+    text-align: center;
+   }
+   .ourObjectifs{
+    margin-top: 100px;
+    text-align: center;
+    color: #2C4295;
+    font-weight: 600;
+    font-size: 36px;
+    font-family: work sans;
+   }
+   .aveirContainer{
+    display: flex;
+    position: relative;
+;
+   }
+   .avenirImg{
+    min-width: 500px;
+    width: 20%;
+    margin-left: 25%;
+   }
+   .avenirText{
+    min-width: 490px;
+    width: 20%;
+    background-color: #dfdfdfa4;
+    height: fit-content;
+    border-radius: 10px;
+    backdrop-filter: blur(4px);
+    color: #2C4295;
+    font-weight: 500;
+    font-family: work sans;
+    padding: 20px;
+    position: absolute;
+    left: 35%;
+    bottom: 20px;
+   }
+   .objectifsContainer{
+    display: flex;
+    flex-direction: row-reverse;
+    position: relative;
+   }
+   .objectifsImg{
+    min-width: 500px;
+    width: 20%;
+    margin-right: 25%;
+   }
+   .objectifsText{
+    min-width: 490px;
+    width: 20%;
+    background-color: #dfdfdfa4;
+    height: fit-content;
+    border-radius: 10px;
+    backdrop-filter: blur(4px);
+    color: #2C4295;
+    font-weight: 500;
+    font-family: work sans;
+    padding: 20px;
+    position: absolute;
+    right: 35%;
+    bottom: 20px;
+   }
+  }

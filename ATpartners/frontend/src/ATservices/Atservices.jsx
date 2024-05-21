@@ -10,6 +10,8 @@ import flask from "../assets/flask.svg";
 import ble from "../assets/ble.svg";
 import reference from "../assets/reference.jpg";
 import Footer from "../footer/Footer";
+import FormBackground from "../assets/formBackground.jpg";
+import FormBackground2 from "../assets/formBackground2.png";
 
 export default function Atservices() {
   const iconTab = [
@@ -50,7 +52,7 @@ export default function Atservices() {
     }
   ];
   return (
-    <>
+    <div className={styles.ATservicesMainContainer}>
       <NavMobile />
       <NavBarDesktop />
       <section className={styles.ATservicesheader}>
@@ -101,6 +103,10 @@ export default function Atservices() {
           <div className={styles.waveContainer}>
             <div className={styles.pohotContainer}>
             <img src={imageWave} alt="" className={styles.imageWave} />
+            
+            <img src={FormBackground} alt="" className={styles.formBackgroundDesktop}/>
+            <div className={styles.gradient2}>
+            </div>
             <div className={styles.customshapedividertop}>
             <svg width="100%" height="100%" id="svg" viewBox="0 0 1440 690" xmlns="http://www.w3.org/2000/svg"><path d="M 0,700 L 0,262 C 150.66666666666663,314.4 301.33333333333326,366.8 478,351 C 654.6666666666667,335.2 857.3333333333335,251.20000000000002 1022,225 C 1186.6666666666665,198.79999999999998 1313.3333333333333,230.39999999999998 1440,262 L 1440,700 L 0,700 Z" stroke="none" fill="#3696f7">
                 </path>
@@ -160,6 +166,6 @@ export default function Atservices() {
         </div>
       </section>
             <Footer />
-    </>
+    </div>
   );
 }

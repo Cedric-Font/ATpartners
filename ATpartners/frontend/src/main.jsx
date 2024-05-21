@@ -7,6 +7,7 @@ import Footer from './footer/Footer.jsx';
 import './index.css'
 import Form from './form/Form.jsx'
 import Atservices from './ATservices/Atservices.jsx'
+import ATservicesDesktop from './ATservicesDesktop/ATservicesDesktop.jsx';
 
 const router = createBrowserRouter([
   {
@@ -23,7 +24,7 @@ const router = createBrowserRouter([
   },
   {
     path: "/ATservices",
-    element: <Atservices />,
+    element:<> <Atservices /> <ATservicesDesktop /> </>, 
   },
 ]);
 ReactDOM.createRoot(document.getElementById('root')).render(
