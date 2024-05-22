@@ -13,6 +13,7 @@ import reference from "../assets/reference.jpg";
 import Footer from "../footer/Footer";
 import aboutPicture from "../assets/aboutPicture.jpeg";
 import avenir from "../assets/avenir.svg";
+import Values from '../OurValues/OurValues';
 
 export default function ATservicesDesktop() {
   const iconTab = [
@@ -268,6 +269,7 @@ export default function ATservicesDesktop() {
             panneaux et menuiseries isothermes.
           </p>
         </div>
+        <Values />
       </section>
       <Footer />
     </div>
