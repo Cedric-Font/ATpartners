@@ -14,6 +14,7 @@ import Footer from "../footer/Footer";
 import aboutPicture from "../assets/aboutPicture.jpeg";
 import avenir from "../assets/avenir.svg";
 import Values from '../OurValues/OurValues';
+import Ressources from '../Ressources/Ressources'
 
 export default function ATservicesDesktop() {
   const iconTab = [
@@ -271,6 +272,7 @@ export default function ATservicesDesktop() {
         </div>
         <Values />
       </section>
+      <Ressources />
       <Footer />
     </div>
   );
