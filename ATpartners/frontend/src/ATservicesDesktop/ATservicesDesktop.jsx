@@ -55,7 +55,7 @@ export default function ATservicesDesktop() {
     },
   ];
   return (
-    <div className={styles.ATservicesMainContainer}>
+    <div className={styles.ATservicesMainContainer} id="atserviceshome">
       <NavMobile />
       <NavBarDesktop />
       <section className={styles.ATservicesheader}>
@@ -87,7 +87,7 @@ export default function ATservicesDesktop() {
       <section className={styles.bodyContainer}>
         <div className={styles.aboutContainer}>
           <div className={styles.aboutTextMain}>
-            <h2 className={styles.aboutTitle}>Qui sommes-nous ?</h2>
+            <h2 className={styles.aboutTitle} id="quisommesnous?">Qui sommes-nous ?</h2>
             <p>
               Nous nous adaptons aux mieux à vos besoins et mettons nos
               compétences à votre service.
@@ -174,7 +174,7 @@ export default function ATservicesDesktop() {
           <div className={styles.downWave}>
             <div className={styles.waveContainer}>
               <div className={styles.pohotContainer}>
-                <div className={styles.customshapedividertop}>
+                <div className={styles.customshapedividertop4}>
                   <svg
                     width="100%"
                     height="100%"
@@ -207,14 +207,8 @@ export default function ATservicesDesktop() {
               </div>
             </div>
           </div>
-          <hr className={styles.referenceHr} />
+          <hr className={styles.referenceHr} id="references"/>
           <p className={styles.references}>Réferences</p>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa fuga
-            vitae corrupti? Amet sit asperiores ipsam accusantium corrupti
-            possimus fuga inventore, omnis, consectetur eius fugit neque,
-            officiis quidem dignissimos doloribus.
-          </p>
         </div>
       </section>
       <section className={styles.referenceContainer}>
@@ -247,7 +241,7 @@ export default function ATservicesDesktop() {
         </div>
       </section>
       <section className={styles.objectifs}>
-        <h2 className={styles.ourObjectifs}>Nos objectifs</h2>
+        <h2 className={styles.ourObjectifs} id="nosobjectifs" >Nos objectifs</h2>
         <div className={styles.aveirContainer}>
           <img src={avenir} alt="" className={styles.avenirImg} />
           <p className={styles.avenirText}>
@@ -270,6 +264,7 @@ export default function ATservicesDesktop() {
             panneaux et menuiseries isothermes.
           </p>
         </div>
+        
         <Values />
       </section>
       <Ressources />

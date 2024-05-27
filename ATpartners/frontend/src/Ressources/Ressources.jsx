@@ -5,7 +5,7 @@ import formBackground from "../assets/formBackground.jpg";
 export default function Ressources() {
   return (
     <>
-      <section className={styles.RessoucesSection}>
+      <section className={styles.RessoucesSection} id="nosmoyenshumains">
         <div className={styles.ressourcesTextContainer}>
           <h2 className={styles.ressourcesTitle}>NOS MOYENS HUMAINS</h2>
           <p className={styles.ressourcesText}>

@@ -182,6 +182,16 @@
       transform: scaleX(-1);
       z-index: 2;
   }
+  .customshapedividertop4{
+    position: absolute;
+    bottom: -3rem;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: scaleX(-1);
+    z-index: 2;
+}
   .shapeFill{
       fill:#3696F7;
   }
@@ -214,7 +224,7 @@
   }
   .customshapedividertop3 {
       position: absolute;
-      bottom: 2rem;
+      bottom: 0;
       left: 0;
       width: 100%;
       overflow: hidden;
@@ -234,9 +244,9 @@
       font-size: 40px;
   }
   .referenceContainer{
-      background: linear-gradient(180deg, rgba(44,66,149,1) 60%, rgba(246,246,246,1) 100%);    
+      // background: linear-gradient(180deg, rgba(44,66,149,1) 60%, rgba(246,246,246,1) 100%);    
       width: 100%;
-      padding-top: 45%;
+      padding-top: 25%;
   }
   .referenceMap{
       width: 100%;
@@ -259,7 +269,7 @@
   .referenceText{
       color: white;
       font-family: inter;
-      font-weight: 400;
+      font-weight: 500;
       font-size: 24px;
       width: 80%;
   }
@@ -404,7 +414,7 @@
     padding: 30px;
     width: 390px;
     bottom: -3rem;
-    left: 57%;
+    left: 20%;
     color: #2C4295;
     border-radius: 10px;
     position: absolute;
@@ -471,11 +481,12 @@
     flex-direction: row;
     top: -60%;
     width: 100%;
-    padding-left: 35%;
+    padding-left: 50%;
     height: fit-content;
   }
   .reference.index0 .referenceImage{
-    width: 24%;
+    min-width: 450px;
+    width: 16%;
   }
   .reference.index0 .referenceText{
     width: 424px;
@@ -485,25 +496,27 @@
     position: static;
     display: flex;
     flex-direction: row-reverse;
-    padding-right: 35%;
+    padding-right: 50%;
   }
   .reference.index1 .referenceText{
     margin-right: 50px;
     text-align: right;
+    color: #2C4295;
   }
   .reference.index2{
     position: static;
     display: flex;
     flex-direction: row;
-    padding-left: 35%;
-    margin-top: 8%;
+    padding-left: 50%;
+    margin-top: 3%;
   }
   .reference.index2 .referenceText{
     margin-left: 50px;
+    color: #2C4295;
   }
    .referenceImage{
-    width: 24%;
-    min-width: 500px;
+    min-width: 450px;
+    width: 16%;
    }
    .reference{
     position: absolute;

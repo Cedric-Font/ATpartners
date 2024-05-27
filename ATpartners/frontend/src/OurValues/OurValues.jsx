@@ -46,7 +46,7 @@ export default function OurValues() {
     <>
       <section className={styles.valuesSection}>
         <div className={styles.valuesHeader}>
-          <h2 className={styles.valuesTitle}>NOS VALEURS ET ENGAGEMENTS</h2>
+          <h2 className={styles.valuesTitle} id="nosvaleurs">NOS VALEURS ET ENGAGEMENTS</h2>
           <p className={styles.valuesText}>
             La société Valentin Espace de Vie est animée au quotidien autour de
             4 valeurs que l’ensemble des collaborateurs partagent. Ces
@@ -70,6 +70,7 @@ export default function OurValues() {
                             </div>
                         </div>
                         <p className={styles.logoContent}>{logo.content}</p>
+                        <hr className={styles.hr}></hr>
                         </div>
                     )
                 })}

@@ -8,10 +8,12 @@ align-items: center ;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 40%;
+    width: 45%;
     background-color: #2C4295;
     border-radius: 10px;
     padding: 30px;
+    margin-top: 100px;
+    margin-bottom: 100px;
 }
 .valuesTitle{
     color: white;
@@ -32,7 +34,6 @@ align-items: center ;
     width: 100%;
     background-color: transparent;
     position: relative;
-    height: 1920px;
 }
 .valuesImg{
 }
@@ -47,6 +48,8 @@ align-items: center ;
     font-size: 18px;
     font-weight: 400;
     font-family: mitr;
+    position: relative;
+    margin-bottom: 50px;
 
 }
 .logoContainer{
@@ -109,3 +112,22 @@ border: solid 3px white;
     width: fit-content;
     margin-left: 34vw;
 }
+.hr {
+    border: none;
+    border-top: solid 2px #2C4295;
+    color: #2C4295;
+    overflow: visible;
+    left: 0%;
+    top: 16rem;
+    width: 100%;
+    position: absolute;
+  }
+  .hr::after {
+    background: transparent;
+    position: relative;
+    font-weight: bold;
+    color: #2C4295;
+    width: 50px;
+    top: -22px;
+    transform: rotate(90deg);
+  }
