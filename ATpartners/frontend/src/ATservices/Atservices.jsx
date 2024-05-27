@@ -168,7 +168,9 @@ export default function Atservices() {
         <div className={styles.moreInformation}>
             <h2 className={styles.moreTitle}>Vous souaithez en savoir plus sur ATservices ?</h2>
             <p className={styles.moreText}>Venez découvrir comment fonctionne ATservices ainsi que ses objectifs et ses engagements</p>
+            <Link to={{pathname: "/AboutATservices"}}>
             <button className={styles.moreInformationBtn}>En savoir plus &nbsp; &gt;&gt;</button>
+            </Link>
         </div>
       </section>
             <Footer />

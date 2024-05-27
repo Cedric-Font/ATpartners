@@ -1,0 +1,65 @@
+.AboutATservicesHeaderSection{
+    width: 100%;
+}
+.mainPictureContainer{
+    position: relative  ;
+    width: 100%;
+}
+.mainPicture{
+    object-fit: cover;
+    height: 530px;
+    width: 100%;
+}
+.gradient{
+    background: linear-gradient(
+        90deg,
+        rgba(44, 66, 149, 1) 0%,
+        rgba(37, 129, 196, 0.43) 100%
+      );
+      width: 100%;
+      height: 530px;
+      position: absolute;
+      top: 0px;
+      left: 0;
+      z-index: 1;
+}
+.titleContent{
+    position: absolute;
+    z-index: 5;
+    left: 50%;
+    top: 20%;
+    transform: translate(-50%, -50%); /* décalage de 50% de sa propre taille */
+    color: white;
+    font-family: inter;
+    font-size: 40px;
+    font-weight: bold;
+    text-align: center;
+}
+.title{
+    margin: 0;
+}
+.headerTextContainer{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    position: absolute;
+    top: 55%;
+    min-width: 300px;
+    width: 100%;
+    max-width: 999px;
+    z-index: 6;
+    color: white;
+    font-size: 30px;
+    font-family: inter;
+    font-weight: bold;
+    text-decoration: underline;
+}
+.item{
+    text-align: center  ;
+    width: calc(50% - 5px);
+
+}
+.test{
+   width: 100%;
+   text-align: center;
+}

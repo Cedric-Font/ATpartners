@@ -26,7 +26,7 @@ export default function EnterprisesLinkPictureIphone( {pictures} ) {
         <>
         <div className={styles.linksPictures}>
             <Link className={styles.link} to={{
-                pathname: "/test",
+                pathname: `/${pictures}`,
             }}>
             <img src={linkPictures[pictures].src} alt="" className={styles.ATpicture} />
             <h2 className={styles.ATtitle}>{linkPictures[pictures].alt}</h2>
