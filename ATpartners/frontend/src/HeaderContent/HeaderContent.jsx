@@ -4,6 +4,16 @@ import { Link } from "react-router-dom";
 
 export default function HeaderContent( {mainPicture} ) {
 
+  function scroll() {
+    const element = document.getElementById("nosrealisations");
+    const { top } = element.getBoundingClientRect();
+    const offset = top + window.scrollY - 100; // Décalage de 100 pixels au-dessus de l'élément
+    setTimeout(() => {
+      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      window.scrollTo({ top: offset, behavior: 'smooth' });
+    }, 100);
+  }
+
     return(
 <section className={styles.picturePresentation}>
         <div className={styles.headerPhoto}>
@@ -18,12 +28,12 @@ export default function HeaderContent( {mainPicture} ) {
             vous aidons a réaliser vos projets.
           </p>
           </div>
-          <Link className={styles.discoverButtonLink}
+          {/* <Link className={styles.discoverButtonLink}
           to={{
             pathname: "/test",
-          }}>
-          <button className={styles.discoverButton}>Découvrir nos réalisations &nbsp; &nbsp; &gt;&gt;</button>
-          </Link>
+          }}> */}
+          <button className={styles.discoverButton} onClick={scroll}>Découvrir nos réalisations &nbsp; &nbsp; &gt;&gt;</button>
+          {/* </Link> */}
         </div>
       </section>
     )

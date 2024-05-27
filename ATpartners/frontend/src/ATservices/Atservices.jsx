@@ -51,6 +51,19 @@ export default function Atservices() {
         text: "ATELIER INOVE 45500, SAINT DENIS DE L’HOTEL DATE : MARS-MAI 2022 CHIFFRE D’AFFAIRES : 83 000,00 €",
     }
   ];
+
+  function scroll(text) {
+    const element = document.getElementById(text);
+    if (element) {
+        const { top } = element.getBoundingClientRect();
+        const offset = top + window.scrollY - 100; // Décalage de 100 pixels au-dessus de l'élément
+        setTimeout(() => {
+            element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            window.scrollTo({ top: offset, behavior: 'smooth' });
+        }, 100);
+        console.log(text);
+    }
+  }
   return (
     <div className={styles.ATservicesMainContainer}>
       <NavMobile />
@@ -69,16 +82,9 @@ export default function Atservices() {
               vous aidons a réaliser vos projets.
             </p>
           </div>
-          <Link
-            className={styles.discoverButtonLink}
-            to={{
-              pathname: "/test",
-            }}
-          >
-            <button className={styles.discoverButton}>
+            <button className={styles.discoverButton} onClick={()=>scroll("references")}>
               Découvrir nos réalisations &nbsp; &nbsp; &gt;&gt;
             </button>
-          </Link>
         </div>
       </section>
       <section className={styles.bodyContainer}>
@@ -147,7 +153,7 @@ export default function Atservices() {
             </div>
           </div>
           </div>
-          <p className={styles.references}>réferences</p>
+          <p className={styles.references} id="references">réferences</p>
         </div>
       </section>
       <section className={styles.referenceContainer}>
