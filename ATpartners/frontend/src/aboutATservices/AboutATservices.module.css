@@ -124,4 +124,24 @@
   font-family: inter;
   font-weight: 400;
   font-size: 18px;
+}
+
+.valueContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.valueTitle {
+  text-align: center;
+  font-family: mitr;
+  font-weight: 500;
+  color: white;
+}
+
+.valueText {
+  font-family: mitr;
+  font-weight: 400;
+  color: white;
 }/*# sourceMappingURL=AboutATservices.module.css.map */

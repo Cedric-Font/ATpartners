@@ -115,3 +115,23 @@
     font-weight: 400;
     font-size: 18px;
 }
+.valueContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    // padding-inline: 40px;
+    box-sizing: border-box  ;
+    //background: linear-gradient(180deg, rgba(44,66,149,1) 50%, rgba(14,21,47,1) 100%);
+    // background-color: rgb(44, 66, 149);
+}
+.valueTitle{
+    text-align: center;
+    font-family: mitr;
+    font-weight: 500;
+    color: white
+}
+.valueText{
+    font-family: mitr;
+    font-weight: 400;
+    color: white;
+}

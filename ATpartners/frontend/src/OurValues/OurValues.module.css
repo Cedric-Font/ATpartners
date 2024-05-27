@@ -147,4 +147,84 @@
   width: 50px;
   top: -22px;
   transform: rotate(90deg);
+}
+
+@media screen and (max-width: 1000px) {
+  .valuesSection {
+    width: 100%;
+  }
+  .valuesHeader {
+    width: 100%;
+    margin-bottom: 0px;
+  }
+  .valuesTitle {
+    font-size: 24px;
+    width: 80%;
+    text-align: center;
+  }
+  .valuesText {
+    font-size: 18px;
+    width: 80%;
+  }
+  .hr {
+    display: none;
+  }
+  .logo {
+    width: 75px;
+    height: 75px;
+    float: left;
+    margin-bottom: 0px;
+    margin-right: 10px;
+  }
+  .logoImg {
+    top: -24px;
+    width: 20px;
+  }
+  .logoTextContainer {
+    font-size: 18px;
+  }
+  .logoText {
+    font-size: 14px;
+  }
+  .logoNumber {
+    margin-top: 15px;
+  }
+  .logoMain {
+    background-color: rgba(231, 231, 231, 0.6862745098);
+    border-radius: 10px;
+    padding: 50px;
+    box-sizing: border-box;
+  }
+  .logoMain.index0 {
+    margin-left: 0px;
+    display: block;
+    padding: 20px;
+    padding-top: 30px;
+  }
+  .logoMain.index1 {
+    margin-left: 0px;
+    display: block;
+    padding: 20px;
+    padding-top: 30px;
+  }
+  .logoMain.index2 {
+    margin-left: 0px;
+    display: block;
+    padding: 20px;
+    padding-top: 30px;
+  }
+  .logoMain.index3 {
+    margin-left: 0px;
+    display: block;
+    padding: 20px;
+    padding-top: 30px;
+  }
+  .logoContent {
+    width: 350px;
+    margin: 0;
+  }
+  .valuesAllLogos {
+    flex-direction: column;
+    align-items: center;
+  }
 }/*# sourceMappingURL=OurValues.module.css.map */
