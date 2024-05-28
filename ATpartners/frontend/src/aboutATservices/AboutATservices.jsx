@@ -3,6 +3,7 @@ import ATservicesMain from "../assets/AtservicesHeader.jpg";
 import SubTitle from "../SubTitle/SubTitle";
 import NavMobile from "../navBarMobile/NavMobile";
 import OurValues from "../OurValues/OurValues";
+import Footer from "../footer/Footer";
 
 export default function AboutATservices() {
   const objectifsTab = [
@@ -74,6 +75,7 @@ export default function AboutATservices() {
           </p> */}
         </div>
       </section>
+      <Footer />
     </>
   );
 }
