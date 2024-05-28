@@ -9,10 +9,12 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 40%;
+  width: 45%;
   background-color: #2C4295;
   border-radius: 10px;
   padding: 30px;
+  margin-top: 100px;
+  margin-bottom: 100px;
 }
 
 .valuesTitle {
@@ -37,7 +39,6 @@
   width: 100%;
   background-color: transparent;
   position: relative;
-  height: 1920px;
 }
 
 .test {
@@ -52,6 +53,8 @@
   font-size: 18px;
   font-weight: 400;
   font-family: mitr;
+  position: relative;
+  margin-bottom: 50px;
 }
 
 .logoContainer {
@@ -97,7 +100,7 @@
 }
 
 .logoContent {
-  width: 700px;
+  width: 500px;
   margin-left: 100px;
 }
 
@@ -123,4 +126,105 @@
   width: -moz-fit-content;
   width: fit-content;
   margin-left: 34vw;
+}
+
+.hr {
+  border: none;
+  border-top: solid 2px #2C4295;
+  color: #2C4295;
+  overflow: visible;
+  left: 0%;
+  top: 16rem;
+  width: 100%;
+  position: absolute;
+}
+
+.hr::after {
+  background: transparent;
+  position: relative;
+  font-weight: bold;
+  color: #2C4295;
+  width: 50px;
+  top: -22px;
+  transform: rotate(90deg);
+}
+
+@media screen and (max-width: 1000px) {
+  .valuesSection {
+    width: 100%;
+  }
+  .valuesHeader {
+    width: 100%;
+    margin-bottom: 0px;
+  }
+  .valuesTitle {
+    font-size: 24px;
+    width: 80%;
+    text-align: center;
+  }
+  .valuesText {
+    font-size: 18px;
+    width: 80%;
+  }
+  .hr {
+    display: none;
+  }
+  .logo {
+    width: 75px;
+    height: 75px;
+    float: left;
+    margin-bottom: 0px;
+    margin-right: 10px;
+  }
+  .logoImg {
+    top: -24px;
+    width: 20px;
+  }
+  .logoTextContainer {
+    font-size: 18px;
+  }
+  .logoText {
+    font-size: 14px;
+  }
+  .logoNumber {
+    margin-top: 15px;
+  }
+  .logoMain {
+    background-color: rgba(231, 231, 231, 0.6862745098);
+    border-radius: 10px;
+    padding: 50px;
+    box-sizing: border-box;
+  }
+  .logoMain.index0 {
+    margin-left: 0px;
+    display: block;
+    padding: 20px;
+    padding-top: 30px;
+  }
+  .logoMain.index1 {
+    margin-left: 0px;
+    display: block;
+    padding: 20px;
+    padding-top: 30px;
+  }
+  .logoMain.index2 {
+    margin-left: 0px;
+    display: block;
+    padding: 20px;
+    padding-top: 30px;
+  }
+  .logoMain.index3 {
+    margin-left: 0px;
+    display: block;
+    padding: 20px;
+    padding-top: 30px;
+  }
+  .logoContent {
+    width: 350px;
+    margin: 0;
+  }
+  .valuesAllLogos {
+    flex-direction: column;
+    align-items: center;
+  }
 }/*# sourceMappingURL=OurValues.module.css.map */

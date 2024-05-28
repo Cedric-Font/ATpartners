@@ -1,0 +1,63 @@
+.RessoucesSection {
+  background: linear-gradient(180deg, rgba(210,224,234,1) 55%, rgba(255,255,255,0) 100%);
+  position: relative ;
+  height: 1700px;
+}
+.resssourcesHeader {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.ressourcesTextContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.ressourcesTitle {
+    color: #2C4295;
+    font-family: mitr;
+    font-size: 34px;
+    font-weight: 600;
+
+}
+.ressourcesText {
+    color: #2C4295;
+    font-family: mitr;
+    text-align: center  ;
+    font-size: 18px;
+    width: 760px;
+    margin-bottom: 100px;
+}
+.shemaContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.shema {
+    min-width: 700px;
+  width: 30%;
+}
+
+.ressourcesDescription {
+  color: #2C4295;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 100px;
+  font-family: mitr;
+  font-weight: 400;
+  width: 760px;
+  background-color: #ffffff3e;
+  border-radius: 10px;
+  padding: 50px;
+  box-shadow: 2px 3px 10px 0px rgba(0, 0, 0, 0.4588235294);
+  backdrop-filter: blur(5px);
+}
+.ressourcesBackground{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 900px;
+    object-fit: cover;
+    z-index: -1;
+}

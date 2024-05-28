@@ -14,6 +14,7 @@ import Footer from "../footer/Footer";
 import aboutPicture from "../assets/aboutPicture.jpeg";
 import avenir from "../assets/avenir.svg";
 import Values from '../OurValues/OurValues';
+import Ressources from '../Ressources/Ressources'
 
 export default function ATservicesDesktop() {
   const iconTab = [
@@ -53,8 +54,21 @@ export default function ATservicesDesktop() {
       text: "ATELIER INOVE 45500, SAINT DENIS DE L’HOTEL DATE : MARS-MAI 2022 CHIFFRE D’AFFAIRES : 83 000,00 €",
     },
   ];
+
+  function scroll(text) {
+    const element = document.getElementById(text);
+    if (element) {
+        const { top } = element.getBoundingClientRect();
+        const offset = top + window.scrollY - 100; // Décalage de 100 pixels au-dessus de l'élément
+        setTimeout(() => {
+            element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            window.scrollTo({ top: offset, behavior: 'smooth' });
+        }, 100);
+        console.log(text);
+    }
+  }
   return (
-    <div className={styles.ATservicesMainContainer}>
+    <div className={styles.ATservicesMainContainer} id="atserviceshome">
       <NavMobile />
       <NavBarDesktop />
       <section className={styles.ATservicesheader}>
@@ -71,28 +85,21 @@ export default function ATservicesDesktop() {
               vous aidons a réaliser vos projets.
             </p>
           </div>
-          <Link
-            className={styles.discoverButtonLink}
-            to={{
-              pathname: "/test",
-            }}
-          >
-            <button className={styles.discoverButton}>
+            <button className={styles.discoverButton} onClick={()=>scroll("references")}>
               Découvrir nos réalisations &nbsp; &nbsp; &gt;&gt;
             </button>
-          </Link>
         </div>
       </section>
       <section className={styles.bodyContainer}>
         <div className={styles.aboutContainer}>
           <div className={styles.aboutTextMain}>
-            <h2 className={styles.aboutTitle}>Qui sommes-nous ?</h2>
+            <h2 className={styles.aboutTitle} id="quisommesnous?">Qui sommes-nous ?</h2>
             <p>
               Nous nous adaptons aux mieux à vos besoins et mettons nos
               compétences à votre service.
             </p>
             <p>Découvrez notre équipe et nos valeurs et nos réalisations.</p>
-            <button className={styles.discoverButton2}>
+            <button className={styles.discoverButton2} onClick={()=>scroll("nosmoyenshumains")}>
               Découvir nos équipes &nbsp; &nbsp; &gt;&gt;
             </button>
           </div>
@@ -173,7 +180,7 @@ export default function ATservicesDesktop() {
           <div className={styles.downWave}>
             <div className={styles.waveContainer}>
               <div className={styles.pohotContainer}>
-                <div className={styles.customshapedividertop}>
+                <div className={styles.customshapedividertop4}>
                   <svg
                     width="100%"
                     height="100%"
@@ -206,14 +213,8 @@ export default function ATservicesDesktop() {
               </div>
             </div>
           </div>
-          <hr className={styles.referenceHr} />
+          <hr className={styles.referenceHr} id="references"/>
           <p className={styles.references}>Réferences</p>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa fuga
-            vitae corrupti? Amet sit asperiores ipsam accusantium corrupti
-            possimus fuga inventore, omnis, consectetur eius fugit neque,
-            officiis quidem dignissimos doloribus.
-          </p>
         </div>
       </section>
       <section className={styles.referenceContainer}>
@@ -246,7 +247,7 @@ export default function ATservicesDesktop() {
         </div>
       </section>
       <section className={styles.objectifs}>
-        <h2 className={styles.ourObjectifs}>Nos objectifs</h2>
+        <h2 className={styles.ourObjectifs} id="nosobjectifs" >Nos objectifs</h2>
         <div className={styles.aveirContainer}>
           <img src={avenir} alt="" className={styles.avenirImg} />
           <p className={styles.avenirText}>
@@ -269,8 +270,10 @@ export default function ATservicesDesktop() {
             panneaux et menuiseries isothermes.
           </p>
         </div>
+        
         <Values />
       </section>
+      <Ressources />
       <Footer />
     </div>
   );

@@ -1,0 +1,140 @@
+.AboutATservicesHeaderSection{
+    width: 100%;
+}
+.mainPictureContainer{
+    position: relative  ;
+    width: 100%;
+    height: 530px;
+   filter : drop-shadow(0px 5px 8px black)
+}
+.mainPicture{
+    object-fit: cover;
+    height: 530px;
+    width: 100%;
+}
+.gradient{
+    background: linear-gradient(
+        90deg,
+        rgba(44, 66, 149, 1) 0%,
+        rgba(37, 129, 196, 0.43) 100%
+      );
+      width: 100%;
+      height: 530px;
+      position: absolute;
+      top: 0px;
+      left: 0;
+      z-index: 1;
+}
+.titleContent{
+    position: absolute;
+    z-index: 5;
+    left: 50%;
+    top: 20%;
+    transform: translate(-50%, -50%); /* décalage de 50% de sa propre taille */
+    color: white;
+    font-family: inter;
+    font-size: 40px;
+    font-weight: bold;
+    text-align: center;
+}
+.title{
+    margin: 0;
+}
+.headerTextContainer{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    position: absolute;
+    top: 55%;
+    min-width: 300px;
+    width: 100%;
+    max-width: 999px;
+    z-index: 6;
+    color: white;
+    font-size: 30px;
+    font-family: inter;
+    font-weight: bold;
+    text-decoration: underline;
+}
+.item{
+    text-align: center  ;
+    width: calc(50% - 5px);
+
+}
+.test{
+   width: 100%;
+   text-align: center;
+}
+.objectif{
+    display: flex;
+    flex-direction: column;
+}
+.objectifText{
+    font-size: 18px;
+    font-family: inter;
+    font-weight: 400;
+    color: #2C4295;
+    width: 100%;
+    padding-inline: 40px;
+    box-sizing: border-box;
+}
+.mapContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center ;
+    width: 100%;
+    padding-inline: 40px;
+    box-sizing: border-box;
+    gap: 20px 0px;
+}
+.objectifContainer{
+    display: flex;
+    width: 100%;
+}
+.objectifNumber{
+    background-color: #2C4295;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    color: white;
+    font-size: 20px;
+    padding: 10px;
+    margin-right: 20px;
+    // filter : drop-shadow(0px 5px 8px black)
+    box-shadow: 0px 2px 7px #4e4e4e;
+    font-family: inter;
+    font-weight: 300;
+}
+.objectifParg{
+    width: 80%;
+    color: #2C4295;
+    font-family: inter;
+    font-weight: 400;
+    font-size: 18px;
+}
+.valueContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    // padding-inline: 40px;
+    box-sizing: border-box  ;
+    //background: linear-gradient(180deg, rgba(44,66,149,1) 50%, rgba(14,21,47,1) 100%);
+    // background-color: rgb(44, 66, 149);
+}
+.valueTitle{
+    text-align: center;
+    font-family: mitr;
+    font-weight: 500;
+    color: white
+}
+.valueText{
+    font-family: mitr;
+    font-weight: 400;
+    color: white;
+}
+.bodyContainer{
+    margin-bottom: 150px;
+}

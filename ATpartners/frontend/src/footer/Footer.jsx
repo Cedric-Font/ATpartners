@@ -40,7 +40,10 @@ export default function Footer() {
         <div className={styles.allSiteMapContent}>
         <h2 className={styles.footerTitle}>SITEMAP</h2>
         <div className={styles.footerLinks}>
-          <a className={styles.aLinks} href="">
+        <a className={styles.aLinks} href="/">
+            ATpartners
+          </a>
+          <a className={styles.aLinks} href="/ATservices">
             ATservices
           </a>
           <a className={styles.aLinks} href="">
@@ -49,7 +52,7 @@ export default function Footer() {
           <a className={styles.aLinks} href="">
             ATpromotion
           </a>
-          <a className={styles.aLinks} href="">
+          <a className={styles.aLinks} href="/contact">
             Contact
           </a>
           <a className={styles.aLinks} href="">

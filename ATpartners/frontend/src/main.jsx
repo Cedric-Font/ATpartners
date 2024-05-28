@@ -8,6 +8,7 @@ import './index.css'
 import Form from './form/Form.jsx'
 import Atservices from './ATservices/Atservices.jsx'
 import ATservicesDesktop from './ATservicesDesktop/ATservicesDesktop.jsx';
+import AboutATservices from './aboutATservices/AboutATservices.jsx';
 
 const router = createBrowserRouter([
   {
@@ -25,6 +26,10 @@ const router = createBrowserRouter([
   {
     path: "/ATservices",
     element:<> <Atservices /> <ATservicesDesktop /> </>, 
+  },
+  {
+    path: "/AboutATservices",
+    element:<AboutATservices />, 
   },
 ]);
 ReactDOM.createRoot(document.getElementById('root')).render(

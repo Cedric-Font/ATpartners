@@ -36,7 +36,7 @@ function App() {
   
 
   return (
-    <div id='Home'>
+    <div id='home'>
       
       <NavBarDesktop />
       <NavMobile />
