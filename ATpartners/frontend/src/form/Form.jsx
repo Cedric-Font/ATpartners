@@ -8,10 +8,20 @@ import correct from "../assets/correct.png";
 import redCross from "../assets/redCross.png";
 import { useState, useEffect } from "react";
 import emailjs from '@emailjs/browser';
+import React from 'react';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 
 export default function Form() {
+  const [isSending, setIsSending] = useState(false);
+const [isSent, setIsSent] = useState(false);
+const [sendError, setSendError] = useState(null);
+
   const formVerification = FormVerification2();
   const [focus, setFocus] = useState(false)
+  const [toasifySuccess, setToasifySuccess] = useState(false)
+  const [toasifyError, setToasifyError] = useState(false)
   const [focusStates, setFocusStates] = useState({
     Nom: false,
     Prénom: false,
@@ -94,27 +104,61 @@ export default function Form() {
           checked: formVerification.selectedCountry ? true : false,
         }
       ];
-      function onSubmit(e){
-        const templateId = "template_z8nq9md";
-        const serviceId = "service_nr2cjv7";
-        sendFeedback(serviceId, templateId, {
+    //   function onSubmit(e){
+    //     e.preventDefault();
+    //     const templateId = "template_z8nq9md";
+    //     const serviceId = "service_nr2cjv7";
+    //     sendFeedback(serviceId, templateId, {
 
-          name : formVerification.firstname,
-          phoneNumber : formVerification.phoneNumber,
-          email : formVerification.email,
-          // subject: data.subject,
+    //       name : formVerification.firstname,
+    //       phoneNumber : formVerification.phoneNumber,
+    //       email : formVerification.email,
+    //       // subject: data.subject,
+    //       message: formVerification.messageContente,
+    //       replay_to: e.target.reset()
+    //   });
+    // }
+  
+
+    async function onSubmit(e) {
+      e.preventDefault();
+      setIsSending(true);
+      setSendError(null);
+    
+      const templateId = "template_z8nq9md";
+      const serviceId = "service_nr2cjv7";
+    
+      try {
+        await sendFeedback(serviceId, templateId, {
+          name: formVerification.firstname,
+          phoneNumber: formVerification.phoneNumber,
+          email: formVerification.email,
           message: formVerification.messageContente,
-          replay_to: e.target.reset()
-      });
+        });
+    
+        setIsSending(false);
+        setIsSent(true);
+        toast.success("Email successfully sent!");
+        e.target.reset();  // Reset the form on success
+      } catch (err) {
+        setIsSending(false);
+        setSendError("There has been an error. Please try again.");
+        toast.error("There has been an error. Please try again.");
+        console.error('Error occurred while sending email:', err);
+      }
     }
 
+    // const sendFeedback = (serviceId, templateId, variables) => {
+    //   emailjs.send(serviceId, templateId, variables, "9YEiPDjVbQjT3ablk")
+    //     .then((res) => {
+    //       console.log('Email successfully sent!')
+    //     })
+    //     .catch(err => console.error('There has been an error.  Here some thoughts on the error that occured:', err))
+    // }
     const sendFeedback = (serviceId, templateId, variables) => {
-      emailjs.send(serviceId, templateId, variables, "9YEiPDjVbQjT3ablk")
-        .then((res) => {
-          console.log('Email successfully sent!')
-        })
-        .catch(err => console.error('There has been an error.  Here some thoughts on the error that occured:', err))
-    }
+      return emailjs.send(serviceId, templateId, variables, "9YEiPDjVbQjT3ablk");
+    };
+    
 
     // function onSubmit(){
     //   console.log("submit")

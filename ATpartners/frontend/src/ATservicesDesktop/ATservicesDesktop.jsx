@@ -15,8 +15,12 @@ import aboutPicture from "../assets/aboutPicture.jpeg";
 import avenir from "../assets/avenir.svg";
 import Values from '../OurValues/OurValues';
 import Ressources from '../Ressources/Ressources'
+import { useEffect } from "react";
 
 export default function ATservicesDesktop() {
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
   const iconTab = [
     {
       icon: sale,

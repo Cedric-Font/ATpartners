@@ -148,4 +148,10 @@
 
 .bodyContainer {
   margin-bottom: 150px;
+}
+
+@media only screen and (min-width: 1000px) {
+  .mainAboutATservices {
+    display: none;
+  }
 }/*# sourceMappingURL=AboutATservices.module.css.map */

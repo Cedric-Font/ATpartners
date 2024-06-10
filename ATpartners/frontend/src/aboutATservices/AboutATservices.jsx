@@ -21,7 +21,7 @@ export default function AboutATservices() {
     },
   ];
   return (
-    <>
+    <div className={styles.mainAboutATservices}>
       <NavMobile />
       <section className={styles.AboutATservicesHeaderSection}>
         <div className={styles.mainPictureContainer}>
@@ -76,6 +76,6 @@ export default function AboutATservices() {
         </div>
       </section>
       <Footer />
-    </>
+    </div>
   );
 }
