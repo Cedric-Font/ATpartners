@@ -71,6 +71,10 @@ export default function ATservicesDesktop() {
         console.log(text);
     }
   }
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
   return (
     <div className={styles.ATservicesMainContainer} id="atserviceshome">
       <NavMobile />
@@ -279,6 +283,9 @@ export default function ATservicesDesktop() {
       </section>
       <Ressources />
       <Footer />
+      <button className={styles.scrollToTop} onClick={scrollToTop}>
+        <span className={styles.scrollToTopIcon}>↑</span>
+      </button>
     </div>
   );
 }
