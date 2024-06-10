@@ -9,6 +9,7 @@ export default function FormVerification() {
   const [enterpriseName, setEnterpriseName] = useState("");
   const [message, setMessage] = useState("");
   const [selectedCountry, setSelectedCountry] = useState("");
+  const [messageContente, setMessageContent] = useState("");
 
   const [falsePhoneNumber, setFalsePhoneNumber] = useState("");
   const [falsePseudo, setFalsePseudo] = useState("");
@@ -101,6 +102,7 @@ const handleChangePseudo = (event) => {
         if (m.target.value.length <= 500 && m.target.value.length >= 30) {
           setFalseMessage("");
           setMessage("true");
+          setMessageContent(m.target.value);
         } else if (m.target.value.length < 30) {
           setFalseMessage(<small>Le message doit contenri au moin 30 caracteres</small>);
         } else if(m.target.value.length > 500) {
@@ -180,5 +182,7 @@ const handleChangePseudo = (event) => {
     setIsFormValid,
     selectedCountry,
     handleCountry,
+    messageContente,
+    setMessageContent,
   };
 }

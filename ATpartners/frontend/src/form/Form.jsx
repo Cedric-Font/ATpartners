@@ -7,6 +7,7 @@ import FormVerification2 from "./FormVerification";
 import correct from "../assets/correct.png";
 import redCross from "../assets/redCross.png";
 import { useState, useEffect } from "react";
+import emailjs from '@emailjs/browser';
 
 export default function Form() {
   const formVerification = FormVerification2();
@@ -93,6 +94,31 @@ export default function Form() {
           checked: formVerification.selectedCountry ? true : false,
         }
       ];
+      function onSubmit(e){
+        const templateId = "template_z8nq9md";
+        const serviceId = "service_nr2cjv7";
+        sendFeedback(serviceId, templateId, {
+
+          name : formVerification.firstname,
+          phoneNumber : formVerification.phoneNumber,
+          email : formVerification.email,
+          // subject: data.subject,
+          message: formVerification.messageContente,
+          replay_to: e.target.reset()
+      });
+    }
+
+    const sendFeedback = (serviceId, templateId, variables) => {
+      emailjs.send(serviceId, templateId, variables, "9YEiPDjVbQjT3ablk")
+        .then((res) => {
+          console.log('Email successfully sent!')
+        })
+        .catch(err => console.error('There has been an error.  Here some thoughts on the error that occured:', err))
+    }
+
+    // function onSubmit(){
+    //   console.log("submit")
+    // }
 
   return (
     <div className={styles.fullFormContent}>
@@ -119,7 +145,7 @@ export default function Form() {
           <h2 className={styles.contactUs}>
             Contactez <br /> nous
           </h2>
-          <form action="" className={styles.formInput}>
+          <form action="" className={styles.formInput} onSubmit={onSubmit}>
             <div className={styles.mapContainer}>
           {ranges.map((e) => (
             <div  className={styles.inputContainer} key={e.text}>
