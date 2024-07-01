@@ -36,7 +36,7 @@
 
 @media screen and (min-width: 1000px) {
   .linksPictures {
-    height: 894px;
+    height: 35vw;
     display: flex;
     justify-content: center;
     width: 23%;
@@ -47,7 +47,7 @@
   }
   .ATpicture {
     width: 100%;
-    height: 894px;
+    height: 35vw;
     background-position: center;
     transition: 250ms;
     border-radius: 5px;
