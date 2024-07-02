@@ -148,6 +148,7 @@ export default function Form() {
       setIsSent(true);
       setIsLoading(false);
       notify();
+      formVerification.formReset();
       e.target.reset(); // Reset the form on success
     } catch (err) {
       setIsSending(false);

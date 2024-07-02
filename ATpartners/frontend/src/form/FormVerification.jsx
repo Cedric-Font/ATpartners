@@ -115,6 +115,16 @@ export default function FormVerification() {
     setSelectedCountry(value);
   };
 
+  const formReset = () => {
+    setPseudo("");
+    setPhoneNumber("");
+    setFirstname("");
+    setEnterpriseName("");
+    setEmail("");
+    setMessageContent("");
+    setSelectedCountry("");
+  };
+
   useEffect(() => {
     const validateForm = () => {
       if (
@@ -186,5 +196,6 @@ export default function FormVerification() {
     handleCountry,
     messageContente,
     setMessageContent,
+    formReset,
   };
 }
