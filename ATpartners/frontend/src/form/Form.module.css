@@ -189,6 +189,10 @@
   transition: ease-in-out 0.3s;
 }
 
+.loader {
+  animation: rotate 1s linear infinite;
+}
+
 .submitButton.disabled {
   background-color: #666666;
   border: none;
@@ -325,5 +329,13 @@
     display: block;
     margin-top: 10rem;
     margin-bottom: 14rem;
+  }
+}
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
   }
 }/*# sourceMappingURL=Form.module.css.map */

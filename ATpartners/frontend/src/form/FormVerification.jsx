@@ -7,7 +7,7 @@ export default function FormVerification() {
   const [phoneNumber, setPhoneNumber] = useState("");
   const [firstname, setFirstname] = useState("");
   const [enterpriseName, setEnterpriseName] = useState("");
-  const [message, setMessage] = useState("");
+  const [message, setMessage] = useState(""); // Vérifiez si nécessaire
   const [selectedCountry, setSelectedCountry] = useState("");
   const [messageContente, setMessageContent] = useState("");
 
@@ -26,31 +26,32 @@ export default function FormVerification() {
   const regexEmail =
     /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
-    function regex(string){
-        return /[a-zA-Z]/.test(string)
-    }
-    
+  function regex(string) {
+    return /[a-zA-Z]/.test(string);
+  }
+
   const handlePhoneNumberChange = (event) => {
     const inputPhoneNumber = event.target.value;
     setPhoneNumber(inputPhoneNumber);
-    // const containsLetters = /[a-zA-Z]/.test(phoneNumber);
     const containsLetters = regex(inputPhoneNumber);
     if (containsLetters) {
       setPhoneNumberError(
-        <small className={styles.test}>Le numéro de téléphone ne doit pas contenir de lettres.</small>
+        <small className={styles.test}>
+          Le numéro de téléphone ne doit pas contenir de lettres.
+        </small>
       );
-    } else if(inputPhoneNumber.length != 10) {
-        setPhoneNumberError(
-            <small className={styles.test}>Le numéro de téléphone doit contenir 10 chiffres.</small>
-        );
-    }
-    else if(!containsLetters && inputPhoneNumber.length === 10) {
+    } else if (inputPhoneNumber.length !== 10) {
+      setPhoneNumberError(
+        <small className={styles.test}>
+          Le numéro de téléphone doit contenir 10 chiffres.
+        </small>
+      );
+    } else {
       setPhoneNumberError("");
-      setPhoneNumber(inputPhoneNumber);
     }
   };
- 
-const handleChangePseudo = (event) => {
+
+  const handleChangePseudo = (event) => {
     const value = event.target.value;
     if (value.length <= 0) {
       setFalsePseudo(<small>Ce champ ne peut pas être vide</small>);
@@ -66,16 +67,15 @@ const handleChangePseudo = (event) => {
   const handleChangeFirstname = (event) => {
     const value = event.target.value;
     if (value.length <= 0) {
-        setFalseFirstname(<small>Ce champ ne peut pas etre vide</small>);
-        setFirstname("");
-    }
-    if (value.length <= MAX_LENGTH_NAME) {
+      setFalseFirstname(<small>Ce champ ne peut pas être vide</small>);
+      setFirstname("");
+    } else if (value.length <= MAX_LENGTH_NAME) {
       setFalseFirstname("");
       setFirstname(value);
     } else {
       setFalseFirstname(<small>Le prénom est trop long</small>);
     }
-  }
+  };
 
   const handleChangeEmail = (e) => {
     setEmail(e.target.value);
@@ -87,84 +87,91 @@ const handleChangePseudo = (event) => {
   };
 
   const handleEnterpriseName = (e) => {
-    setEnterpriseName(e.target.value);
-    if (e.target.value.length <= MAX_LENGTH_ENTERPRISE) {
+    const value = e.target.value;
+    setEnterpriseName(value);
+    if (value.length <= MAX_LENGTH_ENTERPRISE) {
       setFalseEnterpriseName("");
-      enterpriseName("true")
-    } else if(e.target.value.length === 0) {
-        setFalseEnterpriseName(<small>Ce champ ne peut pas etre vide</small>);
+    } else if (value.length === 0) {
+      setFalseEnterpriseName(<small>Ce champ ne peut pas être vide</small>);
     } else {
       setFalseEnterpriseName(<small>Le nom de l'entreprise est trop long</small>);
-  }
     }
+  };
 
-    const handleMessage = (m) => {
-        if (m.target.value.length <= 500 && m.target.value.length >= 30) {
-          setFalseMessage("");
-          setMessage("true");
-          setMessageContent(m.target.value);
-        } else if (m.target.value.length < 30) {
-          setFalseMessage(<small>Le message doit contenri au moin 30 caracteres</small>);
-        } else if(m.target.value.length > 500) {
-          setFalseMessage(<small>Le message ne doit pas depasser 500 caracteres</small>);
-        }
+  const handleMessage = (m) => {
+    const value = m.target.value;
+    if (value.length >= 30 && value.length <= 500) {
+      setFalseMessage("");
+      setMessageContent(value);
+    } else if (value.length < 30) {
+      setFalseMessage(<small>Le message doit contenir au moins 30 caractères</small>);
+    } else if (value.length > 500) {
+      setFalseMessage(<small>Le message ne doit pas dépasser 500 caractères</small>);
+    }
+  };
+
+  const handleCountry = (e) => {
+    const value = e.target.value;
+    setSelectedCountry(value);
+  };
+
+  useEffect(() => {
+    const validateForm = () => {
+      if (
+        pseudo &&
+        phoneNumber &&
+        firstname &&
+        enterpriseName &&
+        email &&
+        selectedCountry &&
+        messageContente &&
+        !falsePhoneNumber &&
+        !falsePseudo &&
+        !falseFirstname &&
+        !falseEnterpriseName &&
+        !falseMessage &&
+        !falseEmail &&
+        !phoneNumberError
+      ) {
+        setIsFormValid(true);
+      } else {
+        setIsFormValid(false);
       }
+      console.log("Form is valid:", isFormValid);
+      console.log("country:", selectedCountry);
+    };
+    validateForm();
+  }, [
+    pseudo,
+    phoneNumber,
+    firstname,
+    enterpriseName,
+    email,
+    falsePhoneNumber,
+    falsePseudo,
+    falseFirstname,
+    falseEnterpriseName,
+    falseMessage,
+    falseEmail,
+    phoneNumberError,
+    selectedCountry,
+  ]);
 
-      const handleCountry = (e) => {
-        if(e.target.value !== "Pays") {
-          setSelectedCountry("true");
-          console.log(e.target.value)
-          console.log(selectedCountry)
-        } else {
-          setSelectedCountry("false");
-        }
-      };
-
-     
-      useEffect(() => {
-        const validateForm = () => {
-            if (
-              pseudo &&
-              phoneNumber &&
-              firstname &&
-              enterpriseName &&
-              email &&
-              message &&
-              selectedCountry &&
-              !falsePhoneNumber &&
-              !falsePseudo &&
-              !falseFirstname &&
-              !falseEnterpriseName &&
-              !falseMessage &&
-              !falseEmail &&
-              !phoneNumberError
-            ) {
-              setIsFormValid(true);
-            } else {
-              setIsFormValid(false);
-            }
-          };
-        validateForm();
-      }, [pseudo, phoneNumber, firstname, enterpriseName, email, falsePhoneNumber, falsePseudo, falseFirstname, falseEnterpriseName, falseMessage, falseEmail, phoneNumberError, selectedCountry], message);
-    //   console.log(isFormValid)
   return {
     email,
     handleChangePseudo,
     pseudo,
     setPseudo,
     falsePseudo,
-    setFalsePseudo,
     phoneNumber,
     setPhoneNumber,
     falsePhoneNumber,
-    setFalsePhoneNumber,
     handlePhoneNumberChange,
     setPhoneNumberError,
     phoneNumberError,
     firstname,
     setFirstname,
     falseFirstname,
-    setFalseFirstname,
     handleChangeFirstname,
     handleChangeEmail,
     falseEmail,
@@ -172,14 +179,9 @@ const handleChangePseudo = (event) => {
     enterpriseName,
     setEnterpriseName,
     falseEnterpriseName,
-    setFalseEnterpriseName,
     handleMessage,
-    message,
-    setMessage,
     falseMessage,
-    setFalseMessage,
     isFormValid,
-    setIsFormValid,
     selectedCountry,
     handleCountry,
     messageContente,
