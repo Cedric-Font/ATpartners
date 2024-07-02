@@ -104,7 +104,8 @@
   position: absolute;
   flex-direction: column;
   left: 23%;
-  margin-top: 60px;
+  margin-top: 80px;
+  filter: drop-shadow(2px 4px 6px white);
 }
 
 .aboutPart1 {
@@ -197,40 +198,64 @@
     padding-left: 100px;
     padding-right: 100px;
     box-sizing: border-box;
+    position: relative;
   }
   .pictureOver {
-    padding-left: 50px;
+    padding-left: 0px;
     margin-top: 0px;
   }
   .textContainer {
-    left: 35%;
+    left: 47%;
+    z-index: 2;
+    filter: drop-shadow(2px 4px 6px white);
+    margin-top: 70px;
   }
   .backPicture {
     width: 63%;
     min-width: 377px;
     max-width: 700px;
     min-height: 500px;
-    max-height: 800px;
+    max-height: 560px;
   }
   .overText {
     font-size: 48px;
   }
   .aboutContainer {
-    width: 75%;
-    border-radius: 0px 0px 0px 64px;
+    width: 40%;
+    border-radius: 10px;
+    position: absolute;
+    z-index: 1;
+    top: 26%;
+    max-width: 400px;
+    left: 50%;
+    right: 50%;
+    -webkit-backdrop-filter: blur(4px);
+            backdrop-filter: blur(4px);
+    background: linear-gradient(90deg, rgba(12, 109, 255, 0.5) 0%, rgb(6, 59, 175) 100%);
   }
   .aboutPart2 {
     flex-direction: row-reverse;
+    box-sizing: border-box;
+    position: relative;
+    padding-right: 100px;
+    padding-left: 100px;
   }
   .pictureOver2 {
-    width: 45%;
-    padding-right: 100px;
+    width: 100%;
+    padding-right: 0px;
   }
   .aboutContainer2 {
     width: 40%;
     margin-left: 150px;
+    position: absolute;
+    -webkit-backdrop-filter: blur(4px);
+            backdrop-filter: blur(4px);
+    background: linear-gradient(90deg, rgb(12, 109, 255) 0%, rgba(6, 59, 175, 0.502) 100%);
+    border-radius: 10px;
+    left: 0%;
   }
   .textContainer2 {
-    left: 52%;
+    left: 40%;
+    margin-top: 70px;
   }
 }/*# sourceMappingURL=AboutUs.module.css.map */
