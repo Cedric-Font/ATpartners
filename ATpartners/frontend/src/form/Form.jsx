@@ -227,7 +227,7 @@ theme="colored"
                       }
                       required
                     />
-                  ) : (
+                   ) : (
                     <div className={styles.selectContainer}>
                       <select
                         name="country"

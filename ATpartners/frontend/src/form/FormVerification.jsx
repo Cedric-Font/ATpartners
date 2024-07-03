@@ -36,13 +36,13 @@ export default function FormVerification() {
     const containsLetters = regex(inputPhoneNumber);
     if (containsLetters) {
       setPhoneNumberError(
-        <small className={styles.test}>
+        <small className="coucou">
           Le numéro de téléphone ne doit pas contenir de lettres.
         </small>
       );
     } else if (inputPhoneNumber.length !== 10) {
       setPhoneNumberError(
-        <small className={styles.test}>
+        <small className="coucou2">
           Le numéro de téléphone doit contenir 10 chiffres.
         </small>
       );

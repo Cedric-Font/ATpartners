@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .fullFormContent {
   background-color: white;
 }
@@ -130,7 +131,8 @@
 
 .correctContainer {
   position: absolute;
-  right: 0;
+  right: 0px;
+  top: 50%;
   transition: opacity 0.3s ease-in-out;
 }
 
@@ -174,7 +176,7 @@
   justify-content: center;
   font-size: 30px;
   color: #979797;
-  bottom: 20px;
+  bottom: 5px;
 }
 
 .submitButton {
@@ -217,6 +219,7 @@
   width: fit-content;
   position: absolute;
   bottom: 15px;
+  top: 90%;
 }
 
 .mapContainer {
@@ -289,6 +292,7 @@
   .input {
     height: -moz-fit-content;
     height: fit-content;
+    overflow: auto;
   }
   .iconContainer {
     right: 20px;
@@ -298,6 +302,7 @@
     width: -moz-fit-content;
     width: fit-content;
     transform: translate(0%, 200%);
+    margin-bottom: 0;
   }
   .inputTitleDisplayed {
     transition: 400ms;
@@ -329,6 +334,26 @@
     display: block;
     margin-top: 10rem;
     margin-bottom: 14rem;
+  }
+  .small {
+    top: 85%;
+  }
+  .correctContainer {
+    right: -20px;
+    top: 45%;
+  }
+  :global .coucou {
+    margin-top: 15px;
+  }
+  input:-webkit-autofill,
+  textarea:-webkit-autofill,
+  select:-webkit-autofill { /* Enlever le background */
+    box-shadow: 0 0 0px 1000px rgba(255, 255, 255, 0) inset; /* Enlever le background */
+    -webkit-text-fill-color: #000 !important; /* Appliquer la couleur du texte */
+    font-family: work sans !important; /* Appliquer le style de police par défaut */
+    font-size: 24px !important; /* Appliquer la taille de police par défaut */
+    -webkit-transition: background-color 5000s ease-in-out 0s;
+    transition: background-color 5000s ease-in-out 0s; /* Eviter le clignotement */
   }
 }
 @keyframes rotate {
