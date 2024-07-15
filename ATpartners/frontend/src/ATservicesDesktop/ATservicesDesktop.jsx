@@ -274,7 +274,6 @@ export default function ATservicesDesktop() {
             panneaux et menuiseries isothermes.
           </p>
         </div>
-        
         <Values />
       </section>
       <Ressources />
