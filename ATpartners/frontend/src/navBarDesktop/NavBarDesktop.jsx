@@ -47,7 +47,11 @@ export default function NavBarDesktop() {
               }}>
                 <li className={`${styles.liNav} ${isScrolled ? styles.scrolled : ""}`}>Accueil</li>
                 </Link>
+                <Link to={{
+                  pathname: "/ATservices",
+                }}>
                 <li className={`${styles.liNav} ${isScrolled ? styles.scrolled : ""}`}>ATservices</li>
+                </Link>
                 <li className={`${styles.liNav} ${isScrolled ? styles.scrolled : ""}`}>ATimmobilier</li>
                 <li className={`${styles.liNav} ${isScrolled ? styles.scrolled : ""}`}>ATpromotion</li>
             </ul>

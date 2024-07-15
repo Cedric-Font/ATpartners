@@ -12,6 +12,7 @@ import reference from "../assets/reference.jpg";
 import Footer from "../footer/Footer";
 import FormBackground from "../assets/formBackground.jpg";
 import FormBackground2 from "../assets/formBackground2.png";
+import { FaCircleArrowUp } from "react-icons/fa6";
 
 export default function Atservices() {
   const iconTab = [
@@ -64,6 +65,9 @@ export default function Atservices() {
         console.log(text);
     }
   }
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
   return (
     <div className={styles.ATservicesMainContainer}>
       <NavMobile />
@@ -174,6 +178,9 @@ export default function Atservices() {
         </div>
       </section>
             <Footer />
+            <button className={styles.scrollToTop} onClick={scrollToTop}>
+        <span className={styles.scrollToTopIcon}><FaCircleArrowUp /></span>
+      </button>
     </div>
   );
 }

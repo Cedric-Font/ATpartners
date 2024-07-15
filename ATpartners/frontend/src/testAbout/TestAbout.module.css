@@ -1,0 +1,32 @@
+.MainContainer {
+  display: flex;
+  position: relative;
+  justify-content: center;
+}
+
+.AboutImg {
+  width: 60%;
+  height: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 10px;
+  left: 20%;
+}
+
+.rounded {
+  -webkit-backdrop-filter: blur(4px);
+          backdrop-filter: blur(4px);
+  background: rgba(23, 55, 215, 0.519);
+  color: rgb(255, 255, 255);
+  margin-left: 30%;
+  position: absolute;
+  width: 50%; /* Largeur relative au conteneur parent */
+  aspect-ratio: 1/1; /* Maintient un rapport d'aspect de 1:1 pour garantir un cercle parfait */
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center; /* Centre le texte horizontalement */
+  padding: 10px; /* Ajoute du padding pour que le texte ne touche pas les bords */
+}/*# sourceMappingURL=TestAbout.module.css.map */

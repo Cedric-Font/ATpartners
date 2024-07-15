@@ -467,6 +467,7 @@
     position: absolute;
     z-index: 100;
     top: 70%;
+    display: flex;
   }
   .fullIcon {
     border-radius: 10px;

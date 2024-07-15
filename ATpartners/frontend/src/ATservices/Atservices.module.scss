@@ -299,6 +299,29 @@
   display: none;
 }
 
+.scrollToTop {
+  position: fixed;
+  bottom: 40%;
+  right: 20px;
+  background-color: white;
+  // color: white;
+  border: none;
+  // padding: 10px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  // cursor: pointer;
+  z-index: 1000;
+}
+
+.scrollToTopIcon {
+  font-size: 40px;
+  height: 40px;
+}
+
 @media only screen and (min-width: 1000px){
   .ATservicesMainContainer{
     display: none;
